@@ -761,3 +761,51 @@ Bu durumda, toplam sıralama sayısı $4 \times 3 \times 2 \times 1 = 24$'tür. 
 10 kişilik bir sınıftan 3 kişilik bir başkanlık divanı (başkan, başkan yardımcısı, sekreter) seçmek. Sıralama önemli olduğu için bu bir permütasyon problemidir.
 $P(10,3) = \frac{10!}{(10-3)!} = \frac{10!}{7!} = 10 \times 9 \times 8 = 720$'dir.
 Yani 720 farklı şekilde başkanlık divanı oluşturulabilir.
+
+---
+
+### Arrangements (k-Permutations)
+
+#### Introduction
+**Arrangements**, also known as **placements** or **k-permutations**, refer to the number of ways to arrange a subset of *k* objects selected from a larger set of *n* distinct objects, where the **order of arrangement matters**.
+
+Let's look at an example to illustrate this principle.
+
+#### Example: Arranging Students for Awards
+Imagine you have 8 students competing, and you need to select and arrange 3 of them to receive gold, silver, and bronze medals.
+- For the first place (gold), you have 8 choices.
+- For the second place (silver), you have 7 choices remaining.
+- For the third place (bronze), you have 6 choices left.
+
+<img width="360" height="295" alt="image" src="https://github.com/user-attachments/assets/676d141a-c5e7-418a-baf0-2614a051fc49" />
+
+
+
+By applying the **Multiplication Principle**, the total number of ways to arrange the awards is: $8 \times 7 \times 6 = 336$.
+Therefore, there are **336** possible ways to award medals to 3 out of 8 students.
+
+---
+
+### The General Formula
+For situations involving an arrangement of *k* objects selected from a set of *n* distinct objects, the total number of arrangements, denoted as $P(n,k)$ or $A(n,k)$, can be generalized with the following formula:
+
+$P(n,k) = \frac{n!}{(n-k)!}$
+
+This formula represents the product of the first *k* terms of *n* factorial, which is: $n \times (n-1) \times (n-2) \times ... \times (n-k+1)$.
+
+#### Connection to Permutations
+A **permutation** is a special case of an arrangement where the number of selected objects is equal to the total number of available objects (i.e., when $n=k$). In this scenario, the formula simplifies to $P(n,n) = n!$.
+
+---
+
+### Exercise
+Imagine you need to create a 4-character password using distinct digits from 0 to 9. How many unique ways can you do this?
+
+#### Solution
+This is an arrangement problem because the **order of the digits matters**, and we are selecting a subset of 4 digits from a larger set of 10.
+- Total objects ($n$): 10 (digits 0-9)
+- Objects to be arranged ($k$): 4
+
+Using the arrangement formula, the total number of unique passwords is:
+$P(10,4) = \frac{10!}{(10-4)!} = \frac{10!}{6!} = 10 \times 9 \times 8 \times 7 = 5040$
+Thus, there are **5,040** unique ways to create a 4-digit password using distinct digits.
