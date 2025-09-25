@@ -611,3 +611,73 @@ Bu soru, kombinasyon sayısını bulmak için hem **Toplama Prensibi**'ni hem de
     - Toplam Kombinasyon: $9 \times 3 = 27$
 
 Yani, bir aktivite ve bir tişört rengi seçmek için toplamda **27 farklı kombinasyon** vardır.
+
+---
+
+### Toplama ve Çarpma İlkeleri
+
+Toplama ve Çarpma İlkeleri, olasılık ve kombinatorik alanında bir dizi seçimin toplam olası sonucunu bulmak için kullanılan temel kurallardır.
+
+---
+
+### Toplama İlkesi (Additive Principle)
+
+Bu ilke, aynı anda gerçekleşemeyen veya birbirini dışlayan iki ayrı olayın toplam olası sonucunu bulmak için kullanılır.
+
+* **Ne Zaman Kullanılır?** Seçenekler arasında bir **VEYA (OR)** ilişkisi olduğunda. Yani, "ya A'yı ya da B'yi seçerim" dediğinizde bu ilkeyi kullanırsınız.
+* **Kural:** Eğer bir olayın *$n$* farklı sonucu varsa ve diğer bir olayın *$m$* farklı sonucu varsa, bu iki olaydan birinin gerçekleşme toplam yolu *$n + m$*'dir.
+
+#### Günlük Hayattan Örnek:
+
+Bir kafe menüsünde sandviç veya salata seçeneğiniz olduğunu düşünün.
+* Sandviç seçeneği: 5
+* Salata seçeneği: 3
+* Toplam Seçim Sayısı: $5 + 3 = 8$ farklı seçim yapabilirsiniz.
+
+---
+
+### Çarpma İlkesi (Multiplication Principle)
+
+Bu ilke, ardışık veya bağımsız seçimlerin toplam olası sonucunu bulmak için kullanılır. Bir dizi karar alırken, her bir kararın sonucu diğer kararları etkilemediğinde bu ilke geçerlidir.
+
+* **Ne Zaman Kullanılır?** Seçenekler arasında bir **VE (AND)** ilişkisi olduğunda. Yani, "hem A'yı hem de B'yi seçerim" dediğinizde bu ilkeyi kullanırsınız.
+* **Kural:** Eğer bir olayın *$n$* farklı sonucu varsa ve ikinci bir olayın *$m$* farklı sonucu varsa, bu iki olayın arka arkaya gerçekleşme toplam yolu *$n \times m$*'dir.
+
+#### Günlük Hayattan Örnek:
+
+Bir kıyafet kombinasyonu yaptığınızı düşünün.
+* Gömlek seçeneği: 4
+* Pantolon seçeneği: 3
+* Toplam Kombinasyon Sayısı: $4 \times 3 = 12$ farklı kombinasyon oluşturabilirsiniz.
+
+---
+
+### Birleşik Örnek: Her İki İlkenin Birlikte Kullanımı
+
+Bazı durumlarda her iki ilkeyi de kullanmanız gerekebilir.
+
+#### Günlük Hayattan Örnek:
+
+Bir kafeteryada yemek ve içecek seçimi yapıyorsunuz.
+* **Adım 1: Yemeği Seçme (Toplama İlkesi)**
+    * Sandviç: 5 seçenek
+    * Salata: 3 seçenek
+    * Toplam Yemek Seçeneği: $5 + 3 = 8$
+* **Adım 2: Yemek ve İçeceği Seçme (Çarpma İlkesi)**
+    * Toplam Yemek Seçeneği: 8
+    * İçecek Seçeneği: 4
+    * Toplam Kombinasyon: $8 \times 4 = 32$
+
+Sonuç olarak, 32 farklı yemek ve içecek kombinasyonu yapabilirsiniz.
+
+
+### Toplama ve Çarpma İlkeleri Karşılaştırması
+
+| Özellik | Toplama İlkesi | Çarpma İlkesi |
+| :--- | :--- | :--- |
+| **Kullanım Amacı** | Birbirini dışlayan, **aynı anda gerçekleşemeyen** olayların toplam sonucunu bulmak. | **Ardışık veya bağımsız** olayların toplam kombinasyon sayısını bulmak. |
+| **Mantıksal Bağ** | Seçenekler arasında **"VEYA" (`OR`)** ilişkisi vardır. (Ya A ya da B) | Seçenekler arasında **"VE" (`AND`)** ilişkisi vardır. (Hem A hem B) |
+| **Matematiksel İşlem** | **Toplama** (`+`) | **Çarpma** (`*`) |
+| **Teknik Kural** | Eğer olay $A$, $n$ farklı şekilde ve olay $B$, $m$ farklı şekilde gerçekleşiyorsa, ikisinden birinin gerçekleşme sayısı $n + m$'dir. | Eğer olay $A$, $n$ farklı şekilde ve olay $B$, $m$ farklı şekilde gerçekleşiyorsa, ikisinin de gerçekleşme sayısı $n \times m$'dir. |
+| **Günlük Hayattan Örnek** | Bir restoranda, **ya** bir pizza (**10 çeşit**) **ya da** bir makarna (**8 çeşit**) seçme sayısı: $10 + 8 = 18$ farklı seçim. | Bir restoranda, **hem** bir ana yemek (**10 çeşit**) **hem de** bir içecek (**8 çeşit**) seçme sayısı: $10 \times 8 = 80$ farklı kombinasyon. |
+| **Önemli Not** | Seçimler arasında bir kesişim olamaz. Bir pizza seçtiğinizde, bir makarna seçemezsiniz. | Seçimler birbirinden bağımsızdır. Bir ana yemek seçimi, içecek seçimi sayısını etkilemez. |
