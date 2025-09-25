@@ -37,3 +37,18 @@
 - Örneklem verilerine dayanarak popülasyonlar hakkında sonuçlar çıkarmak için olasılık bilginizi kullanın.
 
   ---
+# Introduction to Probability
+
+### What is Probability?
+
+Probability is a branch of mathematics that deals with calculating the likelihood of an event occurring. In simple terms, it helps us understand and quantify uncertainty. Probability is widely used in fields like statistics, finance, science, and even everyday decision-making. It provides a mathematical framework for modelling random phenomena and making predictions about outcomes.
+
+For example:
+- What is the likelihood of flipping a coin and it landing heads up?
+- What is the chance of drawing an ace from a deck of cards?
+- What is the probability that a person will pass an exam?
+
+
+
+
+
