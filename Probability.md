@@ -681,3 +681,83 @@ Sonuç olarak, 32 farklı yemek ve içecek kombinasyonu yapabilirsiniz.
 | **Teknik Kural** | Eğer olay $A$, $n$ farklı şekilde ve olay $B$, $m$ farklı şekilde gerçekleşiyorsa, ikisinden birinin gerçekleşme sayısı $n + m$'dir. | Eğer olay $A$, $n$ farklı şekilde ve olay $B$, $m$ farklı şekilde gerçekleşiyorsa, ikisinin de gerçekleşme sayısı $n \times m$'dir. |
 | **Günlük Hayattan Örnek** | Bir restoranda, **ya** bir pizza (**10 çeşit**) **ya da** bir makarna (**8 çeşit**) seçme sayısı: $10 + 8 = 18$ farklı seçim. | Bir restoranda, **hem** bir ana yemek (**10 çeşit**) **hem de** bir içecek (**8 çeşit**) seçme sayısı: $10 \times 8 = 80$ farklı kombinasyon. |
 | **Önemli Not** | Seçimler arasında bir kesişim olamaz. Bir pizza seçtiğinizde, bir makarna seçemezsiniz. | Seçimler birbirinden bağımsızdır. Bir ana yemek seçimi, içecek seçimi sayısını etkilemez. |
+
+### Permutations
+
+#### Introduction
+Permutations refer to the number of ways to arrange a set of distinct objects in a specific order. The **order of arrangement matters** in permutations.
+
+Let's take a look at the example.
+
+#### Example: Arranging Books on a Shelf
+Suppose you have 4 different books and you want to arrange them on a shelf.
+- For the first position, you have 4 choices.
+- For the second position, you have 3 remaining choices.
+- For the third position, 2 choices.
+- For the last position, 1 choice.
+
+By the Multiplication Principle, the total number of ways to arrange the books is: $P_4 = 4 \times 3 \times 2 \times 1 = 24$.
+So, there are 24 different ways to arrange 4 books.
+
+#### A Generalisation of the Multiplication Principle
+Suppose there are $n$ positions to be filled with $n$ different objects, in which there are:
+- $n$ choices for the 1st position;
+- $n-1$ choices for the 2nd position;
+- $n-2$ choices for the 3rd position;
+- ... and ...
+- 1 choice for the last position.
+
+The Multiplication Principle tells us there are then in general: $P_n = n \times (n-1) \times (n-2) \times ... \times 1 = n!$
+
+> Permutation of $n$ objects is an ordered arrangement of $n$ objects and is denoted as $P_n$.
+
+---
+
+### Exercise
+What is the number of ways to line up 5 students for a class photo?
+
+#### Solution
+$P_5 = 5! = 120$
+
+> Permutations are used when the order of arrangement is important. The total number of ways to arrange distinct objects is given by $n!$, which is the product of all positive integers up to $n$, following the Multiplication Principle.
+---
+
+### Permütasyon
+
+Permütasyon, belirli sayıda nesnenin, belirli bir sıraya göre dizilme şekillerinin sayısıdır. Bu konunun en önemli özelliği, **sıranın önemli olmasıdır**.
+
+#### Permütasyon Nedir?
+
+Permütasyon, bir kümedeki elemanların farklı sıralanışlarını inceler. Eğer sıralama değiştiğinde sonuç da değişiyorsa, permütasyondan bahsedilir.
+
+#### Günlük Hayattan Örnek:
+
+- **Şifre Belirleme:** Bir telefonun 4 haneli şifresini düşünün. "1234" şifresi ile "4321" şifresi aynı değildir. Rakamların sırası önemlidir, bu yüzden bu bir permütasyondur.
+- **Yarış Sıralaması:** 10 kişinin katıldığı bir koşu yarışında, ilk 3'e girenlerin sıralaması önemlidir (birinci, ikinci ve üçüncü). Ahmet'in birinci, Mehmet'in ikinci olması ile tam tersi durum aynı değildir.
+
+---
+
+### Permütasyon Nasıl Hesaplanır?
+
+Permütasyon, "Çarpma İlkesi"nin özel bir halidir. Elinizdeki nesne sayısı ($n$) kadar farklı pozisyon varsa, her bir pozisyon için bir önceki pozisyonda kullanılamayan elemanlar kalır. Bu durum, faktöriyel ($!$) ile gösterilir.
+
+#### Günlük Hayattan Örnek:
+
+Elinizde 4 farklı kitap (A, B, C, D) var ve bunları bir rafa dizmek istiyorsunuz.
+- 1. pozisyon için: 4 kitabın hepsi bir seçenek. (4 tercih)
+- 2. pozisyon için: İlk kitabı koyduğunuz için geriye 3 kitap kaldı. (3 tercih)
+- 3. pozisyon için: Geriye 2 kitap kaldı. (2 tercih)
+- 4. pozisyon için: Son kitap kaldı. (1 tercih)
+Bu durumda, toplam sıralama sayısı $4 \times 3 \times 2 \times 1 = 24$'tür. Bu, matematiksel olarak $4!$ (4 faktöriyel) olarak ifade edilir.
+
+---
+
+### Formül:
+
+- Birbirinden farklı $n$ nesnenin sıralanma sayısı $P_n$ ile gösterilir ve $P_n = n!$'dir.
+- Eğer belirli bir sayıdaki nesneden ($n$), daha az sayıda nesneyi ($r$) sıralamak istiyorsanız, formül şöyledir: $P(n,r) = \frac{n!}{(n-r)!}$
+
+#### Örnek:
+10 kişilik bir sınıftan 3 kişilik bir başkanlık divanı (başkan, başkan yardımcısı, sekreter) seçmek. Sıralama önemli olduğu için bu bir permütasyon problemidir.
+$P(10,3) = \frac{10!}{(10-3)!} = \frac{10!}{7!} = 10 \times 9 \times 8 = 720$'dir.
+Yani 720 farklı şekilde başkanlık divanı oluşturulabilir.
