@@ -338,3 +338,14 @@ Arkadaşlarınızla bir kart oyunu oynadığınızı varsayalım.
 - **Olay A:** As (Ace) kartı çekmek.
 - A olayını sağlayan sonuçlar: Destede 4 tane as kartı vardır. Bu nedenle $N(A)=4$'tür.
 - **Olasılığı hesaplayın:** Klasik yaklaşımı kullanarak as çekme olasılığı: $P(A)=\frac{4}{52}\approx0.077$ veya yaklaşık %7.7'dir.
+
+  ### Olayların Olasılığı: Farklı Yaklaşımlar
+
+| Yaklaşım | Göreceli Frekans Yaklaşımı | Klasik Yaklaşım |
+| :--- | :--- | :--- |
+| **Temel Tanım** | Bir deneyin çok sayıda tekrarlanmasına dayanır. Bir olayın olasılığı, o olayın gerçekleştiği sayının toplam deneme sayısına oranıdır. | Bir deneyin tüm sonuçlarının eşit derecede olası olduğu varsayımına dayanır. Bir olayın olasılığı, o olayı sağlayan sonuç sayısının, tüm olası sonuçların sayısına oranıdır. |
+| **Formül** | $P(A) = \frac{\text{A Olayının Gerçekleşme Sayısı}}{\text{Toplam Deneme Sayısı}}$ | $P(A) = \frac{\text{A Olayını Sağlayan Sonuç Sayısı}}{\text{Toplam Olası Sonuç Sayısı}}$ |
+| **Ne Zaman Kullanılır?** | Sonuçların eşit derecede olası olup olmadığının bilinmediği veya varsayılamadığı durumlarda, genellikle geçmiş verilerle tahmin yapmak için kullanılır. Örneğin, bir fabrika üretim hatasının olasılığını bulmak. | Sonuçların eşit derecede olası olduğu, teorik olarak bilinen durumlar için kullanılır. Örneğin, zar atma, madeni para atma, kart çekme gibi deneyler. |
+| **Avantajı** | Gerçek dünya verilerine dayanarak olasılık tahmini yapmamızı sağlar ve teorik varsayımlar gerektirmez. | Hesaplaması daha basittir ve deney yapılmadan olasılık değeri bulunabilir. |
+| **Dezavantajı** | Doğru bir tahmin için çok sayıda deneme gerektirir. Küçük bir örneklemle yapılan hesaplamalar yanıltıcı olabilir. | Yalnızca tüm sonuçların eşit olasılıklı olduğu deneyler için geçerlidir. Gerçek hayattaki birçok durum için uygun değildir. |
+| **Günlük Hayattan Örnek** | Bir basketbolcunun serbest atış isabet olasılığını hesaplamak. Basketbolcu geçmişte 1000 serbest atıştan 750'sini başarılı attıysa, olasılığı $750/1000 = 0.75$ (%75) olarak tahmin edilir. | Bir parayı havaya attığımızda tura gelme olasılığı. Tüm sonuçlar (yazı, tura) eşit olasılıklı olduğundan, olasılık $1/2 = 0.5$ (%50) olarak hesaplanır. |
