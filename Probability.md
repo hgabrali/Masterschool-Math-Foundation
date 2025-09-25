@@ -48,7 +48,30 @@ For example:
 - What is the chance of drawing an ace from a deck of cards?
 - What is the probability that a person will pass an exam?
 
+# Olasılığa Giriş
 
+### Olasılık Nedir?
 
+Olasılık, bir olayın meydana gelme ihtimalini hesaplayan bir matematik dalıdır. Basit terimlerle, belirsizliği anlamamıza ve nicel olarak belirlememize yardımcı olur. Olasılık, istatistik, finans, bilim ve hatta gündelik karar alma gibi alanlarda yaygın olarak kullanılır. Rastgele olayları modellemek ve sonuçlar hakkında tahminlerde bulunmak için matematiksel bir çerçeve sunar.
 
+Örneğin:
+- Bir madeni parayı attığınızda yazı gelme olasılığı nedir?
+- Bir iskambil destesinden as çekme şansı nedir?
+- Bir kişinin sınavı geçme olasılığı nedir?
+
+  # Key Terms in Probability
+
+- **Experiment:** An action or process that leads to one of several possible outcomes. For example, rolling a die or drawing a card from a deck.
+- **Sample Space:** The set of all possible outcomes of an experiment. For example, when rolling a die, the sample space is {1, 2, 3, 4, 5, 6}.
+- **Event:** A specific outcome or set of outcomes of an experiment. For example, rolling an even number on a die is an event.
+- **Outcome:** A single result from the sample space. For example, getting a 3 when rolling a die is an outcome.
+
+### Olasılıkta Anahtar Terimler
+
+| İngilizce Terim | Türkçe Karşılığı | Açıklama |
+| :--- | :--- | :--- |
+| **Experiment** | **Deney** | Birkaç olası sonuçtan birine yol açan eylem veya süreç. Örneğin, bir zar atmak veya desteden bir kart çekmek. |
+| **Sample Space** | **Örneklem Uzayı** | Bir deneyin tüm olası sonuçlarının kümesi. Örneğin, bir zar atıldığında örneklem uzayı {1, 2, 3, 4, 5, 6} olur. |
+| **Event** | **Olay** | Bir deneyin belirli bir sonucu veya sonuçlar kümesi. Örneğin, bir zarda çift sayı gelmesi bir olaydır. |
+| **Outcome** | **Sonuç** | Örneklem uzayından çıkan tek bir sonuç. Örneğin, bir zar atıldığında 3 gelmesi bir sonuçtur. |
 
