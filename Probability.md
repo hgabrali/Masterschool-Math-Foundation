@@ -382,3 +382,194 @@ Bir iskambil destesindeki tüm kartlar (52 kart) eşit olasılığa sahiptir. Ya
 **d) Resimli Kart (Face Card) Çekme Olasılığı:**
 - İstediğin sonuçlar: Resimli kartlar Vale (Jack), Kız (Queen) ve Papaz'dır (King). Her birinden 4'er tane olduğu için toplam 12 resimli kart vardır.
 - Hesaplama: $\frac{12}{52} = \frac{3}{13} \approx 0.231$
+
+---
+### Probability: Definition and Properties
+
+We previously defined probability informally. Now, let's take a look at a formal definition using the axioms of probability:
+
+Probability is defined as a set function $P$ that assigns to each event $A$ in the sample space $S$ a non-negative value called the probability of the event $A$, such that the following hold:
+
+- The probability of any event $A$ is non-negative: $P(A) \ge 0$.
+- The probability of the sample space is 1: $P(S) = 1$.
+- Given mutually exclusive events $A_1, A_2, ...$, the probability of the union of these events equals the sum of their individual probabilities: $P(A_1 \cup A_2 \cup ...) = P(A_1) + P(A_2) + ...$.
+
+---
+
+### Theorem 1
+
+The probability of an event $A$ occurring is equal to one minus the probability of its complement:
+$P(A) = 1 - P(A')$
+<img width="727" height="380" alt="image" src="https://github.com/user-attachments/assets/d5dc168d-5821-41de-8d50-2bccd454ced9" />
+
+
+**Example:**
+Consider a standard deck of 52 cards. Let event $A$ be drawing a Heart from the deck. There are 13 Hearts in the deck, so:
+$P(A) = \frac{13}{52} = \frac{1}{4}$
+The complement of A, denoted as $A'$, is drawing any card that is not a Heart. There are 39 non-Heart cards, so:
+$P(A') = \frac{39}{52} = \frac{3}{4} = 1 - P(A)$
+
+---
+
+### Theorem 2
+
+The probability of the empty set is zero:
+$P(\emptyset) = 0$
+
+**Example:**
+Consider rolling a standard 6-sided die. Let event $A$ be rolling a number greater than 6. Since the die only has numbers from 1 to 6, there are no outcomes where the result is greater than 6. This means: $A = \emptyset$. Therefore, the probability of this event is:
+$P(A) = 0$
+
+---
+
+### Theorem 3
+
+If event $A$ is a subset of event $B$, then the probability of $A$ is less than or equal to the probability of $B$:
+If $A \subseteq B$ then $P(A) \le P(B)$.
+
+<img width="723" height="386" alt="image" src="https://github.com/user-attachments/assets/ad56126b-d5d9-4c2d-bb57-1f0f2b70f620" />
+
+
+**Example:**
+Consider drawing a card from a standard deck of 52 cards.
+Let event $B$ be drawing a red card. There are 26 red cards (Hearts and Diamonds), so: $P(B) = \frac{26}{52} = \frac{1}{2}$
+Let event $A$ be drawing a red Queen. There are only 2 red Queens (Queen of Hearts and Queen of Diamonds), so: $P(A) = \frac{2}{52}$
+Drawing a red Queen is a more specific outcome that is fully contained within the event of drawing any red card ($A \subseteq B$), so: $P(A) \le P(B)$
+
+---
+
+### Theorem 4
+
+The probability of any event $A$ is always less than or equal to 1:
+$P(A) \le 1$
+
+**Example:**
+Consider rolling a standard 6-sided die.
+Let event $A$ be rolling a number less than 7. Since all possible outcomes ({1, 2, 3, 4, 5, 6}) satisfy this condition, the probability is: $P(A) = \frac{6}{6} = 1$
+Let event $B$ be rolling an even number. The even outcomes are {2, 4, 6}, so: $P(B) = \frac{3}{6} = \frac{1}{2}$
+In both cases, the probability of each event is less than or equal to 1: $P(A) = 1$ and $P(B) = 0.5 \le 1$
+
+---
+
+### Theorem 5
+
+The probability of the union of two events $A$ and $B$ is equal to the sum of their individual probabilities minus the probability of their intersection:
+$P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+
+<img width="533" height="226" alt="image" src="https://github.com/user-attachments/assets/6d3b81a3-de76-4936-adc0-1cab499563ff" />
+
+
+**Example:**
+Consider a classroom of 30 students.
+Let event $A$ be a student playing a musical instrument. Suppose 18 students play a musical instrument: $P(A) = \frac{18}{30} = \frac{3}{5}$
+Let event $B$ be
+
+
+---
+
+### Olasılık: Tanım ve Özellikler
+
+Daha önce olasılığı gayriresmi olarak tanımlamıştık. Şimdi olasılığın aksiyomlarını kullanarak resmi bir tanıma göz atalım:
+
+Olasılık, örneklem uzayı S'deki her A olayı için P(A) adı verilen negatif olmayan bir değer atayan bir küme fonksiyonu olarak tanımlanır, öyle ki aşağıdaki koşullar geçerlidir:
+
+- Herhangi bir A olayının olasılığı negatif değildir: $P(A) \ge 0$.
+- Örneklem uzayının olasılığı 1'dir: $P(S) = 1$.
+- Karşılıklı dışlayıcı (mutually exclusive) olaylar $A_1, A_2, ...$ verildiğinde, bu olayların birleşiminin olasılığı, bireysel olasılıklarının toplamına eşittir: $P(A_1 \cup A_2 \cup ...) = P(A_1) + P(A_2) + ...$.
+
+---
+
+### Teorem 1
+
+Bir A olayının gerçekleşme olasılığı, onun tümleyeninin olasılığının birden çıkarılmasına eşittir:
+$P(A) = 1 - P(A')$
+
+**Örnek:**
+Standart 52 kartlık bir desteyi düşünün. A olayı, desteden bir Sinek (Heart) çekmek olsun. Destede 13 adet Sinek vardır, bu yüzden:
+$P(A) = \frac{13}{52} = \frac{1}{4}$
+A'nın tümleyeni, $A'$ olarak gösterilir, Sinek olmayan herhangi bir kartı çekmektir. Destede 39 adet Sinek olmayan kart vardır, bu yüzden:
+$P(A') = \frac{39}{52} = \frac{3}{4} = 1 - P(A)$
+
+---
+
+### Teorem 2
+
+Boş kümenin olasılığı sıfırdır:
+$P(\emptyset) = 0$
+
+**Örnek:**
+Standart 6 yüzlü bir zar atmayı düşünün. A olayı, 6'dan büyük bir sayı atmak olsun. Zarın sadece 1'den 6'ya kadar sayıları olduğundan, sonuç 6'dan büyük olan hiçbir sonuç yoktur. Bu, $A = \emptyset$ anlamına gelir. Bu nedenle, bu olayın olasılığı şudur:
+$P(A) = 0$
+
+---
+
+### Teorem 3
+
+Eğer A olayı B olayının bir alt kümesi ise, A'nın olasılığı B'nin olasılığından küçük veya eşittir:
+Eğer $A \subseteq B$ ise $P(A) \le P(B)$.
+
+**Örnek:**
+Standart 52 kartlık bir desteden kart çekmeyi düşünün.
+B olayı, kırmızı bir kart çekmek olsun. Destede 26 kırmızı kart (Sinek ve Karo) vardır, bu yüzden: $P(B) = \frac{26}{52} = \frac{1}{2}$
+A olayı, kırmızı bir Kız (Queen) çekmek olsun. Sadece 2 kırmızı Kız (Sinek Kız ve Karo Kız) vardır, bu yüzden: $P(A) = \frac{2}{52}$
+Kırmızı Kız çekmek, kırmızı kart çekme olayının daha spesifik bir sonucudur ve bu olayın tamamen içinde yer alır ($A \subseteq B$), bu yüzden: $P(A) \le P(B)$
+
+---
+
+### Teorem 4
+
+Herhangi bir A olayının olasılığı daima 1'den küçük veya eşittir:
+$P(A) \le 1$
+
+**Örnek:**
+Standart 6 yüzlü bir zar atmayı düşünün.
+A olayı, 7'den küçük bir sayı atmak olsun. Tüm olası sonuçlar ({1, 2, 3, 4, 5, 6}) bu koşulu sağladığı için, olasılık şudur: $P(A) = \frac{6}{6} = 1$
+B olayı, çift sayı atmak olsun. Çift sayılar {2, 4, 6}'dır, bu yüzden: $P(B) = \frac{3}{6} = \frac{1}{2}$
+Her iki durumda da, her bir olayın olasılığı 1'den küçük veya eşittir: $P(A) = 1$ ve $P(B) = 0.5 \le 1$
+
+---
+
+### Teorem 5
+
+İki olay A ve B'nin birleşiminin olasılığı, bireysel olasılıklarının toplamından kesişimlerinin olasılığının çıkarılmasına eşittir:
+$P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+
+**Örnek:**
+30 öğrencili bir sınıfı düşünün.
+A olayı, bir öğrencinin müzik aleti çalması olsun. 18 öğrencinin müzik aleti çaldığını varsayalım: $P(A) = \frac{18}{30} = \frac{3}{5}$
+B olayı, bir öğrencinin ikinci bir dil konuşması olsun. 15 öğrencinin ikinci bir dil konuştuğunu varsayalım: $P(B) = \frac{15}{30} = \frac{1}{2}$
+10 öğrencinin hem müzik aleti çaldığını hem de ikinci bir dil konuştuğunu varsayalım. Bu, A ve B'nin kesişimidir: $P(A \cap B) = \frac{10}{30} = \frac{1}{3}$
+İki olayın birleşimi formülünü kullanarak: $P(A \cup B) = P(A) + P(B) - P(A \cap B) = \frac{3}{5} + \frac{1}{2} - \frac{1}{3} = \frac{23}{30}$
+Dolayısıyla, rastgele seçilen bir öğrencinin ya müzik aleti çalması ya da ikinci bir dil konuşması olasılığı 23/30'dur.
+
+### Olasılığın Beş Temel Teoremi
+
+Olasılık teorisinin bu beş temel teoremi, olaylar arasındaki ilişkileri ve olasılıkların nasıl hesaplandığını anlamak için kritik öneme sahiptir. Aşağıda, her bir teorem karşılaştırmalı olarak ve örneklerle açıklanmıştır.
+
+---
+
+#### Teorem 1 ve 2: Tümleme ve Boş Küme
+
+Bu iki teorem, bir olayın gerçekleşme ve gerçekleşmeme durumları arasındaki ilişkiyi kurar.
+
+| Teorem | Formül | Açıklama | Örnek |
+| :--- | :--- | :--- | :--- |
+| **Teorem 1**<br>(Tümleme Kuralı) | $P(A) = 1 - P(A')$ | Bir olayın olma olasılığı, olmama olasılığının ($A'$), 1'den çıkarılmasına eşittir. Bu, tüm olasılıkların toplamının 1 olduğu gerçeğine dayanır. | Bir desteden kupa çekme olasılığı $13/52$ ise, kupa çekmeme olasılığı $1 - 13/52 = 39/52$'dir. |
+| **Teorem 2**<br>(Boş Küme) | $P(\emptyset) = 0$ | Gerçekleşmesi imkansız bir olayın olasılığı sıfırdır. Boş küme ($∅$), sonuçlar kümesinde hiçbir elemanı olmayan bir olayı temsil eder. | Altı yüzlü bir zar attığınızda, 7 gelme olasılığı 0'dır, çünkü bu imkansız bir sonuçtur. |
+
+### Teorem 3 ve 4: Alt Küme ve Maksimum Olasılık
+
+Bu teoremler, olasılıkların büyüklükleri ve birbiriyle ilişkileri hakkında temel kısıtlamalar getirir.
+
+| Teorem | Formül | Açıklama | Örnek |
+| :--- | :--- | :--- | :--- |
+| **Teorem 3**<br>(Alt Küme Kuralı) | Eğer $A \subseteq B$ ise $P(A) \le P(B)$ | Eğer bir olay ($A$) başka bir olayın ($B$) alt kümesi ise, $A$'nın olma olasılığı $B$'nin olma olasılığından daha küçük veya eşittir. | Bir desteden kırmızı kız (red queen) çekme olasılığı ($A$), kırmızı kart çekme olasılığından ($B$) daha düşüktür, çünkü tüm kırmızı kızlar kırmızı karttır. |
+| **Teorem 4**<br>(Maksimum Olasılık) | $P(A) \le 1$ | Herhangi bir olayın olasılığı asla 1'den büyük olamaz. Olasılıklar, en fazla tüm olası sonuçları kapsayan kesin olay kadar olabilir. | Bir zar attığınızda, 7'den küçük bir sayı gelme olasılığı 1'dir. Başka bir sonuç olamayacağı için olasılık 1'i geçemez. |
+
+### Teorem 5: Birleşim Kuralı
+
+Bu teorem, iki olayın birleşiminin olasılığını hesaplamak için kullanılır ve en karmaşık olanıdır.
+
+| Teorem | Formül | Açıklama | Örnek |
+| :--- | :--- | :--- | :--- |
+| **Teorem 5**<br>(Birleşim Kuralı) | $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ | İki olayın birleşim olasılığı, bireysel olasılıklarının toplamından, her ikisinin de aynı anda gerçekleşme olasılığının ($A \cap B$) çıkarılmasına eşittir. Bu çıkarma işlemi, ortak durumların iki kez sayılmasını önler. | 30 kişilik bir sınıfta, 18 kişinin enstrüman çaldığını ($A$) ve 15 kişinin Almanca konuştuğunu ($B$) düşünün. 10 kişi her ikisini de yapıyorsa, ya enstrüman çalan ya da Almanca konuşan birini seçme olasılığı $P(A) + P(B) - P(A \cap B) = 18/30 + 15/30 - 10/30 = 23/30$ olur. |
