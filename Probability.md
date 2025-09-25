@@ -156,7 +156,32 @@ We could set a practical upper limit, but some people might own hundreds or even
 | **Empty Set** | $\emptyset$ or {} | A set that contains **no elements**. | The intersection of two disjoint sets (with no common elements) is the empty set. |
 
 ---
+### Olaylar (Events)
 
+Bir olay, örneklem uzayının (tüm olası sonuçların kümesinin) bir alt kümesidir. Yani, bir deneyin olası sonuçlarından belirli bir kısmını ifade eder.
+
+### Günlük Hayattan Örnekler:
+
+**Örnek: Bir Alışveriş Merkezi Ziyaretçisi**
+- **Rastgele Deney:** Rastgele bir alışveriş merkezi ziyaretçisi seçmek ve ona kaç tane mağaza gezdiğini sormak.
+- **Örneklem Uzayı (S):** $\{0, 1, 2, 3, 4, ...\}$ (Sonsuz bir küme)
+- **Olay A:** Ziyaretçinin en az 5 mağaza gezmesi.
+- Bu olayın elemanları: $A = \{5, 6, 7, 8, ...\}$
+- **Olay B:** Ziyaretçinin çift sayıda mağaza gezmesi.
+- Bu olayın elemanları: $B = \{0, 2, 4, 6, 8, ...\}$
+
+**Örnek: Hava Durumu Tahmini**
+- **Rastgele Deney:** Yarınki hava durumunun ne olacağını tahmin etmek.
+- **Örneklem Uzayı (S):** $\{Güneşli, Bulutlu, Yağmurlu, Karlı, Rüzgarlı\}$
+- **Olay C:** Yarınki havanın "yağışlı" olması.
+- Bu olayın elemanları: $C = \{Yağmurlu, Karlı\}$
+
+**Örnek: Öğrenci Sınavı**
+- **Rastgele Deney:** Bir öğrencinin sınavdan alacağı notu (100 üzerinden) tahmin etmek.
+- **Örneklem Uzayı (S):** $\{0, 1, 2, ..., 100\}$
+- **Olay D:** Öğrencinin geçme notu alması. (Geçme notu 60 ise)
+- Bu olayın elemanları: $D = \{60, 61, 62, ..., 100\}$
+  
 ### Temel Küme İşlemleri
 
 | İşlem | Sembol | Açıklama | Örnek |
