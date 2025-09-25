@@ -277,4 +277,64 @@ Using the **classical approach**, the probability of rolling an even number is:
 
 $P(A) = \frac{N(A)}{N(S)} = \frac{3}{6} = 0.5$
 
-  
+---
+
+### Olayların Olasılığı
+
+Olasılığı anlamak, bir örnekleme dayanarak daha geniş bir popülasyon hakkında sonuç çıkarmayı içeren soruları yanıtlamak için çok önemlidir. "Ne kadar olası?" veya "Olasılığı nedir?" gibi sorular, araştırma ve veri analizinin merkezinde yer alır.
+
+Gayriresmi Olarak Olasılığı Şu Şekilde Tanımlayabiliriz:
+
+- Olasılık, 0 ile 1 arasında bir sayıdır.
+- 0'a yakın bir sayı, olayın pek olası olmadığını gösterir.
+- 1'e yakın bir sayı, olayın oldukça olası olduğunu gösterir.
+- Bir olayın olasılığı tam olarak 0 ise, o olay gerçekleşemez.
+- Bir olayın olasılığı tam olarak 1 ise, o olay kesinlikle gerçekleşir.
+
+#### Günlük Hayattan Örnekler:
+
+- **Gerçekleşemeyen Olay (Olasılık = 0):** Hava durumu bugün güneşli iken aynı anda yağmur yağması. Bu iki olayın aynı anda gerçekleşme olasılığı sıfırdır.
+- **Kesinlikle Gerçekleşen Olay (Olasılık = 1):** Bir futbol maçının sonunda ya bir takımın kazanması ya da maçın berabere bitmesi. Başka bir sonuç olamayacağı için bu olay kesinlikle gerçekleşir.
+
+---
+
+### Göreceli Frekans Yaklaşımı
+
+Olasılık hesaplamanın çok yaygın ve pratik bir yolu, göreceli frekans yaklaşımıdır. Bir olayın birçok tekrarlanan deneme boyunca ne sıklıkta meydana geldiğini gözlemleyerek, olasılığını varsayımlar yerine gerçek verilere dayanarak tahmin edebiliriz.
+
+Bu yaklaşım aşağıdaki adımlarda yapılır:
+
+1.  Bir deneyi çok sayıda ($n$) kez gerçekleştirin.
+2.  A olayının meydana geldiği sayı olan $N(A)$'yı sayın.
+3.  Ardından, A olayının olasılığı: $P(A) = \frac{N(A)}{n}$ olur.
+
+#### Günlük Hayattan Örnek:
+
+Bir kahve makinesinin siparişleri ne sıklıkta yanlış hazırladığını tahmin etmek istediğinizi varsayalım.
+
+- **Deneyi gerçekleştirin:** Makinenin son 100 siparişini inceleyin.
+- **Meydana gelme sayısını sayın:** Makinenin 100 siparişten 5'ini yanlış hazırladığını buldunuz.
+- **Olasılığı hesaplayın:** Formülü kullanarak, makinenin yanlış hazırlama olasılığı $P(\text{Yanlış Hazırlama}) = \frac{5}{100} = 0.05$ veya %5'tir.
+
+---
+
+### Klasik Yaklaşım
+
+Örneklem uzayındaki sonuçların eşit derecede olası olduğu durumlarda, A olayının olasılığı:
+
+$P(A) = \frac{N(A)}{N(S)}$
+
+Burada:
+
+- $N(A)$, A olayındaki eleman sayısıdır.
+- $N(S)$, S örneklem uzayındaki eleman sayısıdır.
+
+#### Günlük Hayattan Örnek:
+
+Arkadaşlarınızla bir kart oyunu oynadığınızı varsayalım.
+
+- **Deney:** Bir desteden rastgele bir kart çekmek.
+- **Örneklem Uzayı (S):** Destedeki tüm kartlar, yani 52 kart. Bu nedenle $N(S)=52$'dir.
+- **Olay A:** As (Ace) kartı çekmek.
+- A olayını sağlayan sonuçlar: Destede 4 tane as kartı vardır. Bu nedenle $N(A)=4$'tür.
+- **Olasılığı hesaplayın:** Klasik yaklaşımı kullanarak as çekme olasılığı: $P(A)=\frac{4}{52}\approx0.077$ veya yaklaşık %7.7'dir.
