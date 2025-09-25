@@ -192,3 +192,37 @@ Bir olay, örneklem uzayının (tüm olası sonuçların kümesinin) bir alt kü
 | **Fark** | $A - B$ | **A kümesinde olan**, ancak B kümesinde **olmayan** elemanların kümesi. | Eğer $A = \{1, 2, 3\}$ ve $B = \{3, 4, 5\}$ ise, $A - B = \{1, 2\}$ olur. |
 | **Boş Küme** | $\emptyset$ veya {} | Hiçbir eleman içermeyen bir küme. | Kesişimi olmayan (ortak elemanları olmayan) iki kümenin kesişimi boş kümedir. |
 
+---
+
+# Probabilities of the events
+
+Understanding probability is essential for answering questions that involve making conclusions about a larger population based on a sample. Questions like "How likely is it...?" or "What is the probability...?" are at the core of research and data analysis. To answer them accurately, we need a solid grasp of probability concepts, rules, and models.
+
+Informally we can define a probability as following:
+
+### Probability
+- a number between 0 and 1
+- a number closer to 0 means **not likely**
+- a number closer to 1 means **quite likely**
+- if probability of an event is exactly 0, then the event **can't occur**
+- if the probability of an event is exactly 1, then the event will **definitely occur**
+
+  ### An Event That Cannot Occur
+
+This is an event with a probability of exactly 0. It is also known as an **impossible event**.
+
+**Example:**
+- **Experiment:** Rolling a standard six-sided die.
+- **Impossible Event:** Rolling a 7. Since a standard die only has the numbers 1 through 6, it is impossible to roll a 7. The probability of this event is $0/6 = 0$.
+
+---
+
+### An Event That Will Definitely Occur
+
+This is an event with a probability of exactly 1. It is also known as a **certain event**.
+
+**Example:**
+- **Experiment:** Rolling a standard six-sided die.
+- **Certain Event:** Rolling a number less than 7. Since all possible outcomes (1, 2, 3, 4, 5, 6) are less than 7, this event will always happen. The probability of this event is $6/6 = 1$.
+
+  
