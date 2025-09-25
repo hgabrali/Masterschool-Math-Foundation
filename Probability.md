@@ -84,3 +84,39 @@ Olasılık, bir olayın meydana gelme ihtimalini hesaplayan bir matematik dalıd
 | **Sample Space** | **Örneklem Uzayı** | Tüm olası sonuçların listesi: Kekin mükemmel bir şekilde kabarması, ortasının çökmesi veya tadının çok şekerli olması. |
 | **Event** | **Olay** | Mükemmel bir kek yapma gibi, belirli ve arzu edilen bir sonuç. Bu, tüm olası sonuçlardan sadece bir tanesidir. |
 | **Outcome** | **Sonuç** | Fırından çıkan tek, nihai sonuç. Örneğin, 'ortası çökmüş kek'. Bu, örneklem uzayındaki tek bir noktadır. |
+
+### Events
+
+For a given random experiment, the outcome space (or sample space) **S** is the collection of all possible outcomes of the random experiment.
+
+**Example:**
+Suppose we randomly select a person and ask them, "How many books do you own?" In this case, our sample space is:
+
+$S = \{0, 1, 2, 3, 4, 5, ...\}$
+
+We could set a practical upper limit, but some people might own hundreds or even thousands of books. So, we'll leave the sample space open to be as accurate as possible. Now, let's define some events:
+
+- Let A be the event that a randomly selected person owns no books:
+  $A = \{0\}$
+
+- Let B be the event that a person owns at least one book:
+  $B = \{1, 2, 3, 4, ...\}$
+
+- Let C be the event that a person owns no more than 10 books:
+  $C = \{0, 1, 2, 3, ..., 10\}$
+
+- Let D be the event that a person owns an even number of books:
+  $D = \{0, 2, 4, 6, ...\}$
+
+  ### Basic Set Operations
+
+1.  ∅ is the **null set** or **empty set**. This set does not contain any elements.
+
+2.  $A \cup B$ = **union**. The union contains all of the elements of set A and all elements of set B.
+
+3.  $A \cap B$ = **intersection**. The intersection contains all elements that are present in **both** A and B.
+
+   <img width="359" height="257" alt="image" src="https://github.com/user-attachments/assets/c2ef307a-0a20-4fa7-9a20-0f6b0fa98f73" />
+
+
+5.  If $A \cap B = ∅$, then A and B are called **mutually exclusive events**.
