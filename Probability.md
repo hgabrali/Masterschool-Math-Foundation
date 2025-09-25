@@ -145,3 +145,25 @@ We could set a practical upper limit, but some people might own hundreds or even
   $E_0 = \{0\}, E_1 = \{1\}, E_2 = \{2\}, ...$
   then the events $E_0, E_1, E_2, ...$ are **exhaustive events**, meaning they cover all possible outcomes in the sample space.
 
+  ### Basic Set Operations
+
+| Operation | Symbol | Description | Example |
+| :--- | :--- | :--- | :--- |
+| **Union** | $A \cup B$ | The set of all elements that are in **set A**, in **set B**, or in **both**. | If $A = \{1, 2, 3\}$ and $B = \{3, 4, 5\}$, then $A \cup B = \{1, 2, 3, 4, 5\}$. |
+| **Intersection** | $A \cap B$ | The set of elements that are **common to both** set A and set B. | If $A = \{1, 2, 3\}$ and $B = \{3, 4, 5\}$, then $A \cap B = \{3\}$. |
+| **Complement** | $A'$ or $A^c$ | The set of all elements in the **universal set** that are **not** in set A. | If the universal set $U = \{1, 2, 3, 4, 5\}$ and $A = \{1, 2\}$, then $A^c = \{3, 4, 5\}$. |
+| **Difference** | $A - B$ | The set of elements that are in **set A** but **not** in set B. | If $A = \{1, 2, 3\}$ and $B = \{3, 4, 5\}$, then $A - B = \{1, 2\}$. |
+| **Empty Set** | $\emptyset$ or {} | A set that contains **no elements**. | The intersection of two disjoint sets (with no common elements) is the empty set. |
+
+---
+
+### Temel Küme İşlemleri
+
+| İşlem | Sembol | Açıklama | Örnek |
+| :--- | :--- | :--- | :--- |
+| **Birleşim** | $A \cup B$ | **A kümesinde**, **B kümesinde** veya **her ikisinde** de bulunan tüm elemanların kümesi. | Eğer $A = \{1, 2, 3\}$ ve $B = \{3, 4, 5\}$ ise, $A \cup B = \{1, 2, 3, 4, 5\}$ olur. |
+| **Kesişim** | $A \cap B$ | Hem A kümesinde hem de B kümesinde **ortak olarak** bulunan elemanların kümesi. | Eğer $A = \{1, 2, 3\}$ ve $B = \{3, 4, 5\}$ ise, $A \cap B = \{3\}$ olur. |
+| **Tümleme** | $A'$ veya $A^c$ | Evrensel kümedeki (uzaydaki) ancak A kümesinde **bulunmayan** tüm elemanların kümesi. | Eğer evrensel küme $U = \{1, 2, 3, 4, 5\}$ ve $A = \{1, 2\}$ ise, $A^c = \{3, 4, 5\}$ olur. |
+| **Fark** | $A - B$ | **A kümesinde olan**, ancak B kümesinde **olmayan** elemanların kümesi. | Eğer $A = \{1, 2, 3\}$ ve $B = \{3, 4, 5\}$ ise, $A - B = \{1, 2\}$ olur. |
+| **Boş Küme** | $\emptyset$ veya {} | Hiçbir eleman içermeyen bir küme. | Kesişimi olmayan (ortak elemanları olmayan) iki kümenin kesişimi boş kümedir. |
+
