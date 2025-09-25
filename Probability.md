@@ -225,4 +225,56 @@ This is an event with a probability of exactly 1. It is also known as a **certai
 - **Experiment:** Rolling a standard six-sided die.
 - **Certain Event:** Rolling a number less than 7. Since all possible outcomes (1, 2, 3, 4, 5, 6) are less than 7, this event will always happen. The probability of this event is $6/6 = 1$.
 
+  ### The relative frequency approach
+
+A very common and practical approach to calculating probabilities is the **relative frequency approach**. By observing how often an event occurs over many repeated trials, we can estimate its probability based on actual data rather than assumptions. This approach is done in a following steps:
+
+1.  **Perform an experiment** a large number of times $n$.
+2.  **Count the number of times event A occurs** - $N(A)$.
+3.  Then, the probability of event A equals:
+
+    $P(A) = \frac{N(A)}{n}$
+
+---
+
+### Example
+
+Suppose you want to estimate the probability that it will rain on any given day in your city. Using the **relative frequency approach**, you decide to look at historical weather data.
+
+1.  **Perform the experiment:** You review the weather records for the past 365 days.
+2.  **Count the occurrences:** You find that it rained on 90 of those days.
+3.  **Calculate the probability:** Using the relative frequency formula:
+
+    $P(Rain) = \frac{N(Rainy Days)}{N(Total Days)} = \frac{90}{365} \approx 0.247$
+
+So, based on past data, the probability that it will rain on any given day is approximately **24.7%**.
+
+### Classical approach
+
+As long as the outcomes in the sample space are **equally likely**, the probability of event $A$ is:
+
+$P(A) = \frac{N(A)}{N(S)}$
+
+where:
+* $N(A)$ is the number of elements in the event $A$.
+* $N(S)$ is the number of elements in the sample space $S$.
+
+---
+
+### Example
+
+Suppose you roll a fair six-sided die. The sample space for this experiment is:
+
+$S = \{1, 2, 3, 4, 5, 6\}$
+
+Since the die is fair, each outcome is equally likely.
+
+Let event $A$ be rolling an even number. The outcomes that satisfy this event are:
+
+$A = \{2, 4, 6\}$
+
+Using the **classical approach**, the probability of rolling an even number is:
+
+$P(A) = \frac{N(A)}{N(S)} = \frac{3}{6} = 0.5$
+
   
