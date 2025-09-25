@@ -125,12 +125,23 @@ We could set a practical upper limit, but some people might own hundreds or even
 
    1.  $A' = A^C$ = **complement**. When we consider all of the possible elements, the complement to the set A is all elements that do not belong to A.
       
-      <img width="392" height="252" alt="image" src="https://github.com/user-attachments/assets/3317a0df-e4ba-4822-b2d3-d4c38d08b574" />
+<img width="473" height="243" alt="image" src="https://github.com/user-attachments/assets/ec6eff4f-055b-41f6-9350-0bb6c6eb329a" />
 
+      
 
 2.  If $E \cup F \cup G ... = Ω$, then E, F, G, and so on are called **exhaustive events**. So when the union of the sets makes the complete set of all the possible elements, they are called exhaustive events.
 
 3.  The union of events C and D is the event that a randomly selected person either owns **no more than 10 books** or owns an **even number of books**. That is:
 
     $C \cup D = \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, ...\}$
+
+    - The **intersection** of events $A$ and $B$ is the event that a person owns **both no books and at least one book** at the same time. This is impossible, so:
+  $A \cap B = \emptyset$
+
+- The **complement** of event $D$ is the event that a person owns an **odd number of books**. That is:
+  $D^c = \{1, 3, 5, 7, ...\}$
+
+- If we define events $E_0, E_1, E_2,...$ such that
+  $E_0 = \{0\}, E_1 = \{1\}, E_2 = \{2\}, ...$
+  then the events $E_0, E_1, E_2, ...$ are **exhaustive events**, meaning they cover all possible outcomes in the sample space.
 
