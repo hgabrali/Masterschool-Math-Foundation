@@ -119,4 +119,18 @@ We could set a practical upper limit, but some people might own hundreds or even
    <img width="359" height="257" alt="image" src="https://github.com/user-attachments/assets/c2ef307a-0a20-4fa7-9a20-0f6b0fa98f73" />
 
 
-5.  If $A \cap B = ∅$, then A and B are called **mutually exclusive events**.
+4.  If $A \cap B = ∅$, then A and B are called **mutually exclusive events**.
+
+   <img width="435" height="262" alt="image" src="https://github.com/user-attachments/assets/6dac48b5-6bbd-4d22-8cbb-627d19aad1e6" />
+
+   1.  $A' = A^C$ = **complement**. When we consider all of the possible elements, the complement to the set A is all elements that do not belong to A.
+      
+      <img width="392" height="252" alt="image" src="https://github.com/user-attachments/assets/3317a0df-e4ba-4822-b2d3-d4c38d08b574" />
+
+
+2.  If $E \cup F \cup G ... = Ω$, then E, F, G, and so on are called **exhaustive events**. So when the union of the sets makes the complete set of all the possible elements, they are called exhaustive events.
+
+3.  The union of events C and D is the event that a randomly selected person either owns **no more than 10 books** or owns an **even number of books**. That is:
+
+    $C \cup D = \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, ...\}$
+
