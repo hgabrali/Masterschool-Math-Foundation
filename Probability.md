@@ -573,3 +573,41 @@ Bu teorem, iki olayın birleşiminin olasılığını hesaplamak için kullanıl
 | Teorem | Formül | Açıklama | Örnek |
 | :--- | :--- | :--- | :--- |
 | **Teorem 5**<br>(Birleşim Kuralı) | $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ | İki olayın birleşim olasılığı, bireysel olasılıklarının toplamından, her ikisinin de aynı anda gerçekleşme olasılığının ($A \cap B$) çıkarılmasına eşittir. Bu çıkarma işlemi, ortak durumların iki kez sayılmasını önler. | 30 kişilik bir sınıfta, 18 kişinin enstrüman çaldığını ($A$) ve 15 kişinin Almanca konuştuğunu ($B$) düşünün. 10 kişi her ikisini de yapıyorsa, ya enstrüman çalan ya da Almanca konuşan birini seçme olasılığı $P(A) + P(B) - P(A \cap B) = 18/30 + 15/30 - 10/30 = 23/30$ olur. |
+
+### Additive and Multiplication Principles
+
+The **Additive Principle** is used when selecting between two distinct options that cannot occur at the same time. It states: If object A can be chosen in *n* ways, and object B can be chosen in *m* ways, then choosing either A or B can be done in *n + m* ways.
+
+For example, when selecting a snack, if you can choose from 3 types of fruit (apple, banana, orange) and 2 types of granola bars, the total number of choices is $3 + 2 = 5$.
+
+The **Multiplication Principle** applies when making sequential or independent choices. It states: If object A can be chosen in *n* ways, and object B can be chosen in *m* ways, then choosing both A and B can be done in *n x m* ways.
+
+For example, when selecting an outfit, if you have 4 shirts and 3 pairs of pants, the total number of combinations to choose one shirt and one pair of pants is $4 \times 3 = 12$.
+
+In a more complex scenario, such as choosing a meal, both principles can be combined. If a cafeteria offers a sandwich (5 options) or a salad (3 options), and you also want to choose a drink (4 types), the total number of combinations is calculated in two steps:
+- Choosing either a sandwich or a salad: $5 + 3 = 8$
+- Choosing a meal and a drink: $8 \times 4 = 32$
+
+### Exercise
+
+Imagine a school event where students can choose between participating in a science fair or a sports competition. There are 5 science fair categories and 4 sports activities. Additionally, each participant must choose one of 3 available T-shirt colors for the event.
+
+How many combinations are there for choosing an activity and a T-shirt?
+
+### Çözüm
+
+Bu soru, kombinasyon sayısını bulmak için hem **Toplama Prensibi**'ni hem de **Çarpma Prensibi**'ni bir arada kullanmayı gerektirir.
+
+#### Çözüm Adımları
+
+1.  **Aktivite Seçimi:** Öğrencinin seçebileceği toplam aktivite sayısını bulmak için **Toplama Prensibi**'ni kullanırız. Çünkü öğrenci, ya bir bilim fuarı etkinliğine ya da bir spor etkinliğine katılabilir, ikisine birden katılamaz.
+    - Bilim fuarı kategorileri: 5
+    - Spor aktiviteleri: 4
+    - Toplam Aktivite: $5 + 4 = 9$ farklı aktivite seçeneği vardır.
+
+2.  **Kıyafet Seçimi:** Öğrenci, bir aktivite seçtikten sonra, bu aktivite seçimiyle bağımsız olarak bir tişört rengi de seçmelidir. Bu yüzden **Çarpma Prensibi**'ni kullanırız.
+    - Toplam aktivite seçeneği: 9
+    - Tişört rengi seçeneği: 3
+    - Toplam Kombinasyon: $9 \times 3 = 27$
+
+Yani, bir aktivite ve bir tişört rengi seçmek için toplamda **27 farklı kombinasyon** vardır.
