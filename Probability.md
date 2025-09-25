@@ -349,3 +349,36 @@ Arkadaşlarınızla bir kart oyunu oynadığınızı varsayalım.
 | **Avantajı** | Gerçek dünya verilerine dayanarak olasılık tahmini yapmamızı sağlar ve teorik varsayımlar gerektirmez. | Hesaplaması daha basittir ve deney yapılmadan olasılık değeri bulunabilir. |
 | **Dezavantajı** | Doğru bir tahmin için çok sayıda deneme gerektirir. Küçük bir örneklemle yapılan hesaplamalar yanıltıcı olabilir. | Yalnızca tüm sonuçların eşit olasılıklı olduğu deneyler için geçerlidir. Gerçek hayattaki birçok durum için uygun değildir. |
 | **Günlük Hayattan Örnek** | Bir basketbolcunun serbest atış isabet olasılığını hesaplamak. Basketbolcu geçmişte 1000 serbest atıştan 750'sini başarılı attıysa, olasılığı $750/1000 = 0.75$ (%75) olarak tahmin edilir. | Bir parayı havaya attığımızda tura gelme olasılığı. Tüm sonuçlar (yazı, tura) eşit olasılıklı olduğundan, olasılık $1/2 = 0.5$ (%50) olarak hesaplanır. |
+
+### Çikolata Kutusu Metaforu
+
+Bir kutu dolusu farklı çikolatan olduğunu düşün. Bu kutuda toplam **52** tane çikolata var ve her birinin içindeki dolgu eşit olasılığa sahip (çilekli, karamelli, fındıklı vb.).
+
+- **Toplam Olası Sonuçlar:** Elindeki bütün çikolataların sayısı. Yani, **52** çikolata. Bu, olasılık formülündeki paydadır.
+- **İstediğin Sonuçlar:** Kutudan çekmek istediğin çikolata türlerinin sayısı. Örneğin, fındıklı çikolataların tamamı. Bu, olasılık formülündeki paydır.
+
+**Klasik Yaklaşımın Kuralı:** Olasılığı hesaplamak için istediğin sonuçların sayısını, tüm olası sonuçların sayısına bölersin.
+
+$P(\text{İstenen Sonuç}) = \frac{\text{İstediğin Çikolata Sayısı}}{\text{Tüm Çikolataların Sayısı}}$
+
+---
+
+Şimdi bu mantıkla kart destesi sorusunu çözelim:
+
+Bir iskambil destesindeki tüm kartlar (52 kart) eşit olasılığa sahiptir. Yani, tüm hesaplamalarda paydamız 52 olacak.
+
+**a) Sinek (Heart) Çekme Olasılığı:**
+- İstediğin sonuçlar: Destede 13 tane sinek kartı var.
+- Hesaplama: $\frac{13}{52} = \frac{1}{4} = 0.25$
+
+**b) Papaz (King) Çekme Olasılığı:**
+- İstediğin sonuçlar: Destede 4 tane papaz var (sinek, maça, karo, kupa).
+- Hesaplama: $\frac{4}{52} = \frac{1}{13} \approx 0.077$
+
+**c) Kırmızı Kart Çekme Olasılığı:**
+- İstediğin sonuçlar: Kırmızı kartlar sinek (hearts) ve karo (diamonds) türüdür. Her birinden 13 tane olduğu için toplamda 26 kırmızı kart vardır.
+- Hesaplama: $\frac{26}{52} = \frac{1}{2} = 0.5$
+
+**d) Resimli Kart (Face Card) Çekme Olasılığı:**
+- İstediğin sonuçlar: Resimli kartlar Vale (Jack), Kız (Queen) ve Papaz'dır (King). Her birinden 4'er tane olduğu için toplam 12 resimli kart vardır.
+- Hesaplama: $\frac{12}{52} = \frac{3}{13} \approx 0.231$
