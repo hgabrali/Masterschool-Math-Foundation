@@ -1,6 +1,6 @@
 # Course Structure Overview
 
-##1: Foundations of Probability
+## 1: Foundations of Probability
 - Learn the core concepts of probability, including random variables, sample spaces, and probability distributions.
 - Build a strong foundation for understanding uncertainty and making data-driven decisions.
 
