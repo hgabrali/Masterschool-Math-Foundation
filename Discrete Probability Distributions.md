@@ -222,6 +222,14 @@ Bu dağılımlar, sayılabilir sonuçlara sahip rastgele olayları analiz etmek 
 | **Kullanım Alanı** | Bir ürünün kalite kontrolünden ilk geçtiği deneme sayısını bulmak. |
 
 ---
+# Temel Ayrık Olasılık Dağılımları Karşılaştırması
 
-Bu dört temel dağılım, olasılık ve istatistikte en sık kullanılanlardır. Şimdi istersen, bu dağılımlardan birini daha derinlemesine inceleyebiliriz.
+Bu tablo, dört temel ayrık dağılımın **ne zaman (Koşullar)**, **ne işe yaradığı (Amaç)** ve **nerede (Uygulama Alanı)** kullanıldığını özetlemektedir.
+
+| Dağılım Adı | Temel Amaç (Ne İşe Yarar) | Temel Koşullar (Ne Zaman Kullanılır) | Uygulama Alanları (Nerede Kullanılır) |
+| :--- | :--- | :--- | :--- |
+| **1. Bernoulli** | Tek bir denemede **başarı olasılığını** modellemek. | Deney **sadece bir kez** yapılır ve sonuç **iki değerden** biri olmalıdır ($0$ veya $1$). | **İkili (Binary) Testler:** Tek bir kullanıcının reklama tıklayıp tıklamaması, bir test sonucunun pozitif ya da negatif çıkması. |
+| **2. Binomial** | Bağımsız $n$ denemede **başarı sayısını ($k$)** modellemek. | Deneme sayısı ($n$) sabittir. Her denemede başarı olasılığı ($p$) aynıdır. Denemeler **bağımsızdır**. | **Kalite Kontrol:** Üretilen $100$ üründen kaçının kusurlu olacağını tahmin etme. **A/B Testi:** $1000$ ziyaretçiden kaçının dönüşüm sağlayacağını bulma. |
+| **3. Poisson** | Sabit bir zaman, alan veya hacim biriminde **nadir olayların** ($\lambda$ ortalamasıyla) **sayısını** modellemek. | Olayların gerçekleşme hızı ($\lambda$) sabittir. Olaylar bağımsızdır. Aynı anda birden fazla olay çok nadirdir. | **Hizmet Sektörü/BT:** Çağrı merkezine dakikada gelen çağrı sayısı. Bir sunucuda ayda meydana gelen hata sayısı. **Finans:** Belirli bir günde yapılan işlem sayısı. |
+| **4. Geometrik** | **İlk başarının** elde edilmesi için gereken **deneme sayısını** ($k$) modellemek. | Denemeler bağımsızdır. Başarı olasılığı ($p$) sabittir. Deney, ilk başarı elde edilene kadar sürer. | **Kalite Kontrol:** Bir makineden ilk hatasız ürün çıkana kadar kaç deneme yapılması gerektiği. **Oyun Teorisi:** Bir şans oyununda ilk kez kazanmak için gereken oyun sayısı. |
 
