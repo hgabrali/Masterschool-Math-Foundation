@@ -6,6 +6,16 @@
 
 <img width="738" height="287" alt="image" src="https://github.com/user-attachments/assets/eae05593-0c5f-4176-affd-f87bb272264d" />
 
+<img width="727" height="519" alt="image" src="https://github.com/user-attachments/assets/04498180-4911-419a-9c89-f6f472fb5101" />
+
+# Olasılık Problemlerine Yaklaşım: 3 Adımlı Plan
+
+| Adım | Amaç | Hesaplama Aracı |
+| :--- | :--- | :--- |
+| **1. Rastgele Değişkeni Tanımlama** | Değişkenin alabileceği **tüm olası ayrık değerleri** listeleriz. Bu, örneklem uzayını ($X$) sayısal olarak sınırlar. | Mantıksal Çıkarım |
+| **2. PMF'yi Hesaplama** | Her bir ayrık değerin **tam olarak** gerçekleşme olasılığını buluruz. Bu, problemin **neden-sonuç** ilişkisini kurar. | Olasılık (Seçim Kuralları) |
+| **3. CDF'yi Hesaplama** | PMF değerlerini toplayarak **kümülatif (birikimli) olasılıkları** buluruz. Bu, olasılıkların bir eşiği aşmama durumunu gösterir. | Toplama (PMF'lerin Toplamı) |
+
 ---
 
 # Kümülatif Dağılım Fonksiyonu (Cumulative Distribution Function - CDF) Nedir?
