@@ -29,3 +29,37 @@ Bu tablo, **ayrık rastgele değişkenin ($X$)** temel momentlerinin (merkez ve 
 | **3. Standart Sapma** | $\sigma$ | **Yorumlanabilirlik:** Yayılımı, verinin **orijinal birimleri** cinsinden ölçer (Varyans karesel birimlerdedir). Varyansa göre yorumlaması daha kolaydır. | $$\mathbf{\sigma = \sqrt{Var(X)}}$$ |
 
 ---
+
+# Kavramsal Açıklamalar ve Kullanım Amaçları
+
+## 1. Matematiksel Beklenti (Mean / Expected Value, $E[X]$)
+
+| Amaç (Ne İşe Yarar) | Kullanım (Nerede/Ne Zaman) |
+| :--- | :--- |
+| **Merkezi Eğilimi Tanımlama:** Rastgele bir deneyin uzun vadede **ortalama sonucunun** ne olacağını gösterir. Dağılımın **merkez noktasını** belirtir. | Bir yatırımın ortalama getirisi, bir kumar oyununda uzun vadede beklenecek kayıp/kazanç miktarı, bir ürünün ortalama ömrü gibi **merkez değeri** bilmek istediğimiz her an kullanılır. |
+| **Özet:** Olasılıkların ağırlıklı ortalamasıdır. | Veri setinin **tipik değerini** hızlıca görmek istediğinizde kullanırsınız. |
+
+
+## 2. Varyans (Variance, $\sigma^2$)
+
+| Amaç (Ne İşe Yarar) | Kullanım (Nerede/Ne Zaman) |
+| :--- | :--- |
+| **Dağılımı/Yayılımı Ölçme:** Rastgele değişkenin değerlerinin, Ortalamadan ($E[X]$) ne kadar **uzaklaştığını** veya **yayıldığını** gösterir. | **Risk Analizi:** Bir finansal varlığın (hisse senedi) getirilerinin ortalamadan ne kadar sapabileceğini, yani ne kadar **istikrarsız** olduğunu ölçmek için kullanılır. Yüksek varyans, yüksek risk demektir. |
+| **Özet:** Ortalamadan olan sapmaların karesinin ortalamasıdır. | Bir dağılımın **ne kadar geniş** veya **dağınık** olduğunu merak ettiğinizde kullanırsınız. |
+
+## 3. Standart Sapma (Standard Deviation, $\sigma$)
+
+| Amaç (Ne İşe Yarar) | Kullanım (Nerede/Ne Zaman) |
+| :--- | :--- |
+| **Yorumlanabilir Yayılım Ölçüsü:** Varyansın karesel birimler cinsinden ölçüldüğü bu durumu ortadan kaldırır. Varyansın **karekökünü** alarak yayılımı **orijinal veri birimine** geri çevirir. | **Karşılaştırma ve Yorumlama:** Risk analizinde Varyans yerine sıklıkla kullanılır, çünkü yorumlaması daha kolaydır. Örneğin, "Ortalama kazancımız $100$ TL ve standart sapmamız $20$ TL'dir." dendiğinde, bu $20$ TL'nin ortalamaya göre ne kadar sapma olduğunu anlarız. |
+| **Özet:** Varyansın daha pratik, günlük hayata uyarlanmış halidir. | Risk veya yayılım ölçüsünü **verinin kendi biriminde** (TL, metre, adet vb.) ifade etmek istediğinizde kullanırsınız. |
+
+# Metaforik Karşılaştırma: Aşçının Çorbası 🥣
+
+Bu tablo, olasılığın üç temel anının (momentinin) günlük hayattaki karşılıklarını somutlaştırmaktadır.
+
+| Kavram | Metaforik Karşılığı | Açıklama |
+| :--- | :--- | :--- |
+| **Matematiksel Beklenti ($E[X]$)** | **Çorbanın Ortalama Tadı** | Bir kaşık aldığınızda beklediğiniz **tipik lezzet** nedir? (Çok mu tuzlu, çok mu baharatlı?) Bu, çorbanın **merkezini** temsil eder. |
+| **Varyans ($\sigma^2$)** | **Malzemelerin Karışma Düzeyinin Karesi** | Çorbanın ne kadar iyi karıştırıldığıdır. Bu değer **yüksekse**, bir kaşığınızda yoğun tuz, diğerinde sadece su bulursunuz. Tadı **istikrarsızdır** (yüksek risk). |
+| **Standart Sapma ($\sigma$)** | **Tadın Ortalama Sapması** | Çorbayı karıştırmadan önce tuzun ve karabiberin ortalama tattan ne kadar **saptığını doğrudan hissettiğiniz** ölçüdür. (Çok tuzlu bir lokma ile karşılaşma riskiniz ne kadardır?) |
