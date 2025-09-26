@@ -1,6 +1,50 @@
 # Bayes’ Theorem
 ---
+# Bayes Teoremi'ne Katkıda Bulunan Bilim İnsanları (Tarihsel Kronoloji)
+
+Bayes Teoremi, tek bir keşiften ziyade, zaman içinde geliştirilmiş bir fikirdir. İşte bu sürecin anahtar isimleri ve katkıları:
+
+---
+
+## 1. Thomas Bayes (1702–1761)
+
+| Rolü | Katkısı |
+| :--- | :--- |
+| **Teoremin Fikir Babası** | Teoremin temel fikrini ortaya koyan İngiliz istatistikçi ve din adamıdır. |
+| **Eseri** | Ölümünden sonra 1763'te yayımlanan *An Essay towards solving a Problem in the Doctrine of Chances* makalesidir. |
+| **Temel Fikir** | Olasılığı bilinen olaylar için **ters olasılığı** (yani, **nedenden sonuca gitmeyi**) hesaplamanın genel bir yolunu geliştirmiştir. |
+
+---
+
+## 2. Pierre-Simon Laplace (1749–1827)
+
+| Rolü | Katkısı |
+| :--- | :--- |
+| **Teoremi Formüle Eden ve Yaygınlaştıran** | Teoremi **modern formuna** sokan ve uygulamalarını genişleten Fransız matematikçi ve gökbilimcidir. |
+| **Temel Fikir** | Teoremi 1774 yılında bağımsız olarak yeniden keşfetti, ispatladı ve günümüzde kullanılan daha genel matematiksel ifadeyi kesinleştirdi. Teoremi astronomiden tıbba kadar geniş bir alanda uygulamıştır. |
+
+---
+
+## 3. Sir Harold Jeffreys (1891–1989)
+
+| Rolü | Katkısı |
+| :--- | :--- |
+| **Bayesci İstatistiğin Yeniden Canlanması** | 20. yüzyılın başlarında, klasik istatistiğin hakimiyetinde iken **Bayesci yöntemin gücünü** yeniden vurguladı. |
+| **Eseri** | 1939 tarihli *Theory of Probability* (Olasılık Teorisi) adlı kitabıyla modern **Bayesci Analizin** temellerini attı. |
+
+---
+
+## Kronolojik Özet
+
+| Yıl | Gelişme | Katkıda Bulunan |
+| :--- | :--- | :--- |
+| **1763** | Teoremin temel fikri ölümünden sonra yayımlandı. | **Thomas Bayes** |
+| **1774** | Teorem modern haliyle bağımsız olarak yeniden keşfedilip formüle edildi. | **Pierre-Simon Laplace** |
+| **1939** | Modern Bayesci istatistik yöntemleri için teorik temeller atıldı. | **Sir Harold Jeffreys** |
+
+
 [Bayes Teoremi - Vikipedi (Teknik Detaylar)](https://en.wikipedia.org/wiki/Bayes%27_theorem)
+
 # Bayes Teoremi Neden Kritik Öneme Sahiptir?
 
 **Bayes Teoremi'nin** temel önemi, bize inançlarımızı **rasyonel bir şekilde güncelleme** imkanı vermesinden kaynaklanır. Yeni veriler (kanıtlar) ortaya çıktıkça, teorem, ilk hipotezimize olan güvenimizi nasıl değiştirmemiz gerektiğini matematiksel olarak kesin bir dille belirtir.
