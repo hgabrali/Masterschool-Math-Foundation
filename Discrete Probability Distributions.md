@@ -198,6 +198,8 @@ Bu dağılımlar, sayılabilir sonuçlara sahip rastgele olayları analiz etmek 
 
 ## 3. Poisson Dağılımı (Poisson Distribution)
 
+[Poisson Dağılımı - Vikipedi (Ayrıntılı Teknik Bilgi)](https://en.wikipedia.org/wiki/Poisson_distribution)
+
 | Özellik | Açıklama |
 | :--- | :--- |
 | **Tanım** | Belirli bir zaman aralığında veya sabit bir alanda **nadir olayların** kaç kez gerçekleşeceğini modeller. |
@@ -209,6 +211,8 @@ Bu dağılımlar, sayılabilir sonuçlara sahip rastgele olayları analiz etmek 
 ---
 
 ## 4. Geometrik Dağılım (Geometric Distribution)
+
+[Geometrik Dağılım - Vikipedi (Ayrıntılı Teknik Bilgi)](https://en.wikipedia.org/wiki/Geometric_distribution)
 
 | Özellik | Açıklama |
 | :--- | :--- |
