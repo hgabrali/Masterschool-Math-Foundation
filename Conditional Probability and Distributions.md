@@ -115,3 +115,124 @@ $$P(B|A) = \frac{90}{99} \approx 0.91$$
 And the joint probability, which stands for selecting a defective lightbulb and a non-defective one right after it is
 
 $$P(A \cap B) = P(A) \cdot P(B|A) \approx 0.1 \cdot 0.91 = 0.091$$
+
+* Conditional probability helps us understand how the likelihood of an event changes when we know that another event has occurred. This concept is fundamental in making informed decisions under uncertainty.
+
+---
+
+# Koşullu Olasılık (Conditional Probability) Nedir?
+
+Koşullu olasılık, bir olayın, **başka bir olayın zaten gerçekleştiği bilindiğinde** ortaya çıkma olasılığını ifade eder. Başka bir deyişle, bir olayın gerçekleşme ihtimalini, elimizdeki **ek bilgiye** dayanarak yeniden hesaplamaktır.
+
+## Örnekle Açıklama: Zar Atma
+
+Bu durumu bir örnekle açıklayalım:
+
+Farz edelim ki, bir zar atıyorsunuz. Normalde "zarın 6 gelme olasılığı" $1/6$'dır. Bu, hiçbir ek bilginin olmadığı durumdaki olasılıktır.
+
+Peki, size **"zarın çift sayı geldiği bilindiğinde, zarın 6 gelme olasılığı nedir?"** diye sorsam?
+
+1.  **İlk Durumdaki Tüm Olasılıklar (Örneklem Uzayı):**
+    $$S = \{1, 2, 3, 4, 5, 6\} \quad \text{(6 durum)}$$
+
+2.  **Yeni Durum (Verilen Ek Bilgi):**
+    "Zarın **çift sayı** geldiği bilgisi." Bu durumda, olasılık uzayımız küçülür. Sadece çift sayıların olduğu kümeye odaklanıyoruz:
+    $$\text{Yeni Durum} = \{2, 4, 6\} \quad \text{(3 durum)}$$
+
+3.  **Koşullu Olasılık Hesaplaması:**
+    Bu yeni "olasılık uzayında" 6 gelme olasılığı nedir?
+    * İstenen durum sayısı (6 gelmesi): 1 durum
+    * Toplam durum sayısı (Yeni Durum): 3 durum
+
+    Bu yüzden, **"zarın çift sayı geldiği bilindiğinde, zarın 6 gelme olasılığı"** $1/3$'tür.
+
+Gördüğün gibi, ek bilgi sayesinde olasılık değeri $1/6$'dan $1/3$'e yükseldi.
+
+---
+
+## Formül ve Gösterim
+
+Koşullu olasılık genellikle şu şekilde gösterilir ve okunur:
+
+$$\mathbf{P(A|B)}$$
+
+Bu, "$B$ olayı gerçekleştiği bilindiğinde $A$ olayının olasılığı" anlamına gelir.
+
+**Formülü** ise şöyledir:
+
+$$P(A|B) = \frac{P(A \cap B)}{P(B)}$$
+
+### Formül Bileşenleri
+
+* **$P(A|B)$:** B olayı gerçekleştiğinde A olayının koşullu olasılığı.
+* **$P(A \cap B)$:** Hem $A$ olayının hem de $B$ olayının **birlikte** gerçekleşme olasılığı (Kesişim Kümesi).
+* **$P(B)$:** $B$ olayının gerçekleşme olasılığı.
+
+---
+
+## Formülü Örnekle Uygulama
+
+Yukarıdaki zar örneğini formül ile doğrulayalım:
+
+* **$A$:** Zarın 6 gelmesi olayı.
+* **$B$:** Zarın çift sayı gelmesi olayı.
+
+1.  **$P(A \cap B)$ Hesaplaması:**
+    * Zarın hem 6 **hem de** çift sayı gelme olasılığı. Bu sadece 6 gelmesi olayıdır.
+    * $$P(A \cap B) = 1/6$$
+
+2.  **$P(B)$ Hesaplaması:**
+    * Zarın çift sayı gelme olasılığı. (Olasılık kümesi $\{2, 4, 6\}$)
+    * $$P(B) = 3/6 = 1/2$$
+
+3.  **Formülde Yerine Koyma:**
+    $$P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{1/6}{1/2}$$
+
+4.  **Sonuç:**
+    $$P(A
+# Gündelik Hayattan Koşullu Olasılık Örnekleri
+
+Koşullu olasılık, günlük kararlarımızın ve çıkarımlarımızın birçoğunda farkında olmadan kullandığımız bir kavramdır. İşte bu kavramı daha iyi anlamak için bazı basit örnekler:
+
+---
+
+## Örnek 1: Trafik ve Yağmur
+
+**Senaryo:** Sabah işe giderken iki farklı yol kullanma seçeneğin var. Normalde her iki yolda da trafik olasılığı aynıdır. Ancak, hava durumunu kontrol ettiğinde yağmur yağdığını görüyorsun.
+
+* **Olay A:** Trafikte kalma olasılığın.
+* **Olay B:** Yağmur yağması olayı.
+
+Normalde $P(A)$ olasılığı, yani trafikte kalma olasılığın, yağmur bilgisi olmadan değerlendirilir. Ancak, **yağmurun (B olayı) gerçekleştiği bilindiğinde**, yani $P(A|B)$ koşullu olasılığına baktığımızda, trafikte kalma olasılığın artar. Çünkü yağmur, insanların daha yavaş sürmesine veya kaza yapmasına neden olabilir.
+
+---
+
+## Örnek 2: Hastalık Teşhisi ve Test Sonuçları
+
+**Senaryo:** Belirli bir hastalığı taşıma riskin var. Normalde bu hastalığın toplumdaki görülme sıklığı $P(H)$'dir. Ancak bir test yaptırdın ve sonuç pozitif çıktı.
+
+* **Olay H:** Hastalığı taşıma olasılığın.
+* **Olay P:** Test sonucunun pozitif çıkması olayı.
+
+Test yapılmadan önce hastalığı taşıma olasılığın $P(H)$ idi. Ancak **testin pozitif çıktığı bilindiğinde**, yani $P(H|P)$ koşullu olasılığına baktığımızda, hastalığı taşıma olasılığın önemli ölçüde artar. Bu yeni bilgi, başlangıçtaki olasılığı değiştirecektir.
+
+---
+
+## Örnek 3: Kart Oyunları ve El Seçimi
+
+**Senaryo:** Bir iskambil destesinde bir kart çekiyorsun.
+
+* **Olay A:** Çektiğin kartın karo (maça, kupa, sinek gibi bir tür) olması olasılığı.
+* **Olay B:** Çektiğin kartın bir as olması olasılığı.
+
+Normalde desteden rastgele bir kart çektiğinde, bir as gelme olasılığı $P(B) = 4/52$'dir. Ancak birisi sana **"çekilen kartın kırmızı renkte (kupa veya karo) olduğu"** bilgisini verdiğinde, as çekme olasılığın değişir. Çünkü artık tüm kartlar yerine, sadece kırmızı kartlar arasından bir as çekme olasılığını düşünmen gerekir.
+
+Bu durumda:
+* Kırmızı kart sayısı: 26 (13 kupa, 13 karo)
+* Kırmızı as sayısı: 2 (Kupa Ası, Karo Ası)
+
+Yeni durumda as çekme olasılığın $2/26$'dır, yani $1/13$. Gördüğün gibi, ek bilgi olasılığı $4/52$'den $2/26$'ya yükseltti.
+
+---
+
+Bu örnekler, koşullu olasılığın günlük hayatımızda nasıl işlediğini gösteriyor. Verilerimize yeni bir bilgi eklendiğinde, olayların olasılıklarını yeniden değerlendirmemiz gerektiğini hatırlatıyor.
