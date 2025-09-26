@@ -1,5 +1,8 @@
 # Probability Mass Function (PMF)
 
+<img width="698" height="390" alt="image" src="https://github.com/user-attachments/assets/5b3c013f-3bd8-4702-bab5-21a5c7d635fc" />
+
+
 # Olasılık Kütle Fonksiyonu (Probability Mass Function - PMF)
 
 **PMF**, **ayrık olasılık dağılımlarının (Discrete Probability Distributions)** kalbidir. Bir rastgele değişkenin ($X$), olası bir $x$ değerini alma olasılığını tanımlayan fonksiyondur ve genellikle $P(X=x)$ veya $f(x)$ olarak gösterilir.
