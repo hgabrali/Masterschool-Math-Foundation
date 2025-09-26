@@ -63,3 +63,40 @@ Bu tablo, olasılığın üç temel anının (momentinin) günlük hayattaki kar
 | **Matematiksel Beklenti ($E[X]$)** | **Çorbanın Ortalama Tadı** | Bir kaşık aldığınızda beklediğiniz **tipik lezzet** nedir? (Çok mu tuzlu, çok mu baharatlı?) Bu, çorbanın **merkezini** temsil eder. |
 | **Varyans ($\sigma^2$)** | **Malzemelerin Karışma Düzeyinin Karesi** | Çorbanın ne kadar iyi karıştırıldığıdır. Bu değer **yüksekse**, bir kaşığınızda yoğun tuz, diğerinde sadece su bulursunuz. Tadı **istikrarsızdır** (yüksek risk). |
 | **Standart Sapma ($\sigma$)** | **Tadın Ortalama Sapması** | Çorbayı karıştırmadan önce tuzun ve karabiberin ortalama tattan ne kadar **saptığını doğrudan hissettiğiniz** ölçüdür. (Çok tuzlu bir lokma ile karşılaşma riskiniz ne kadardır?) |
+
+---
+
+# Dağılımların Momentlerinin (E[X], Var[X]) Basitleşmesi
+
+**Beklenti ($E[X]$), Varyans ve Standart Sapma** tanımları **tüm dağılımlar için aynıdır.** Yani, Beklenti her zaman merkezi eğilimi (merkezi) gösterir, Varyans her zaman yayılımı (riski) gösterir.
+
+Ancak, her bir dağılımın (Binomial, Poisson, vb.) kendine ait benzersiz bir PMF (Olasılık Kütle Fonksiyonu) yapısı olduğu için, genel $\sum x f(x)$ formülünü uyguladığımızda, sonuç dağılımın parametrelerine dayalı çok daha basit bir formüle indirgenir.
+
+Bu basitleştirilmiş formüller, dağılımların **"sınıflandırılma" biçimidir**.
+
+
+
+
+# Moment Formüllerinden Kavramsal Çıkarımlar
+
+**Basitleşme:** **Binomial dağılımda** Beklenti'yi ($E[X]$) bulmak için, $n$ denemenin tamamı için karmaşık toplamlar almak yerine, sadece parametreleri ($n$ ve $p$) çarpmanız yeterlidir ($\mathbf{E[X] = n \cdot p}$). Bu, matematiksel kanıtın gücüdür.
+
+**Poisson'un Eşsizliği:** **Poisson dağılımında** Beklenti ($E[X]$) ve Varyans ($Var(X)$) birbirine eşittir ($\mathbf{E[X] = Var(X) = \lambda}$). Bu eşsiz özellik, bu dağılımın nadir ve rastgele olayları modellemedeki gücünü gösteren ayırt edici bir özelliğidir.
+
+# Ayrık Dağılımlarda Momentlerin Sınıflandırılması
+
+Aşağıdaki tablo, en yaygın kullanılan ayrık dağılımlar için Beklenti ($E[X]$) ve Varyansın ($Var(X)$) parametreler cinsinden nasıl basitleştiğini göstermektedir.
+
+| Dağılım Adı | Parametreler | Beklenen Değer (Mean, $E[X]$) | Varyans ($Var(X)$) |
+| :--- | :--- | :--- | :--- |
+| **1. Bernoulli** | Başarı olasılığı ($p$) | $$\mathbf{p}$$ | $$\mathbf{p(1-p)}$$ |
+| **2. Binomial** | Deneme sayısı ($n$), Başarı olasılığı ($p$) | $$\mathbf{n \cdot p}$$ | $$\mathbf{n \cdot p \cdot (1-p)}$$ |
+| **3. Poisson** | Beklenen olay sayısı ($\lambda$) | $$\mathbf{\lambda}$$ | $$\mathbf{\lambda}$$ |
+| **4. Geometrik** | Başarı olasılığı ($p$) | $$\mathbf{\frac{1}{p}}$$ | $$\mathbf{\frac{1-p}{p^2}}$$ |
+
+
+Bu basitleştirilmiş formülleri kullanarak, PMF/CDF alıştırmamızı çözdükten sonra uzun PMF hesaplaması yerine bu formüllerle sağlamasını yapabileceğiz.
+
+Şimdi kaldığımız yere dönelim:
+
+**Hatırlatma:** **Adım 1**'de kalmıştık. Çekilen kırmızı top sayısının ($X$) alabileceği **tam sayı değerleri** nelerdi? $(X = ?)$
