@@ -6,3 +6,26 @@
 
 <img width="561" height="191" alt="image" src="https://github.com/user-attachments/assets/2bd8a1ad-1a73-487e-9f3e-7ebf609c5238" />
 
+# Moments of a Discrete Probability Distribution
+
+This table outlines the definitions, purpose, and formulas for the key moments of a **discrete random variable ($X$)**. These concepts quantify the central tendency and spread of the distribution.
+
+| Concept | Alternative Name(s) | Purpose | Discrete Formula |
+| :--- | :--- | :--- | :--- |
+| **1. Mathematical Expectation** | Mean, Expected Value, $\mu$ or $E[X]$ | **Central Tendency:** Describes the long-run **average value** of the random variable. It is the weighted average of all possible outcomes. | $$\mathbf{E[X] = \sum x \cdot f(x)}$$ |
+| **2. Variance** | $\sigma^2$ or $Var(X)$ | **Spread/Dispersion:** Quantifies the **average squared deviation** of values from the Mean ($\mu$). It measures how spread out the distribution is. | $$\mathbf{Var(X) = \sum (x - \mu)^2 \cdot f(x)}$$ **Alternative:** $E[X^2] - (E[X])^2$ |
+| **3. Standard Deviation** | $\sigma$ | **Interpretability:** Measures the spread in the **original units** of the data (since variance is in squared units). Easier to interpret than variance. | $$\mathbf{\sigma = \sqrt{Var(X)}}$$ |
+
+---
+
+# Ayrık Olasılık Dağılımının Momentleri
+
+Bu tablo, **ayrık rastgele değişkenin ($X$)** temel momentlerinin (merkez ve yayılım ölçüleri) tanımlarını, amaçlarını ve formüllerini özetlemektedir.
+
+| Kavram | Alternatif İsim(ler) | Amaç | Ayrık Formül |
+| :--- | :--- | :--- | :--- |
+| **1. Matematiksel Beklenti** | Ortalama, Beklenen Değer, $\mu$ veya $E[X]$ | **Merkezi Eğilim:** Rastgele değişkenin uzun vadede ulaşacağı **ortalama değeri** tanımlar. Tüm olası sonuçların ağırlıklı ortalamasıdır. | $$\mathbf{E[X] = \sum x \cdot f(x)}$$ |
+| **2. Varyans** | $\sigma^2$ veya $Var(X)$ | **Dağılım/Yayılım:** Değerlerin Ortalamadan ($\mu$) ne kadar **uzaklaştığını** (ortalama karesel sapmayı) nicel olarak ölçer. | $$\mathbf{Var(X) = \sum (x - \mu)^2 \cdot f(x)}$$ **Alternatif:** $E[X^2] - (E[X])^2$ |
+| **3. Standart Sapma** | $\sigma$ | **Yorumlanabilirlik:** Yayılımı, verinin **orijinal birimleri** cinsinden ölçer (Varyans karesel birimlerdedir). Varyansa göre yorumlaması daha kolaydır. | $$\mathbf{\sigma = \sqrt{Var(X)}}$$ |
+
+---
