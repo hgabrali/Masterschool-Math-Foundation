@@ -28,6 +28,10 @@ Through this project, I aim to achieve proficiency in:
 
 ---
 
+### Exercises:
+
+* [PMF/CDF ve Momentler Uygulaması (Google Colab Notebook)](https://colab.research.google.com/drive/1BUSHlFCCyuDp5LuPERFGYKv1t4ASTYJt#scrollTo=4qZ9UFRh8KqO)
+
 ### Project Contents
 
 -   **`notebooks/`**: Jupyter notebooks containing code, explanations, and analysis for each topic.
