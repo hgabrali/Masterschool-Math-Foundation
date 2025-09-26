@@ -1,4 +1,4 @@
-# Bayes’ Theorem
+# Bayes’ Theorem / Bayes Teoremi
 ---
 # Bayes Teoremi'ne Katkıda Bulunan Bilim İnsanları (Tarihsel Kronoloji)
 
@@ -241,4 +241,86 @@ $$\mathbf{P(B)}$$
 
 #### $P(B)$'nin Açılımı (Toplam Olasılık Kuralı - Total Probability Rule)
 
-Genellikle $P(B)$ doğrudan bilinmez, bu yüzden $A$ ve $A^c$ ($A$'nın tümleyeni, yani $A$'nın gerçekleşmemesi) olayları üzerinden hesaplanır:
+Genellikle $P(B)$ doğrudan bilinmez, bu yüzden $A$ ve $A^c$ ($A$'nın tümleyeni, yani $A$'nın gerçekleşmemesi) olayları üzerinden hesaplanır.
+
+---
+
+# Bayes’ Theorem 
+
+# Introduction to Bayes' Theorem
+
+Bayes' Theorem is a powerful tool in probability theory that allows us to **update probabilities** based on new information.
+
+It provides a way to calculate the probability of an event given that another event has occurred, effectively incorporating **prior knowledge** or evidence into our calculations. The theorem serves as the foundation for **Bayesian inference**, which is crucial in fields ranging from statistics and machine learning to scientific hypothesis testing.
+
+<img width="714" height="581" alt="image" src="https://github.com/user-attachments/assets/6e87b552-a22e-4dd2-a9b6-580908a60a74" />
+
+<img width="671" height="167" alt="image" src="https://github.com/user-attachments/assets/7151b981-3a7b-4dac-8fcf-cda734844dcd" />
+
+# Marginal Probability
+
+**Marginal probability** refers to the likelihood of an event occurring, **irrespective of the outcomes of other related events**. It represents the probability of a single event taking place, considered in isolation from a full set of joint probabilities.
+
+If events $A_1, A_2, \dots, A_n$ form a **mutually exclusive and exhaustive set** (meaning one of them must occur and they cannot occur simultaneously), and event $B$ can happen under the condition of any $A_i$, then the probability of event $B$ is given by the **Law of Total Probability**:
+
+$$\mathbf{P(B) = \sum_{i=1}^{n} P(B|A_i) \cdot P(A_i)}$$
+
+This formula calculates the marginal probability of $B$ by summing the joint probabilities of $B$ occurring with each possible event $A_i$.
+
+---
+
+## Example: Boxes with Marbles
+
+Let's look at an example to understand how to calculate the marginal probability of drawing a specific color.
+
+**Scenario:**
+Suppose we have two boxes: a **Yellow box ($A_Y$)** and a **Green box ($A_G$)**. Each box contains marbles (balls), either red or blue.
+
+| Box | Blue Marbles | Red Marbles | Total |
+| :--- | :--- | :--- | :--- |
+| **Yellow ($A_Y$)** | 1 | 1 | 2 |
+| **Green ($A_G$)** | 6 | 2 | 8 |
+
+**Question:**
+If we were to draw a red marble blindly, which box would it be most likely to come from?
+
+To answer this, we need to find the conditional probabilities $P(A_Y|R)$ and $P(A_G|R)$ using Bayes' Theorem, which requires the marginal probability of drawing a Red marble, $P(R)$.
+
+Let $P(A_Y) = 1/2$ and $P(A_G) = 1/2$ (assuming we choose a box randomly).
+
+The **Marginal Probability of drawing a Red marble ($P(R)$)** is calculated as:
+$$P(R) = P(R|A_Y) \cdot P(A_Y) + P(R|A_G) \cdot P(A_G)$$
+
+1.  **Probability of Red from Yellow Box:** $P(R|A_Y) = 1/2$
+2.  **Probability of Red from Green Box:** $P(R|A_G) = 2/8 = 1/4$
+
+$$P(R) = \left(\frac{1}{2} \cdot \frac{1}{2}\right) + \left(\frac{1}{4} \cdot \frac{1}{2}\right) = \frac{1}{4} + \frac{1}{8} = \frac{2}{8} + \frac{1}{8} = \frac{3}{8}$$
+
+The marginal probability of drawing a red marble is $\mathbf{3/8}$.
+
+<img width="753" height="500" alt="image" src="https://github.com/user-attachments/assets/27cd1990-520f-4617-9818-c3971eaed523" />
+
+<img width="723" height="351" alt="image" src="https://github.com/user-attachments/assets/9895353d-c7f9-4e6d-a860-7bd3f8e22b38" />
+
+<img width="764" height="680" alt="image" src="https://github.com/user-attachments/assets/9cc88d1b-f401-4a36-9bdf-517826102c96" />
+
+# Key Insights from Bayes' Theorem
+
+Bayes' Theorem provides a powerful, rational framework for updating beliefs. Here are the core insights derived from its application:
+
+| Insight | Description |
+| :--- | :--- |
+| **Incorporating Prior Knowledge** | The theorem formally combines **prior probabilities** ($P(A)$) with **new evidence (likelihood)** ($P(B|A)$) to calculate a refined **posterior probability** ($P(A|B)$). This means initial knowledge is never discarded. |
+| **Impact of Base Rates** | The **prior probability** (often called the **base rate**) significantly affects the posterior probability. Even if new evidence is strong (high likelihood), a very low initial base rate can still result in a low final probability. |
+| **Real-World Applications** | It is widely used across various fields, including **medical testing** (diagnosing rare diseases), **spam detection** (Naive Bayes), **risk assessment**, and **A/B testing**. |
+
+---
+
+These insights highlight why Bayesian inference is a critical tool for navigating uncertainty and making data-driven decisions.
+
+Would you like to see a Python code example demonstrating the **Impact of Base Rates** using a medical testing scenario?
+
+
+
+
+
