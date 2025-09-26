@@ -235,3 +235,253 @@ Yeni durumda as çekme olasılığın $2/26$'dır, yani $1/13$. Gördüğün gib
 ---
 
 Bu örnekler, koşullu olasılığın günlük hayatımızda nasıl işlediğini gösteriyor. Verilerimize yeni bir bilgi eklendiğinde, olayların olasılıklarını yeniden değerlendirmemiz gerektiğini hatırlatıyor.
+
+---
+
+# Bağımsız ve Bağımlı Olaylar (Independent and Dependent Events)
+
+## Giriş
+
+Olasılıkta, olaylar arasındaki ilişkiyi anlamak, sonuçların gerçekleşme olasılığını doğru bir şekilde hesaplamak için hayati öneme sahiptir. Olaylar, birinin gerçekleşmesinin diğerinin olasılığını etkileyip etkilemediğine bağlı olarak **bağımsız** veya **bağımlı** olarak sınıflandırılır.
+
+---
+
+## Bağımsız Olaylar (Independent Events)
+
+İki olay, $A$ ve $B$, birinin gerçekleşmesinin diğerinin olasılığını **etkilememesi** durumunda **bağımsızdır**.
+
+Matematiksel olarak bu, koşullu olasılık formülüyle ifade edilir:
+
+$$\mathbf{P(A|B) = P(A)}$$
+
+Yani, $B$ olayının gerçekleştiği bilgisi, $A$ olayının olasılığını değiştirmez.
+
+### Bağımsızlık İçin Çarpma Kuralı
+
+Koşullu olasılıktan gelen çarpma kuralında ($P(A \cap B) = P(A|B) \times P(B)$), $P(A|B)$ yerine $P(A)$ koyarsak, bağımsız olaylar için geçerli olan temel tanıma ulaşırız:
+
+> 🎓 **Tanım:** $A$ ve $B$ olayları, ancak ve ancak aşağıdaki koşulu sağlıyorsa bağımsızdır:
+>
+> $$\mathbf{P(A \cap B) = P(A) \times P(B)}$$
+
+### Örnek 1: Madeni Para ve Zar
+
+Bir madeni parayı havaya attığımızı ve bir zar attığımızı düşünelim. $A$ olayı paranın "Tura" gelmesi, $B$ olayı ise zarın "4" gelmesi olsun. Parayı atmak zarın sonucunu etkilemediği için bu olaylar bağımsızdır.
+
+* $P(A) = 1/2$
+* $P(B) = 1/6$
+* $P(A \cap B) = P(\text{Tura ve 4}) = P(A) \times P(B) = (1/2) \times (1/6) = 1/12$
+
+### Örnek 2: Anket
+
+Bir öğrenci anketine göre, öğrencilerin **%10'u** bisikletle işe/okula gidiyor ve **%40'ının** bir sevgilisi var. Bu iki olayın bağımsız olduğunu varsayarsak, öğrencilerin yüzde kaçı **hem** bisikletle gidiyor **hem de** sevgilisi var?
+
+* $B$: Bisikletle gidiyor ($P(B) = 0.10$)
+* $S$: Sevgilisi var ($P(S) = 0.40$)
+
+Eğer $B$ ve $S$ bağımsız ise:
+$$\mathbf{P(B \cap S) = P(B) \times P(S) = 0.10 \times 0.40 = 0.04}$$
+
+Yani, öğrencilerin **%4'ü** hem bisikletle gidiyor hem de sevgilisi var.
+
+---
+
+## Bağımlı Olaylar (Dependent Events)
+
+> 🎓 **Tanım:** İki olay, $A$ ve $B$, birinin gerçekleşmesinin diğerinin olasılığını **etkilemesi** durumunda **bağımlıdır**.
+
+Bu ilişki, bağımsız olaylardaki eşitliğin bozulmasıyla ifade edilir:
+$$\mathbf{P(A|B) \neq P(A)}$$
+
+ve çarpma kuralında koşullu olasılık kullanılır:
+
+$$\mathbf{P(A \cap B) = P(A|B) \times P(B)}$$
+
+---
+
+## Karşılıklı Hariç Olan Olaylar (Mutually Exclusive Events)
+
+> 🎓 **Tanım:** İki olayın aynı anda gerçekleşmesi mümkün değilse, bu olaylara **karşılıklı hariç** (ayrık) olaylar denir.
+>
+> $$\mathbf{P(A \cap B) = 0}$$
+>
+> 🎯 **Önemli Not:** Bir olayın gerçekleşmesi, diğerinin gerçekleşmemesiyle sonuçlanacağından, **karşılıklı hariç olan olaylar daima bağımlıdır**. (Örn: Bir madeni paranın aynı anda hem Tura hem de Yazı gelmesi mümkün değildir.)
+
+---
+
+## Uygulama: Bağımlılık Kararı
+
+Aşağıdaki örneklerde olayların bağımlı mı yoksa bağımsız mı olduğunu belirleyelim:
+
+### Alıştırma 1: Hava Durumu ve Piknik
+
+Bir aile piknik yapmayı planlıyor. $A$ olayı "yağmur yağması" ve $B$ olayı "ailenin piknik yapması" olsun. Olaylar bağımsız mı, bağımlı mı?
+
+**Çözüm:** Bu olaylar **bağımlıdır**, çünkü ailenin piknik yapıp yapmaması ($B$), yağmur yağıp yağmamasına ($A$) bağlıdır.
+
+### Alıştırma 2: Yerine Koymadan Top Çekme
+
+Bir kutuda 6 kırmızı ve 4 mavi top var. Art arda, **yerine koymadan** iki top çekiliyor. $A$ olayı birinci çekilişte kırmızı top gelmesi, $B$ olayı ise ikinci çekilişte kırmızı top gelmesi olsun. Olaylar bağımsız mı, bağımlı mı?
+
+**Çözüm:** Bu olaylar **bağımlıdır**, çünkü birinci çekilişin sonucu, ikinci çekilişte kutuda kalan top sayısını (hem toplam sayıyı hem de kırmızı top sayısını) değiştirir ve dolayısıyla $P(B)$ olasılığını etkiler.
+
+### Alıştırma 3: Zar Atma
+
+İki adet adil altı yüzlü zar atılıyor. $A$ olayı birinci zarda 4 gelmesi, $B$ olayı ise ikinci zarda çift sayı gelmesi olsun. Olaylar bağımsız mı, bağımlı mı?
+
+**Çözüm:** Bu olaylar **bağımsızdır**, çünkü birinci zarın sonucu, ikinci zarın sonucunu hiçbir şekilde etkilemez.
+
+---
+
+## Sonuç
+
+🎉 Olayların bağımsız mı yoksa bağımlı mı olduğunu anlamak, olasılıkları doğru bir şekilde hesaplamak için çok önemlidir. Bağımsız olaylar, olasılıkların doğrudan çarpılmasına olanak tanırken, bağımlı olaylar koşullu olasılık kullanımını gerektirir. Bu ayrımı yapmak, gerçek dünya olasılık problemlerini etkili bir şekilde çözmenin anahtarıdır.
+
+---
+# Independent and Dependent Events in Probability
+
+## Introduction
+
+In probability theory, understanding the relationship between events is essential for accurately calculating the likelihood of outcomes. Events are primarily classified as **independent** or **dependent**, determined by whether the occurrence of one event affects the probability of another.
+
+---
+
+## Independent Events
+
+**Definition:**
+Two events, $A$ and $B$, are **independent** if the occurrence of one does not affect the probability of the other.
+
+**Mathematical Expression:**
+Independence is defined by the following multiplication rule:
+
+$$\mathbf{P(A \cap B) = P(A) \cdot P(B)}$$
+
+This formula is derived from the multiplication rule for probability, $P(A \cap B) = P(A|B) \cdot P(B)$, where the conditional probability simplifies to the marginal probability:
+
+$$\mathbf{P(A|B) = P(A)}$$
+
+### Example: Coin Flip and Die Roll
+
+Consider flipping a fair coin and rolling a six-sided die.
+* **Event A:** Getting Heads on the coin.
+* **Event B:** Rolling a 4 on the die.
+
+Since flipping a coin does not influence the outcome of rolling a die:
+
+$$P(A) = \frac{1}{2}$$
+$$P(B) = \frac{1}{6}$$
+
+The probability of both events occurring is:
+$$P(A \cap B) = P(A) \cdot P(B) = \frac{1}{2} \cdot \frac{1}{6} = \frac{1}{12}$$
+
+### Example: Student Survey
+
+A survey suggests that $10\%$ of students commute by bike and $40\%$ have a significant other. Assuming these events are independent, what percentage of students commute by bike **and** have a significant other?
+
+* **Event B:** Student commutes by bike. ($P(B) = 0.10$)
+* **Event S:** Student has a significant other. ($P(S) = 0.40$)
+
+Since $B$ and $S$ are assumed independent:
+
+$$P(B \cap S) = P(B) \cdot P(S) = 0.10 \cdot 0.40 = 0.04$$
+
+**Solution:** $4\%$ of students commute by bike and have a significant other.
+
+---
+
+## Dependent Events
+
+**Definition:**
+Two events, $A$ and $B$, are **dependent** if the occurrence of one event **does** affect the probability of the other.
+
+**Mathematical Expression:**
+The relationship between dependent events is expressed using **conditional probability** and the general multiplication rule:
+
+$$\mathbf{P(A \cap B) = P(A|B) \cdot P(B)}$$
+
+Where $P(A|B)$ is the probability of $A$ given that $B$ has already occurred, and **$P(A|B) \neq P(A)$**.
+
+---
+
+## Mutually Exclusive Events (vs. Independence)
+
+**Definition:**
+Events are called **mutually exclusive** (or disjoint) when they **cannot occur at the same time**.
+
+**Mathematical Expression:**
+This is expressed by:
+
+$$\mathbf{P(A \cap B) = 0}$$
+
+**Key Distinction:**
+Mutually exclusive events are a special type of **dependent** events. If $A$ and $B$ are mutually exclusive, the occurrence of $A$ makes the occurrence of $B$ impossible (probability becomes 0), thus affecting its probability. They are only independent if $P(A)$ or $P(B)$ (or both) is $0$.
+
+---
+
+## Practice Exercises
+
+### Exercise 1: The Weather and a Picnic
+
+A family is planning a picnic. Let **Event A** be "it rains," and **Event B** be "the family has a picnic." Are the events $A$ and $B$ independent or dependent?
+
+**Solution:**
+These events are **dependent** because the family's decision to have a picnic ($B$) is highly influenced by the weather condition ($A$). If it rains, the probability of having a picnic decreases significantly.
+
+### Exercise 2: Drawing Balls Without Replacement
+
+A box contains 6 red balls and 4 blue balls. Two balls are drawn one after the other **without replacement**. Let **Event A** be drawing a red ball on the first draw, and **Event B** be drawing a red ball on the second draw. Are $A$ and $B$ independent or dependent?
+
+**Solution:**
+These events are **dependent**. The outcome of the first draw changes the composition of the remaining balls (the sample space) for the second draw. Specifically, if a red ball is drawn first ($A$), the probability of drawing another red ball on the second draw ($P(B|A)$) decreases from $6/10$ to $5/9$.
+
+### Exercise 3: Rolling Dice
+
+Two fair six-sided dice are rolled. Let **Event A** be rolling a 4 on the first die, and **Event B** be rolling an even number on the second die. Are $A$ and $B$ independent or dependent?
+
+**Solution:**
+These events are **independent**. The physical action and outcome of the first die roll have absolutely no influence on the physical action and outcome of the second die roll.
+
+---
+
+## Conclusion
+
+Understanding whether events are **independent** or **dependent** is crucial for accurately calculating probabilities. **Independent events** allow for the direct multiplication of probabilities, while **dependent events** require the use of conditional probability. Mastering this distinction is key to solving real-world probability problems effectively.
+
+# Bağımsız ve Bağımlı Olaylar Karşılaştırması
+
+Aşağıdaki tablo, olasılık teorisindeki **Bağımsız Olaylar** ve **Bağımlı Olaylar** arasındaki temel farkları, formülleri ve örnekleriyle özetlemektedir.
+
+| Özellik | Bağımsız Olaylar (Independent Events) | Bağımlı Olaylar (Dependent Events) |
+| :--- | :--- | :--- |
+| **Tanım** | Bir olayın gerçekleşmesi, diğer olayın gerçekleşme olasılığını **kesinlikle değiştirmez**. | Bir olayın gerçekleşmesi, diğer olayın gerçekleşme olasılığını **değiştirir**. |
+| **Koşullu Olasılık** | $A$ olayının olasılığı, $B$ olayının gerçekleşip gerçekleşmemesinden etkilenmez. | $A$ olayının olasılığı, $B$ olayının gerçekleşmesine **bağlıdır**. |
+| **Koşullu Formül** | $$\mathbf{P(A|B) = P(A)}$$ | $$\mathbf{P(A|B) \neq P(A)}$$ |
+| **Çarpma Kuralı (Birlikte Olma)** | İki olayın birlikte gerçekleşme olasılığı, tek tek olasılıklarının çarpımıdır. | İki olayın birlikte gerçekleşme olasılığı, koşullu olasılık kullanılarak hesaplanır. |
+| **Genel Formül** | $$\mathbf{P(A \cap B) = P(A) \cdot P(B)}$$ | $$\mathbf{P(A \cap B) = P(A|B) \cdot P(B)}$$ |
+| **Gündelik Örnek** | Bir madeni paranın tura gelmesi ve bir zarın 6 gelmesi. (Birbirini etkilemezler) | Yağmur yağması ve bir şemsiye almayı unuttuğun için ıslanma olasılığın. (Yağmur, ıslanma olasılığını artırır) |
+| **Kutu Örneği** | Bir top çekip, topu **geri koyarak** tekrar çekmek (Replacement). | Bir top çekip, topu **geri koymadan** tekrar çekmek (Without Replacement). |
+
+---
+
+## Formül Detayları ve Uygulaması
+
+### Bağımsız Olaylar Örneği: Para Atma ve Zar Atma
+
+* **Olay A:** Madeni paranın Tura gelmesi ($P(A) = 1/2$)
+* **Olay B:** Zarın 4 gelmesi ($P(B) = 1/6$)
+
+İki olayın aynı anda gerçekleşme olasılığı:
+$$\mathbf{P(A \cap B) = P(A) \cdot P(B) = \frac{1}{2} \cdot \frac{1}{6} = \frac{1}{12}}$$
+
+### Bağımlı Olaylar Örneği: Geri Koymadan Top Çekme
+
+Bir kutuda 5 Kırmızı (K) ve 5 Mavi (M) top var (Toplam 10 top). Ardışık iki top, geri koyulmadan çekiliyor.
+
+1.  **Olay B:** İlk çekilen topun Kırmızı olması ($P(B) = 5/10$)
+2.  **Olay A:** İkinci çekilen topun Kırmızı olması
+
+**$P(A|B)$ Hesaplaması:** İlk top Kırmızı çekilirse, geriye 4 Kırmızı ve toplam 9 top kalır.
+$$P(A|B) = \frac{\text{Kalan Kırmızı Top Sayısı}}{\text{Kalan Toplam Sayısı}} = \frac{4}{9}$$
+
+İki Kırmızı topun ardışık çekilme olasılığı:
+$$\mathbf{P(A \cap B) = P(A|B) \cdot P(B) = \frac{4}{9} \cdot \frac{5}{10} = \frac{20}{90} = \frac{2}{9}}$$
