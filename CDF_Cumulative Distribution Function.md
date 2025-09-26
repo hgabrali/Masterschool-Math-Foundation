@@ -1,0 +1,41 @@
+# CDF_Cumulative Distribution Function
+
+# Kümülatif Dağılım Fonksiyonu (Cumulative Distribution Function - CDF) Nedir?
+
+**CDF**, $F(x)$ olarak gösterilir ve **Olasılık Kütle Fonksiyonu'nun (PMF)** yaptığı gibi tek bir değeri hesaplamak yerine, birikimli (**kümülatif**) olasılığı hesaplamak için kullanılır.
+
+---
+
+## Temel Amaç: Kümülatif Olasılık
+
+CDF'nin temel amacı, bir rastgele değişkenin ($X$) belirli bir $x$ değerine **eşit veya ondan küçük olma olasılığını** bulmaktır.
+
+* **Matematiksel Gösterim:**
+    $$\mathbf{F(x) = P(X \le x)}$$
+
+---
+
+## Ayrık Değişkenlerde CDF'nin Çalışma Prensibi
+
+Ayrık bir rastgele değişken için **CDF**, PMF değerlerinin bir toplamıdır. Belirli bir $x$ değerindeki CDF, o noktaya kadar olan tüm PMF değerlerinin toplanmasıyla elde edilir.
+
+* **Formel Bağlantı:**
+    $$\mathbf{F(x) = \sum_{t \le x} f(t)}$$
+    (Burada $f(t)$, $X$'in alabileceği tüm $t$ değerleri üzerindeki PMF'yi temsil eder.)
+
+  # CDF Neden Önemlidir? (PMF ile Farkı)
+
+| Fonksiyon | Olasılığı Hesapladığı Aralık | Amacı |
+| :--- | :--- | :--- |
+| **PMF ($f(x)$)** | **Tam olarak $x$ değeri** | Bir olayın tam olarak o sonucu vermesi olasılığı. ($P(X = x)$) |
+| **CDF ($F(x)$)** | $x$ değerine **kadar olan tüm** değerler | Olası sonuçların belirli bir eşiği **aşmama** olasılığı. ($P(X \le x)$) |
+
+### Örnek (Binomial Dağılım)
+
+Binomial dağılımda $P(X \le 3)$ ifadesini hesaplamak istediğimizde (yani 10 denemede 3 veya daha az başarı), CDF aslında bu tek tek olasılıkları toplar:
+
+$$\mathbf{F(3) = P(X=0) + P(X=1) + P(X=2) + P(X=3)}$$
+
+---
+
+**Çıkarım:** Bu, CDF'nin **Toplam Porsiyon Sayısı** analojisine karşılık geldiğini açıklar. CDF bize "Şimdiye kadar kaç başarı (veya arıza, veya çağrı) görme olasılığımız nedir?" sorusunun cevabını verir.
