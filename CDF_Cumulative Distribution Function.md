@@ -1,6 +1,13 @@
 # CDF_Cumulative Distribution Function
 
-# Kümülatif Dağılım Fonksiyonu (Cumulative Distribution Function - CDF) Nedir?
+<img width="706" height="263" alt="image" src="https://github.com/user-attachments/assets/456cb4d0-6bc8-4970-abc6-1d1d3ef7212d" />
+
+<img width="680" height="485" alt="image" src="https://github.com/user-attachments/assets/98aee107-9dee-4569-8ee3-10b3170d54ee" />
+
+<img width="738" height="287" alt="image" src="https://github.com/user-attachments/assets/eae05593-0c5f-4176-affd-f87bb272264d" />
+
+
+## Kümülatif Dağılım Fonksiyonu (Cumulative Distribution Function - CDF) Nedir?
 
 **CDF**, $F(x)$ olarak gösterilir ve **Olasılık Kütle Fonksiyonu'nun (PMF)** yaptığı gibi tek bir değeri hesaplamak yerine, birikimli (**kümülatif**) olasılığı hesaplamak için kullanılır.
 
