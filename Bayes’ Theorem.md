@@ -318,7 +318,82 @@ Bayes' Theorem provides a powerful, rational framework for updating beliefs. Her
 
 These insights highlight why Bayesian inference is a critical tool for navigating uncertainty and making data-driven decisions.
 
-Would you like to see a Python code example demonstrating the **Impact of Base Rates** using a medical testing scenario?
+<img width="827" height="586" alt="image" src="https://github.com/user-attachments/assets/b91490b1-f3f5-44d5-9c36-884812d76ed9" />
+
+<img width="739" height="711" alt="image" src="https://github.com/user-attachments/assets/6521fe6e-6d4f-4fb2-9c0c-f08e34751fe8" />
+
+<img width="787" height="421" alt="image" src="https://github.com/user-attachments/assets/98f1f8e9-faa7-45c8-8677-d7c8addc4d19" />
+
+
+---
+
+# Uygulama Örneği: Bayes Teoremi ile Arızalı Makine Teşhisi
+
+Bu örnek, Bayes Teoremi'nin yeni bir kanıt (kusurlu ürün) ışığında bir olayın nedenini (hangi makine) bulmak için nasıl kullanıldığını gösterir.
+
+## Senaryo Detayları
+
+Bir fabrika, toplam 10.000 ürün üreten üç makine (A, B, C) işletmektedir. Makinelere ait üretim oranları (**Öncül Olasılıklar**) ve kusur oranları (**Olabilirlikler**) aşağıdaki gibidir:
+
+| Makine | Günlük Üretim | Ürünün O Makineden Gelme Olasılığı ($P(M)$) | Kusur Oranı ($P(\text{Kusurlu}|M)$) |
+| :--- | :--- | :--- | :--- |
+| **A** | 4.000 | $P(A) = 4000/10000 = \mathbf{0.40}$ | $P(D|A) = \mathbf{0.01}$ |
+| **B** | 3.000 | $P(B) = 3000/10000 = \mathbf{0.30}$ | $P(D|B) = \mathbf{0.02}$ |
+| **C** | 3.000 | $P(C) = 3000/10000 = \mathbf{0.30}$ | $P(D|C) = \mathbf{0.03}$ |
+
+**Soru:** Rastgele seçilen bir ürünün **kusurlu (D)** olduğu biliniyorsa, bu ürünün her bir makineden gelme olasılığı ($P(A|D)$, $P(B|D)$, $P(C|D)$) nedir?
+
+---
+
+## Adım 1: Toplam Kusur Olasılığını Hesaplama (Marjinal Olasılık)
+
+İlk olarak, fabrikada üretilen herhangi bir ürünün kusurlu olma genel olasılığını ($P(D)$), yani **Kanıt Olasılığını** hesaplamalıyız. Bu, her makineden kusurlu ürün gelme olasılığının toplamıdır (Toplam Olasılık Kuralı).
+
+### Formül:
+$$\mathbf{P(D) = P(D|A)P(A) + P(D|B)P(B) + P(D|C)P(C)}$$
+
+### Hesaplama:
+$$\begin{aligned} P(D) &= (0.01 \cdot 0.40) + (0.02 \cdot 0.30) + (0.03 \cdot 0.30) \\ P(D) &= 0.004 + 0.006 + 0.009 \\ P(D) &= \mathbf{0.019} \end{aligned}$$
+
+**Sonuç:** Fabrikada üretilen herhangi bir ürünün kusurlu olma genel olasılığı $\mathbf{0.019}$'dur (veya %1.9).
+
+---
+
+## Adım 2: Bayes Teoremi Uygulaması (Arka Olasılık)
+
+Ürünün kusurlu olduğu **bilgisine** dayanarak, ürünün her bir makineden gelme olasılığını hesaplıyoruz. Bayes Teoremi'nin genel formülü şöyledir:
+
+$$\mathbf{P(M|D) = \frac{P(D|M) \cdot P(M)}{P(D)}}$$
+
+### A. Makine A'dan Gelme Olasılığı ($P(A|D)$)
+
+$$\mathbf{P(A|D) = \frac{P(D|A) \cdot P(A)}{P(D)} = \frac{0.01 \cdot 0.40}{0.019} \approx \mathbf{0.2105}}$$
+
+### B. Makine B'den Gelme Olasılığı ($P(B|D)$)
+
+$$\mathbf{P(B|D) = \frac{P(D|B) \cdot P(B)}{P(D)} = \frac{0.02 \cdot 0.30}{0.019} \approx \mathbf{0.3158}}$$
+
+### C. Makine C'den Gelme Olasılığı ($P(C|D)$)
+
+$$\mathbf{P(C|D) = \frac{P(D|C) \cdot P(C)}{P(D)} = \frac{0.03 \cdot 0.30}{0.019} \approx \mathbf{0.4737}}$$
+
+---
+
+## Çözüm Özeti ve Çıkarım
+
+| Makine | Öncül Olasılık ($P(M)$) | Arka Olasılık ($P(M|D)$) |
+| :--- | :--- | :--- |
+| **A** | $0.40$ (40%) | $\approx 0.2105$ (21.05%) |
+| **B** | $0.30$ (30%) | $\approx 0.3158$ (31.58%) |
+| **C** | $0.30$ (30%) | $\approx 0.4737$ (47.37%) |
+| **TOPLAM** | $1.00$ | $1.00$ |
+
+**Sonuç:** Kusurlu ürünün en yüksek olasılıkla **Makine C'den (%47.37)** geldiği sonucuna varılır.
+
+**Temel Çıkarım:** Makine A en çok üretim yapmasına rağmen, Makine C'nin **yüksek kusur oranı** (Olabilirlik), ürünün kusurlu olduğu bilgisini aldığımızda, Makine C'den gelme olasılığını en yüksek seviyeye çıkarmıştır. Bayes Teoremi, öncül bilgiyi (üretim oranı) yeni kanıt (kusur) ile etkin bir şekilde birleştirmiştir.
+
+---
+
 
 
 
