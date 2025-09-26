@@ -68,6 +68,36 @@ PMF'nin (Probability Mass Function) bir fonksiyon sayılabilmesi için karşıla
 | **3. Tanımlı Küme Dışı** | Defined only for $X$'s values | Rastgele değişkenin almadığı değerler için olasılık $0$'dır. | $$\mathbf{f(x) = 0 \quad (\text{eğer } x \notin X)}$$ |
 
 * Bu gereksinimler, zar atma, yazı tura atma veya arızalı ürün sayısını modelleme gibi tüm ayrık olayların matematiksel olarak tutarlı bir şekilde temsil edilmesini sağlar.
+----
+  # Dağılım ve Fonksiyon Farkı
+
+* Poisson, Binomial ve Geometrik, olasılık olaylarını modelleyen **Dağılım** türleridir.
+
+* PMF (Olasılık Kütle Fonksiyonu) ve CDF (Kümülatif Dağılım Fonksiyonu) ise bu dağılımları matematiksel olarak tanımlayan **Fonksiyonlardır** (araçlardır).
+
+# Olasılık Kavramlarının Rolleri: Bir Analoji (Dağılım, PMF, CDF)
+
+Bu tablo, Olasılık Dağılımı, PMF ve CDF arasındaki ilişkileri bir yemek tarifi analojisiyle netleştirmektedir.
+
+| Kavram | İngilizce Karşılığı | Rolü (Yemek Analojisi) | Açıklama |
+| :--- | :--- | :--- | :--- |
+| **Dağılım** | Distribution | **Tarif Kitabı** 📖 | Olası sonuçların listesi ve bu sonuçların oluşma kurallarını belirleyen genel matematiksel model. |
+| **PMF** | Probability Mass Function | **Malzeme Listesi/Teknik Adımlar** 🧾 | Dağılımın kuralına göre, **tam olarak tek bir sonuca** ulaşma olasılığını hesaplayan fonksiyon. |
+| **CDF** | Cumulative Distribution Function | **Toplam Porsiyon Sayısı** 📈 | Belirli bir değere (veya ona kadar olan) tüm sonuçların olasılıklarını **toplayarak (biriktirerek)**, o ana kadarki kümülatif olasılığı hesaplayan fonksiyon. |
+
+
+# Ayrık Dağılımların PMF ve CDF Karşılaştırması
+
+Bu tablo, temel ayrık olasılık dağılımlarının PMF (Olasılık Kütle Fonksiyonu) ve CDF (Kümülatif Dağılım Fonksiyonu) ile olan somut ilişkisini göstermektedir.
+
+| Dağılım Adı | PMF Ne İşe Yarar? (Tek Bir Değer) | CDF Ne İşe Yarar? (Kümülatif Değer) |
+| :--- | :--- | :--- |
+| **Bernoulli ($p$)** | Tek bir denemede **tam olarak 1 başarı** olasılığını ($p$) veya **tam olarak 0 başarı** olasılığını ($1-p$) verir. | Olasılığın $0$'dan $1$'e yükselişini gösterir. $P(X \le 0)$ ve $P(X \le 1)$'i verir. |
+| **Binomial ($n, p$)** | $n$ denemede **tam olarak $k$ tane başarı** olma olasılığını ($P(X = k)$) hesaplar. | $n$ denemede **$k$ veya daha az** başarı olma olasılığını ($P(X \le k)$) hesaplar. |
+| **Poisson ($\lambda$)** | Sabit bir aralıkta **tam olarak $k$ tane olay** gerçekleşme olasılığını ($P(X = k)$) hesaplar. | Sabit bir aralıkta **$k$ veya daha az** olay gerçekleşme olasılığını ($P(X \le k)$) hesaplar. |
+| **Geometrik ($p$)** | **Tam olarak $k$. denemede ilk başarıyı** elde etme olasılığını ($P(X = k)$) hesaplar. | **$k$ veya daha az** denemede ilk başarıyı elde etme olasılığını ($P(X \le k)$) hesaplar. |
+
+---
 
 [Probability Mass Function (PMF) - Vikipedi (Ayrıntılı Teknik Bilgi)](https://en.wikipedia.org/wiki/Probability_mass_function)
 
