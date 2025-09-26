@@ -95,4 +95,37 @@ Aşağıdaki tablo, en yaygın kullanılan ayrık dağılımlar için Beklenti (
 | **4. Geometrik** | Başarı olasılığı ($p$) | $$\mathbf{\frac{1}{p}}$$ | $$\mathbf{\frac{1-p}{p^2}}$$ |
 
 
+* Beklenen Değer, Varyans ve Standart Sapma soyut formüller olmaktan çok, iş ve bilim dünyasında risk, güvenilirlik ve tahmin ile ilgili kararlar almamızı sağlayan ölçüm araçlarıdır.
 
+# 1. Matematiksel Beklenti (Mean / Expected Value, $E[X]$)
+
+Beklenen Değer, bir olayın uzun vadeli ortalama sonucunu tahmin etmenin matematiksel karşılığıdır.
+
+| Data Science Uygulaması | Ne İşe Yarar? (Kullanım Amacı) | Neleri Bulmana Yardımcı Olur? |
+| :--- | :--- | :--- |
+| **Tahmin ve Bütçeleme** | **Merkezi Tahmin:** Olasılıkları kullanarak gelecekteki tipik sonucu tahmin etme. | **Ortalama Müşteri Ömrü Değeri (CLV):** Bir müşterinin şirkete ortalama ne kadar gelir getireceğini tahmin etme. **Optimizasyon:** Bir süreçte ortalama maliyet/kazanç noktasını belirleme. |
+| **Örnek: E-Ticaret** | Bir müşterinin bir sonraki ziyaretinde yapacağı **ortalama harcama** miktarını tahmin etmek. (Bu, envanter ve pazarlama bütçesini ayarlamaya yardımcı olur.) | |
+
+# 2. Varyans (Variance, $\sigma^2$) ve Standart Sapma (Standard Deviation, $\sigma$)
+
+Varyans ve Standart Sapma, dağılımın yayılımını ölçerek, tahminlerimizin etrafındaki **belirsizliği ve riski** nicelleştirir.
+
+| Data Science Uygulaması | Ne İşe Yarar? (Kullanım Amacı) | Neleri Bulmana Yardımcı Olur? |
+| :--- | :--- | :--- |
+| **Risk Analizi** | **Volatilite Ölçümü:** Verilerin merkezden ne kadar sapma eğiliminde olduğunu belirleme. Yüksek varyans = Yüksek **risk/belirsizlik**. | **Finansal Risk:** Bir yatırım portföyünün getirilerindeki **oynaklık** seviyesini ölçme. Yüksek $\sigma$, getiri ortalamadan hızla sapabilir demektir. |
+| **Kalite Kontrolü** | **Güvenilirlik Aralığı:** Veri noktalarının %68'inin (1 Standart Sapma içinde) ve %95'inin (2 Standart Sapma içinde) hangi aralıkta kalacağını belirleme. | **Üretim Hataları:** Bir makinenin ürettiği parçaların boyutlarının ne kadar **tutarlı** olduğunu kontrol etme. |
+| **Örnek: A/B Testi** | İki farklı reklam kampanyasının (A ve B) dönüşüm oranları aynı olabilir, ancak Kampanya A'nın varyansı çok daha düşükse, bu, A'nın sonucunun **daha güvenilir ve istikrarlı** olduğu anlamına gelir. | |
+
+
+# Özet: Momentler Neden Hayati Önemdedir?
+
+Bu momentler, bir veri bilimcinin sadece **"ne olacak?"** sorusunu değil, aynı zamanda **"ne kadar güvenle tahmin edebilirim?"** sorusunu yanıtlamasına yardımcı olur.
+
+| Kavram | Temel Çıkarım | Karar Mekanizması |
+| :--- | :--- | :--- |
+| **$E[X]$ (Beklenti)** | Uzun vadeli kazanç. | **"Ortalamada bu iyidir."** (Elde edilecek tipik değer) |
+| **$\sigma^2 / \sigma$ (Varyans/SS)** | Kazancın istikrarı. | **"Bu tahmin ne kadar risklidir?"** (Ortalamadan sapma payı) |
+
+---
+
+Bu kavramları somutlaştırmak için şimdi uygulamaya dönelim! Gördüğün gibi, Beklenti ve Varyans hesaplamak, gerçek hayatta Risk Yönetimi yapmaktır.
