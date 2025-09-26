@@ -2,7 +2,18 @@
 
 <img width="698" height="390" alt="image" src="https://github.com/user-attachments/assets/5b3c013f-3bd8-4702-bab5-21a5c7d635fc" />
 
+ <img width="865" height="580" alt="image" src="https://github.com/user-attachments/assets/1bd69202-e3b8-474d-8863-11177890d336" />
 
+<img width="1098" height="666" alt="image" src="https://github.com/user-attachments/assets/cab28747-0a90-46ee-b5c8-ff51d30c4313" />
+
+<img width="1163" height="564" alt="image" src="https://github.com/user-attachments/assets/76e728ea-0a88-4f8f-92e1-e43982ac0e34" />
+
+### Kaynaklar (Resources)
+
+* [Probability Mass Function - GeeksforGeeks](https://www.geeksforgeeks.org/maths/probability-mass-function/)
+
+  ---
+  
 # Olasılık Kütle Fonksiyonu (Probability Mass Function - PMF)
 
 **PMF**, **ayrık olasılık dağılımlarının (Discrete Probability Distributions)** kalbidir. Bir rastgele değişkenin ($X$), olası bir $x$ değerini alma olasılığını tanımlayan fonksiyondur ve genellikle $P(X=x)$ veya $f(x)$ olarak gösterilir.
