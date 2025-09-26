@@ -45,6 +45,7 @@ Bayes Teoremi, tek bir keşiften ziyade, zaman içinde geliştirilmiş bir fikir
 
 [Bayes Teoremi - Vikipedi (Teknik Detaylar)](https://en.wikipedia.org/wiki/Bayes%27_theorem)
 
+
 # Bayes Teoremi Neden Kritik Öneme Sahiptir?
 
 **Bayes Teoremi'nin** temel önemi, bize inançlarımızı **rasyonel bir şekilde güncelleme** imkanı vermesinden kaynaklanır. Yeni veriler (kanıtlar) ortaya çıktıkça, teorem, ilk hipotezimize olan güvenimizi nasıl değiştirmemiz gerektiğini matematiksel olarak kesin bir dille belirtir.
@@ -95,6 +96,71 @@ Bayes Teoremi'nin farklı akademik ve teknolojik alanlardaki temel işlevleri a�
 
 **Bayes Teoremi**, sadece akademik bir formül değil; belirsizlikle dolu dünyamızda **rasyonel çıkarım yapma** ve **bilgiyi etkin bir şekilde kullanma** sanatının matematiksel anahtarıdır.
 
+
+---
+
+# Makine Öğrenimi ve Büyük Veri'de (Big Data) Bayes Teoremi'nin Önemi
+
+Bayes Teoremi, günümüz teknolojisinin iki ana direği olan **Makine Öğrenimi (Machine Learning)** ve **Büyük Veri (Big Data)** alanlarında belirsizliği yönetmek, bilgiyi güncellemek ve en iyi tahminleri yapmak için vazgeçilmez bir matematiksel çerçeve sunar.
+
+---
+
+## Makine Öğrenimi'nde (ML) Merkezi Rolü
+
+Makine öğrenimi, veriye dayalı tahminler ve çıkarımlar yapmayı amaçlar. Bayes Teoremi, bu sürecin temelini oluşturan **inanç güncelleme** mekanizmasını sağlar.
+
+### 1. Sınıflandırmanın Temeli: Naive Bayes Algoritması
+
+Bayes Teoremi, basit ama son derece etkili bir denetimli öğrenme algoritması olan **Naive Bayes (Saf Bayes) Sınıflandırıcısı'nın** temelini oluşturur.
+
+* **Çalışma Prensibi:** Verilen bir veri noktasının (örneğin bir e-posta metninin) belirli bir sınıfa (örneğin "spam") ait olma olasılığını Bayes Teoremi kullanarak hesaplar.
+* **Uygulama Alanları:**
+    * **Metin Sınıflandırma:** E-posta spam filtreleme ve haber makalesi kategorizasyonu.
+    * **Duygu Analizi:** Metinlerin pozitif, negatif veya nötr olduğunu tahmin etme.
+
+### 2. İnanç Güncelleme ve Ön Bilginin Kullanımı
+
+Bayesci yaklaşım, öğrenme sürecini doğrudan modeller.
+
+* **Öncül Bilgi:** Modele, eğitime başlamadan önce sahip olduğumuz bilgileri (**öncül olasılık**) dahil etmemizi sağlar.
+* **Güncelleme:** Yeni veri (kanıt) geldikçe, modelin parametrelerine olan inançlarımız (**arka olasılık**) sürekli ve matematiksel olarak kesin bir şekilde güncellenir.
+
+### 3. Bayesci Çıkarım ve Belirsizliğin Ölçülmesi
+
+Geleneksel ML modellerinin aksine, Bayesci yöntemler tahminlerini bir **olasılık dağılımı** olarak sunar.
+
+* **Güven Aralığı:** Bu yaklaşım, sadece bir tahmin değeri vermek yerine, tahminin ne kadar güvenilir olduğunu da (**belirsizlik ölçüsü**) belirtir. Bu, tıbbi teşhis veya otonom sürüş gibi kritik sistemlerde hayati önem taşır.
+
+---
+
+## Büyük Veri'de (Big Data) Önemi
+
+Büyük Veri setlerinden anlamlı ve eyleme geçirilebilir içgörüler çıkarma süreci, Bayes Teoremi sayesinde daha verimli ve güvenilir hale gelir.
+
+### 1. Ölçeklenebilirlik ve Çevrimiçi Öğrenme
+
+Büyük Veri, sürekli akış halinde gelir ve tüm veri setini aynı anda işlemek zordur.
+
+* **Ardışık Öğrenme (Sequential Learning):** Bayesci yaklaşımlar, Teoremin ardışık güncelleme mantığı sayesinde, verileri parça parça veya akış halinde işleyerek modelleri sürekli güncelleyebilir. Bu, **çevrimiçi öğrenme (Online Learning)** için idealdir.
+
+### 2. Veri Füzyonu ve Güvenilirleştirme
+
+Büyük Veri, genellikle farklı kaynaklardan gelen gürültülü ve eksik bilgiyi içerir.
+
+* **Bilgi Birleştirme:** Bayes Teoremi, farklı sensörlerden veya veri kaynaklarından gelen bilgileri ağırlıklandırarak birleştirmek için mükemmel bir araçtır. Bu **veri füzyonu** (data fusion) yeteneği, kararların farklı kaynaklardan gelen verilere dayalı olarak güvenilir bir şekilde alınmasını sağlar.
+
+### 3. Gerçek Zamanlı Tahminler
+
+* **Hızlı Kararlar:** Finans ve e-ticaret gibi alanlarda, bir kullanıcının geçmiş verilerini (**öncül olasılık**) ve mevcut bağlamını birleştirerek, reklam tıklama olasılığı gibi gerçek zamanlı tahminlerin saniyeler içinde yapılabilmesine olanak tanır.
+
+---
+
+## Özet Tablo: Bayes Teoremi'nin Rolü
+
+| Alan | Neden Kritik? | Anahtar Uygulama Örneği |
+| :--- | :--- | :--- |
+| **Makine Öğrenimi** | Belirsizlik altında rasyonel tahmin ve parametre güncellemesi sağlar. | **Naive Bayes Sınıflandırıcıları** (Spam Tespiti) |
+| **Büyük Veri** | Ardışık gelen veri akışlarını işler, farklı kaynakları birleştirir ve tahmin güvenilirliğini ölçer. | **Gerçek Zamanlı Reklam/Öneri Sistemleri** |
 
 ---
 
