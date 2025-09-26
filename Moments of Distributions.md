@@ -95,8 +95,4 @@ Aşağıdaki tablo, en yaygın kullanılan ayrık dağılımlar için Beklenti (
 | **4. Geometrik** | Başarı olasılığı ($p$) | $$\mathbf{\frac{1}{p}}$$ | $$\mathbf{\frac{1-p}{p^2}}$$ |
 
 
-Bu basitleştirilmiş formülleri kullanarak, PMF/CDF alıştırmamızı çözdükten sonra uzun PMF hesaplaması yerine bu formüllerle sağlamasını yapabileceğiz.
 
-Şimdi kaldığımız yere dönelim:
-
-**Hatırlatma:** **Adım 1**'de kalmıştık. Çekilen kırmızı top sayısının ($X$) alabileceği **tam sayı değerleri** nelerdi? $(X = ?)$
