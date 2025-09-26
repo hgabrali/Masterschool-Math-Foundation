@@ -81,6 +81,15 @@ This summary provides an overview of the core concepts, types, and importance of
 
 ## 3. Types of Discrete Probability Distributions
 
+<img width="532" height="373" alt="image" src="https://github.com/user-attachments/assets/3fd51c84-4114-492a-84df-ece2f577eb9c" />
+
+<img width="589" height="284" alt="image" src="https://github.com/user-attachments/assets/a58b75a9-9fed-41f8-8b5f-12faed11f6e4" />
+
+<img width="639" height="518" alt="image" src="https://github.com/user-attachments/assets/0022dfb4-8217-408c-9bc1-0fcf0c1baa53" />
+
+
+
+
 The most common types used in statistics, data science, and finance include:
 
 | Distribution Type | Characteristic | Primary Use |
@@ -162,6 +171,8 @@ Bu dağılımlar, sayılabilir sonuçlara sahip rastgele olayları analiz etmek 
 
 ## 1. Bernoulli Dağılımı (Bernoulli Distribution)
 
+[Bernoulli Dağılımı - Vikipedi (Ayrıntılı Teknik Bilgi)](https://en.wikipedia.org/wiki/Bernoulli_distribution)
+
 | Özellik | Açıklama |
 | :--- | :--- |
 | **Tanım** | Bir deneyin yalnızca iki olası sonucu olduğunda (başarı veya başarısızlık) kullanılır. Tek bir denemeyi modeller. |
@@ -173,6 +184,8 @@ Bu dağılımlar, sayılabilir sonuçlara sahip rastgele olayları analiz etmek 
 ---
 
 ## 2. Binomial Dağılım (Binomial Distribution)
+
+[Binomial Dağılım - Vikipedi (Ayrıntılı Teknik Bilgi)](https://en.wikipedia.org/wiki/Binomial_distribution)
 
 | Özellik | Açıklama |
 | :--- | :--- |
