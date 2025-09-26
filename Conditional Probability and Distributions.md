@@ -1,7 +1,6 @@
 # Conditional Probability and Distributions
 
 
-
 ## Introduction
 In many real-world situations, the probability of an event depends on whether another event has occurred. This relationship is captured by **conditional probability**. Conditional probability measures the likelihood of an event occurring given that another event has already happened.
 
