@@ -91,3 +91,71 @@ Doğru bir çıkarım yapabilmek (çorbanın tadını doğru tahmin edebilmek) i
 | **Sistematik** | Belirli bir aralıkla seçim yapılır. | Her 5 karıştırmada bir kaşık almak. | Popülasyon sıralı bir listede olduğunda ve periyodik bir desen yoksa. |
 | **Tabakalı** | Her alt gruptan örnek alınır. | Kaşığı çorbanın tüm katmanlarından geçirmek. | Popülasyonda önemli ve belirgin alt gruplar (kadın/erkek, yaş grupları) varsa. |
 | **Küme** | Bütün alt gruplar örnek olarak alınır. | Birkaç tane mantıyı bütün olarak seçip tatmak. | Popülasyon coğrafi olarak çok dağınık olduğunda ve bireylere tek tek ulaşmak zorsa. |
+
+
+<img width="805" height="168" alt="image" src="https://github.com/user-attachments/assets/d187af7c-72ff-4f7b-baa9-e616ae7780d2" />
+
+Sayısal bir sonuç bekleyen bir problemden çok, istatistiksel bir problemin **nasıl çözüleceğine dair bir yol haritası (süreç)** sunuyor.
+
+Bu örneğin "çözümü", bir sonuç bulmak değil, doğru adımları izleyerek o sonuca nasıl ulaşılacağını planlamaktır. Gelin bu süreci adım adım, pratik bir şekilde ele alalım.
+
+---
+
+### Problemin Analizi
+
+* **Popülasyon:** Üniversitedeki 1,000 öğrencinin tamamı.
+* **Bilmek İstediğimiz Değer (Popülasyon Parametresi):** Bu 1,000 öğrencinin *gerçek* boy ortalaması ($\mu$).
+* **Zorluk:** Herkesi tek tek ölçmek çok zor (zaman, maliyet, lojistik).
+* **Önerilen Çözüm:** Daha küçük bir grup olan 100 kişilik bir **örneklem** seçmek ve bu grubun ortalamasını ($\bar{x}$) kullanarak tüm üniversite hakkında bir **tahmin (çıkarım)** yapmak.
+
+---
+
+### Çözüm Süreci: Adım Adım İlerleme
+
+Bu problemi çözmek için izlenmesi gereken adımlar şunlardır:
+
+#### Adım 1: Doğru Örnekleme Yöntemini Seçmek
+
+Bu, **en kritik adımdır**. Eğer 100 kişilik örnekleminiz tüm üniversiteyi iyi temsil etmezse, tahmininiz tamamen yanlış olabilir. (Örneğin, sadece basketbol takımından 100 kişi seçerseniz, ortalama boy çok yüksek çıkar!)
+
+Burada birkaç yöntem düşünülebilir:
+
+* **Basit Rastgele Örnekleme:** En kolayı. 1,000 öğrencinin hepsinin ismini bir listeye yazıp, tamamen rastgele 100 kişi seçersiniz. Herkesin eşit şansı vardır.
+* **Tabakalı Örnekleme (En İyi Yöntem):** Daha doğru bir sonuç için bu yöntem daha iyidir. Üniversiteyi doğal alt gruplara (yani **tabakalara**) ayırırsınız. Örneğin:
+    * Fakültelere göre (Mühendislik, Tıp, Sosyal Bilimler vb.)
+    * Cinsiyete göre (Kadın/Erkek)
+    * Sınıf seviyelerine göre (1. sınıf, 2. sınıf vb.)
+
+    Sonra, her bir tabakadan, o tabakanın popülasyondaki oranı kadar rastgele öğrenci seçersiniz. Mesela üniversitenin %60'ı kadın, %40'ı erkek ise; 100 kişilik örnekleminizin 60'ını kadınlardan, 40'ını erkeklerden rastgele seçersiniz. Bu, örnekleminizin popülasyonun demografik yapısını yansıtmasını sağlar.
+
+#### Adım 2: Veriyi Toplamak
+
+Seçtiğiniz 100 öğrenciyi bulup boylarını tek tek ölçersiniz. Elinizde artık 100 adet boy verisi olur.
+
+#### Adım 3: Örneklem İstatistiğini Hesaplamak
+
+Topladığınız 100 boy verisinin aritmetik ortalamasını alırsınız. Bu, sizin **örneklem ortalamanızdır ($\bar{x}$)**.
+
+* **Örnek Hesaplama:** Diyelim ki 100 öğrencinin boylarını ölçtünüz ve ortalamasını **172.5 cm** buldunuz. `$\bar{x}$ = 172.5 cm`
+
+#### Adım 4: Çıkarım Yapmak ve Sonucu Raporlamak
+
+Bu adımda, kaşığınızdaki çorbanın tadına bakıp (örneklem), bütün kazan (popülasyon) hakkında bir yorum yaparsınız.
+
+* **Nokta Tahmini (Point Estimate):** En basit tahmin, "Örneklem ortalamamız 172.5 cm olduğuna göre, 1,000 öğrencinin tamamının ortalama boyunun da yaklaşık 172.5 cm olduğunu tahmin ediyoruz" demektir.
+* **Daha İyi Yöntem: Güven Aralığı (Confidence Interval):** İstatistikte tek bir sayı vermek yerine, bir "hata payı" ekleyerek bir aralık vermek çok daha doğrudur. Çünkü örneklememizin şans eseri biraz daha uzun veya kısa kişilerden oluşmuş olabileceğini biliriz. Şöyle bir sonuç raporlanır:
+    > "Yaptığımız analize göre, üniversitedeki 1,000 öğrencinin gerçek boy ortalamasının **%95 güvenle 170.5 cm ile 174.5 cm arasında** olduğunu tahmin ediyoruz."
+
+    Bu aralığa **Güven Aralığı** denir ve tahminimizin ne kadar kesin olduğu hakkında bir fikir verir. Bu, istatistiksel çıkarımın en güçlü yönüdür.
+
+---
+
+### Özetle Çözüm
+
+Bu örnek, şu 4 adımlı süreç ile "çözülür":
+
+1.  **Planla:** Popülasyonu en iyi temsil edecek örnekleme yöntemini (örn: Tabakalı Örnekleme) seç.
+2.  **Uygula:** Seçilen 100 öğrencinin boy verisini topla.
+3.  **Hesapla:** Toplanan verinin ortalamasını ($\bar{x}$) bul.
+4.  **Tahmin Et:** Bulunan örneklem ortalamasını kullanarak, popülasyon ortalaması ($\mu$) için bir tahmin (tercihen bir güven aralığı ile) raporla.
+
