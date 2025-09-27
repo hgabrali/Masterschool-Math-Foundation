@@ -24,6 +24,68 @@
 
 ---
 
+**Sıfır Hipotezi ($H_0$)** ve **Alternatif Hipotez ($H_a$ veya $H_1$)**, istatistiksel bir iddianın test edildiği bir hipotez testinin temelini oluşturan iki rakip beyandır.
+
+Gelin bu iki kavramı, metaforlar ve karşılaştırmalarla detaylı bir şekilde inceleyerek bir özet tablosu oluşturalım.
+
+---
+
+### Ana Metafor: Mahkeme Salonu ve Bilimsel Deney
+
+Bu iki hipotezi anlamak için iki güçlü metafor kullanabiliriz:
+
+* **Mahkeme Salonu:** Bir iddiayı yargıladığımız bir duruşma.
+* **Bilimsel Deney:** Yeni bir fikrin işe yarayıp yaramadığını test ettiğimiz bir laboratuvar.
+
+---
+
+#### 1. Sıfır Hipotezi ($H_0$) – Statükonun Savunucusu
+
+* **Nedir?**
+  Sıfır hipotezi, testin başında doğru olarak kabul edilen varsayımdır. Genellikle "bir etki yoktur," "bir fark yoktur," veya "bir değişiklik olmamıştır" gibi ifadeler içerir. Çürütülmeye çalışılan mevcut durum veya genel kanıdır.
+
+* **Rolü:**
+  Değişime karşı bir "şeytanın avukatı" rolü oynar. Bir etkinin veya farkın, sadece şans eseri ortaya çıkmadığından emin olmamızı sağlar.
+
+* **Metaforları:**
+    * **Mahkeme Salonu:** "**Sanık masumdur.**" Duruşma başladığında, sanığın masum olduğu varsayılır. Onu suçlu bulmak için bu varsayımın "makul şüphenin ötesinde" çürütülmesi gerekir.
+    * **Bilimsel Deney:** "**Yeni gübrenin bitki büyümesine bir etkisi yoktur.**" Deneye başlarken, yeni tedavinin veya yöntemin mevcut durumdan farksız olduğunu varsayarız.
+
+* **Matematiksel İpucu:**
+  Her zaman bir eşitlik içerir (`$=$, `$\le$`, veya `$\ge$`).
+
+#### 2. Alternatif Hipotez ($H_a$ veya $H_1$) – Değişimin Habercisi
+
+* **Nedir?**
+  Alternatif hipotez, araştırmacının kanıtlamaya çalıştığı iddiadır. Bu, "bir etki vardır," "bir fark vardır," veya "bir değişiklik olmuştur" diyen yeni ve "heyecan verici" fikirdir.
+
+* **Rolü:**
+  Statükoya meydan okur. Eğer sıfır hipotezini çürütecek kadar güçlü kanıt bulursak, alternatif hipotezi kabul ederiz.
+
+* **Metaforları:**
+    * **Mahkeme Salonu:** "**Sanık suçludur.**" Bu, savcının kanıtlamaya çalıştığı iddiadır.
+    * **Bilimsel Deney:** "**Yeni gübre bitki büyümesini artırır.**" Bu, araştırmacının keşfetmeyi umduğu yeniliktir.
+
+* **Matematiksel İpucu:**
+  Her zaman bir eşitsizlik içerir (`$\ne$`, `$>$`, veya `$<$`).
+
+# Asagidaki tabloyu markdown formatina cevircez:
+
+<img width="664" height="447" alt="image" src="https://github.com/user-attachments/assets/aed7c1e2-0da4-4f9e-9604-67dc93e997ad" />
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
 <img width="739" height="409" alt="image" src="https://github.com/user-attachments/assets/fda9cdcc-a641-43d5-82cd-2cf633c9f710" />
 
 
