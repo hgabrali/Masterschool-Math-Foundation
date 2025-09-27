@@ -38,6 +38,16 @@ Görsellerde bu ikili arasındaki fark net bir şekilde gösteriliyor.
 Sürekli verilerle çalışmak için özel araçlara ihtiyacımız var.
 
 * **PDF (Probability Density Function - Olasılık Yoğunluk Fonksiyonu):**
+
+<img width="440" height="543" alt="image" src="https://github.com/user-attachments/assets/4b0923ac-5e10-4715-86b2-8c7ff46c9d95" />
+<img width="447" height="750" alt="image" src="https://github.com/user-attachments/assets/e9aee059-308f-4f99-b702-49f43a38e829" />
+
+* Geometric visualisation of the mode, median and mean of an arbitrary unimodal probability density function.
+
+<img width="1023" height="738" alt="image" src="https://github.com/user-attachments/assets/459157ad-a5c0-45e0-b377-7d3f2d6c33f5" />
+
+* Examples of four continuous probability density functions.
+
     * **Metafor (Manzara Tepeleri):** PDF eğrisini bir dağ veya tepe manzarası gibi düşünün.
     * **Tepenin Yüksekliği ($f(x)$):** Manzaranın herhangi bir noktasındaki yükseklik, o bölgede bir değerin ortaya çıkmasının ne kadar "yoğun" veya "olası" olduğunu gösterir. Zirveler, en olası değerlerin kümelendiği yerlerdir. Ancak bu yükseklik, tek başına bir olasılık değildir.
     * **Alan (Olasılık):** Belirli bir aralıktaki olasılığı bulmak için o aralıktaki tepenin altında kalan alanı hesaplamamız gerekir ($P(a < X < b)$). Tüm manzaranın (tüm tepelerin) altındaki toplam alan her zaman 1'dir (%100).
