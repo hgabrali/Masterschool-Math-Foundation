@@ -62,6 +62,8 @@ Sürekli verilerle çalışmak için özel araçlara ihtiyacımız var.
 
 <img width="378" height="305" alt="image" src="https://github.com/user-attachments/assets/79018f58-facb-4e20-a53a-baa0b173a700" />
 
+<img width="322" height="372" alt="image" src="https://github.com/user-attachments/assets/4723ef95-cb4b-4ca4-b9aa-73ff08898a45" />
+
   
     * **Metafor (Tırmanış Rotası):** CDF, bu manzarada en soldan başlayıp sağa doğru ilerlerken, o ana kadar arkanızda bıraktığınız toplam alanı (yani toplam olasılığı) gösteren bir fonksiyondur.
     * Yolculuğun en başında (en solda) arkanızda hiç alan yoktur, yani CDF = 0.
