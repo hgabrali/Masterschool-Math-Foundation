@@ -126,10 +126,10 @@ Bu sonuç, tek bir sayı olan 160 cm'den çok daha değerlidir çünkü tahminim
 
 ---
 
-Bu üç kavram, istatistiksel çıkarımın temel taşlarıdır ve genellikle birbirine karıştırılır:
-* Güven Seviyesi (Confidence Level) – Balıkçının Ustalık Seviyesi
-* Hata Payı (Margin of Error) – Ağın Büyüklü
-* Güven Aralığı (Confidence Interval) – Suya Atılmış Ağ
+ 🗺️ Bu üç kavram, istatistiksel çıkarımın temel taşlarıdır ve genellikle birbirine karıştırılır:
+* 🏆 Güven Seviyesi (Confidence Level) – Balıkçının Ustalık Seviyesi
+* 📏 Hata Payı (Margin of Error) – Ağın Büyüklü
+* 🎣 Güven Aralığı (Confidence Interval) – Suya Atılmış Ağ
 
 ---
 
