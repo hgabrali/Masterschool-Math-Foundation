@@ -82,4 +82,34 @@ Görsellerde iki popüler dağılım türü tanıtılıyor:
 | **Tek Nokta Olasılığı**| `$P(X = c) > 0$` (Anlamlıdır) | `$P(X = c) = 0$` (Anlamsızdır) |
 | **Aralık Olasılığı**| `$P(a \le X \le b)$` (Noktalar toplanır) | `$P(a \le X \le b)$` (Eğri altındaki alan) |
 | **Örnekler** | Zar atışı, müşteri sayısı | Boy, kilo, sıcaklık, zaman |
- 
+
+
+ ---
+
+ ## Olasılığın İki Farklı Dünyası: Kesikli ve Sürekli ( MINI-ÖZET)
+
+Olasılık dünyası, ölçülen verinin doğasına göre iki ana krallığa ayrılır. Temel ayrım, değerlerin **sayılabilir** mi yoksa **ölçülebilir** mi olduğudur.
+
+---
+
+### 1. Kesikli (Discrete) Dünya
+
+* **Metafor:** Bilye Torbası
+* **Temel Fikir:** Değerler arasında geçiş yoktur. Sonuçlar yalnızca belirli, ayrı ve sayılabilir değerler alabilir.
+    * *Örnek: Bir torbada sadece kırmızı ve mavi bilyeler vardır; "yarı kırmızı" bir bilye yoktur.*
+* **Veri Tipi:** Genellikle tam sayılarla ifade edilir.
+    * *Örnekler: Atılan bir zarın sonucu (1, 2, 3, 4, 5, 6), bir saatte gelen müşteri sayısı (10, 11, 12).*
+* **Olasılık Sorusu:** "Bir olayın **tam olarak** gerçekleşme olasılığı nedir?" sorusu anlamlıdır.
+    * *Örnek: `$P(\text{Zar} = 3)$` (Zarın tam 3 gelme olasılığı)*
+
+### 2. Sürekli (Continuous) Dünya
+
+* **Metafor:** Su Bardağı
+* **Temel Fikir:** İki değer arasında sonsuz sayıda başka değer bulunabilir. Değerler bir aralık boyunca kesintisiz bir şekilde akar.
+    * *Örnek: Bardaktaki su miktarı 150ml ile 151ml arasında herhangi bir değer olabilir (150.1, 150.11, 150.112...).*
+* **Veri Tipi:** Genellikle bir aralıktaki reel sayılarla ifade edilir.
+    * *Örnekler: Bir kişinin boyu, bir odanın sıcaklığı, bir işin tamamlanma süresi.*
+* **Olasılık Sorusu:** "Bir sonucun **belirli bir aralıkta** olma olasılığı nedir?" sorusu anlamlıdır.
+    * *Örnek: `$P(175 \le \text{Boy} \le 176)$` (Boyun 175cm ile 176cm arasında olma olasılığı).*
+
+> **Önemli Not:** Tek bir noktanın olasılığı sıfır kabul edilir, çünkü sonsuz olasılık içinde tek bir noktayı tam isabet ettirmek imkansızdır.
