@@ -126,7 +126,10 @@ Bu sonuç, tek bir sayı olan 160 cm'den çok daha değerlidir çünkü tahminim
 
 ---
 
-Bu üç kavram, istatistiksel çıkarımın temel taşlarıdır ve genellikle birbirine karıştırılır. 
+Bu üç kavram, istatistiksel çıkarımın temel taşlarıdır ve genellikle birbirine karıştırılır:
+* Güven Seviyesi (Confidence Level) – Balıkçının Ustalık Seviyesi
+* Hata Payı (Margin of Error) – Ağın Büyüklü
+* Güven Aralığı (Confidence Interval) – Suya Atılmış Ağ
 
 ---
 
@@ -188,11 +191,16 @@ Bir anlığına suyun üzerinde bir hareketlenme görüyorsunuz (bu sizin **örn
 2.  Bu ustalık seviyesi ve elinizdeki ipuçları (veri), ne kadar **büyük bir ağa** ihtiyacınız olduğunu belirler (**Hata Payı**).
 3.  Balığı gördüğünüz noktanın (nokta tahmini) etrafına bu ağı atarsınız ve bu sizin **Güven Aralığınız** olur.
 
-Bu üçlü, bize tek bir "kuru" tahminden çok daha fazlasını sunar: Hem bir tahmin aralığı verir hem de bu aralığı oluşturan yönteme ne kadar güvenebileceğimizi söyleyerek tahminimizdeki **belirsizliği yönetmemizi** sağlar.
+* Bu üçlü, bize tek bir "kuru" tahminden çok daha fazlasını sunar: Hem bir tahmin aralığı verir hem de bu aralığı oluşturan yönteme ne kadar güvenebileceğimizi söyleyerek tahminimizdeki **belirsizliği yönetmemizi** sağlar.
 
 
-# Karsilastirma tablosu eklenecel!!!
+#### Güven Aralığı Kavramları Karşılaştırma Tablosu
 
+| Kavram | Nedir? | Metafordaki Karşılığı | Ne İşe Yarar? | Bize Ne Anlatır? |
+| :--- | :--- | :--- | :--- | :--- |
+| **Güven Seviyesi** | Bir yüzde değeri (örn: %95) | **Balıkçının Ustalık Seviyesi** | Tahmin yapma yönteminin uzun vadedeki başarısını ve güvenilirliğini belirler. | "Bu yönteme ne kadar güvenebilirim?" sorusunu cevaplar. |
+| **Hata Payı** | Tek bir sayısal değer (örn: ±5 cm) | **Ağın Büyüklüğü (Yarıçapı)** | Güven aralığının genişliğini belirleyerek tahminin hassasiyetini ölçer. | "Tahminimin 'oynama payı' ne kadar?" sorusunu cevaplar. |
+| **Güven Aralığı** | Bir değer aralığı (örn: [155cm, 165cm]) | **Suya Atılmış Ağın Kendisi** | Popülasyon parametresi için olası değerlerin bulunduğu nihai tahmini sunar. | "Gerçek değer muhtemelen nerede?" sorusunu cevaplar. |
 
 
 
