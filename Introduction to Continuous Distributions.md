@@ -51,6 +51,8 @@ Sürekli verilerle çalışmak için özel araçlara ihtiyacımız var.
     * **Metafor (Manzara Tepeleri):** PDF eğrisini bir dağ veya tepe manzarası gibi düşünün.
     * **Tepenin Yüksekliği ($f(x)$):** Manzaranın herhangi bir noktasındaki yükseklik, o bölgede bir değerin ortaya çıkmasının ne kadar "yoğun" veya "olası" olduğunu gösterir. Zirveler, en olası değerlerin kümelendiği yerlerdir. Ancak bu yükseklik, tek başına bir olasılık değildir.
     * **Alan (Olasılık):** Belirli bir aralıktaki olasılığı bulmak için o aralıktaki tepenin altında kalan alanı hesaplamamız gerekir ($P(a < X < b)$). Tüm manzaranın (tüm tepelerin) altındaki toplam alan her zaman 1'dir (%100).
+ 
+[Probability Density Function - Wikipedia](https://en.wikipedia.org/wiki/Probability_density_function)
 
 * **CDF (Cumulative Distribution Function - Kümülatif Dağılım Fonksiyonu):**
     * **Metafor (Tırmanış Rotası):** CDF, bu manzarada en soldan başlayıp sağa doğru ilerlerken, o ana kadar arkanızda bıraktığınız toplam alanı (yani toplam olasılığı) gösteren bir fonksiyondur.
