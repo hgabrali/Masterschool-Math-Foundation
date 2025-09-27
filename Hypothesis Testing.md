@@ -76,8 +76,14 @@ Bu iki hipotezi anlamak için iki güçlü metafor kullanabiliriz:
 
 
 
+# Type I and Type II Errors konusunu türkce olarak metaforlu ve tablolu aciklayacagiz. 
 
 
+# One-Tailed and Two-Tailed Tests konusunu türkce olarak metaforlu ve tablolu aciklayacagiz.
+
+# Significance Level konusunu türkce olarak metaforlu ve tablolu aciklayacagiz.
+
+# P-value konusunu türkce olarak metaforlu ve tablolu aciklayacagiz.
 
 
 
