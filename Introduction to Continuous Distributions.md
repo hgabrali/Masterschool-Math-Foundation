@@ -64,11 +64,10 @@ Sürekli verilerle çalışmak için özel araçlara ihtiyacımız var.
 
 <img width="322" height="372" alt="image" src="https://github.com/user-attachments/assets/4723ef95-cb4b-4ca4-b9aa-73ff08898a45" />
 
-  
-    * **Metafor (Tırmanış Rotası):** CDF, bu manzarada en soldan başlayıp sağa doğru ilerlerken, o ana kadar arkanızda bıraktığınız toplam alanı (yani toplam olasılığı) gösteren bir fonksiyondur.
-    * Yolculuğun en başında (en solda) arkanızda hiç alan yoktur, yani CDF = 0.
-    * Yolculuğun sonunda (en sağda) tüm manzarayı geçtiğiniz için toplam alan 1 olur, yani CDF = 1.
-    * Bu araç çok kullanışlıdır. Çünkü iki nokta arasındaki alanı (olasılığı) bulmak için integral ile uğraşmak yerine, sadece o noktalardaki kümülatif değerleri birbirinden çıkarırız: `$P(a < X < b) = CDF(b) - CDF(a)$`.
+   * **Metafor (Tırmanış Rotası):** CDF, bu manzarada en soldan başlayıp sağa doğru ilerlerken, o ana kadar arkanızda bıraktığınız toplam alanı (yani toplam olasılığı) gösteren bir fonksiyondur.
+  * Yolculuğun en başında (en solda) arkanızda hiç alan yoktur, yani CDF = 0.
+  * Yolculuğun sonunda (en sağda) tüm manzarayı geçtiğiniz için toplam alan 1 olur, yani CDF = 1.
+  * Bu araç çok kullanışlıdır. Çünkü iki nokta arasındaki alanı (olasılığı) bulmak için integral ile uğraşmak yerine, sadece o noktalardaki kümülatif değerleri birbirinden çıkarırız: `$P(a < X < b) = CDF(b) - CDF(a)$`.
  
 
 [Cumulative Distribution Function - Wikipedia](https://en.wikipedia.org/wiki/Cumulative_distribution_function) 
