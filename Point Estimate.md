@@ -154,5 +154,71 @@ Bu rakamları şu şekilde yorumlamalıyız:
 #### 4. Sonuçlar Ne Anlama Geliyor?
 * Bu sayılar, popülasyonun *gerçek* değerleri değildir. Onlar, elimizdeki sınırlı veriye dayanarak yaptığımız **en iyi eğitimli tahminlerdir**. Tıpkı aşçının, bütün bir kazan hakkında sadece bir kaşık çorbaya bakarak bir fikir yürütmesi gibi.
 
+--- 
 
+### Python Kodu: Oran için Nokta Tahmini
+
+Aşağıdaki kod, 300 öğrencinin sınav sonuçlarından oluşan bir örneklem oluşturur ve bu örneklemi kullanarak popülasyonun geçme oranı ve bu oranın varyansı için nokta tahminleri yapar.
+
+```python
+import numpy as np
+
+# Simulate a sample of 
+# 300 students' test results
+n = 300  # Total sample size
+
+# Create a random sample 
+# where 1 represents passing 
+# the test and 0 represents failing
+# Let's assume 65% of students passed the test
+np.random.seed(42) # For reproducible results
+students = np.random.choice([0, 1], size=n, p=[0.35, 0.65])  # 65% pass the test
+
+# Calculate the point
+# estimate for the proportion (sample proportion)
+p_estimate = np.mean(students)
+
+# Calculate the variance
+# of the proportion estimate using the formula: p̂ * (1 - p̂) / n
+variance_estimate = p_estimate * (1 - p_estimate) / n
+
+# Print the results
+print(f"Point Estimate for Proportion: {p_estimate:.4f}")
+print(f"Variance of the Proportion Estimate: {variance_estimate:.6f}")
+```
+
+### Kodun ve Çıktının Açıklaması
+
+Bu kodun her bir parçasının ne anlama geldiğini ve sonuçları nasıl yorumlamamız gerektiğini inceleyelim.
+
+#### 1. Oran için Nokta Tahmini (`p_estimate`)
+
+* **Ne Yaptık?**
+  `np.mean(students)` kodunu kullandık. `students` dizisi sadece 0 (kaldı) ve 1'lerden (geçti) oluştuğu için, bu dizinin ortalamasını almak, 1'lerin oranını (yani geçenlerin oranını) bulmak için zekice ve etkili bir yoldur.
+
+* **Yorum:**
+  Çıktıdaki `Point Estimate for Proportion: 0.6400` (veya sizin çalıştırdığınızda buna çok yakın bir değer) bizim **en iyi tekil tahminimizdir**.
+  > "Elimdeki 300 kişilik örnekleme dayanarak, tüm popülasyonun (sınava giren tüm öğrencilerin) geçme oranının **%64** olduğunu tahmin ediyorum."
+
+---
+
+#### 2. Oran Tahmininin Varyansı (`variance_estimate`)
+
+* **Ne Yaptık?**
+  Görselde verilen formülü doğrudan Python koduna çevirdik:
+  $$
+  Var(\hat{p}) = \frac{\hat{p}(1-\hat{p})}{n}
+  $$
+  Bu, kodda `p_estimate * (1 - p_estimate) / n` olarak karşılık bulur.
+
+* **Bu Formül Ne Anlama Geliyor? (Metafor)**
+  Varyansı, tahminimizin **"güvenilirlik ölçüsü"** veya **"titreme payı"** olarak düşünebilirsiniz. Eğer bu deneyi (300 kişilik yeni bir örneklem seçmeyi) tekrar tekrar yapsaydık, bulacağımız oran tahmini her seferinde biraz farklı olurdu. İşte varyans, bu tahminlerin ne kadar "titreyeceğini" veya ne kadar küçük bir aralıkta değişeceğini ölçer.
+
+* **Nelere Dikkat Etmeli?**
+    * **Düşük Varyans (İyi):** Varyansın küçük olması, tahminimizin çok fazla "titremediğini", yani oldukça **güvenilir ve kararlı** olduğunu gösterir. Başka bir örneklem alsak bile sonucun çok farklı çıkmayacağını bekleyebiliriz.
+    * **Yüksek Varyans (Kötü):** Varyansın büyük olması, tahminimizin çok "titrek" olduğunu ve başka bir örneklemde çok farklı bir sonuç bulabileceğimiz anlamına gelir.
+
+* **Yorum:**
+  Çıktıdaki `Variance of the Proportion Estimate: 0.000768` değeri **çok küçüktür**.
+  > "Yaptığımız %64'lük tahmin oldukça sağlam. Örneklem boyutumuz (`n=300`) yeterince büyük olduğu için, bu tahminin 'titreme payı' çok düşüktür. Bu, tahminimize olan güvenimizi artırır." ✅
 
