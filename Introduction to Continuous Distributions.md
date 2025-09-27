@@ -148,11 +148,37 @@ Bu, daha çok matematik ve sayı teorisiyle ilgili bir kavramdır. Bir aralıkta
 * **2. Normal Dağılım (Gaussian Distribution):**
   
   ---
+
+<img width="512" height="772" alt="image" src="https://github.com/user-attachments/assets/427de5d9-f0c5-48be-9482-e46be14968c6" />
+
+
     * **Metafor (Çan Eğrisi Tepesi):** Doğada ve sosyal bilimlerde en sık karşılaşılan dağılımdır. Simetrik bir **çan** şeklindedir.
     * **Özellikleri:** Değerlerin çoğu ortalama ($\mu$) etrafında toplanır. Ortalamadan uzaklaştıkça bu değerlerin görülme sıklığı hızla azalır.
     * **Örnek:** İnsanların boyları, zeka seviyeleri (IQ), ölçüm hataları. Çoğu insan ortalama boydadır; çok uzun veya çok kısa insanlar çok daha azdır.
- 
-  | Özellik | Kesikli Dağılım (Bilye Torbası) | Sürekli Dağılım (Su Bardağı) |
+
+**Gaussian distribution**, also known as the **Normal distribution**, is defined as a continuous random variable characterized by its mean ($\mu$) and standard deviation ($\sigma$). It is often used to describe phenomena such as:
+
+* Student marks
+* Height
+* Weight
+
+
+
+[Normal distribution- Wikipedia](https://en.wikipedia.org/wiki/Normal_distribution)
+
+### Düzgün Dağılım (Uniform Distribution) ve Normal Dağılım (Gaussian Distribution) Tablosu
+
+
+| Özellik | Düzgün Dağılım (Uniform Distribution) | Normal Dağılım (Gaussian Distribution) |
+| :--- | :--- | :--- |
+| **PDF Grafiği (Şekli)** | **Dikdörtgen**. Belirli bir aralıkta olasılık sabittir. | **Çan Eğrisi**. Ortada bir tepe noktası vardır ve kenarlara doğru simetrik olarak azalır. |
+| **Olasılıkların Dağılımı** | Tanımlanan aralıktaki **tüm sonuçlar eşit olasılıklıdır**. | Sonuçlar **ortalama etrafında kümelenir**. Ortalamadan uzaklaştıkça olasılık azalır. |
+| **Tanımlayıcı Parametreler** | Başlangıç noktası ($a$) ve Bitiş noktası ($b$). | Ortalama ($\mu$) ve Standart Sapma ($\sigma$). |
+| **En Olası Değer (Mod)** | Tek bir en olası değer yoktur; aralıktaki tüm değerler eşittir. | En olası değer, dağılımın merkezi olan ortalamadır ($\mu$). |
+| **Yayılım Ölçütü** | Aralığın genişliğidir ($b-a$). | Standart sapmadır ($\sigma$). |
+| **Karşılaştırmalı Örnek** | **Örnek:** Bir kafeye saat 14:00 ile 15:00 arasında herhangi bir anda gelen bir arkadaşınızı bekliyorsunuz. Arkadaşınızın bu 60 dakikalık zaman dilimindeki herhangi bir anda gelme olasılığı tamamen aynıdır. 14:10'da gelmesi ile 14:50'de gelmesi arasında olasılık farkı yoktur. | **Örnek:** Bir sınıftaki öğrencilerin bir sınavdan aldığı notları düşünelim. Notların çoğu sınıf ortalaması (örneğin 75 puan) etrafında toplanacaktır. 95-100 gibi çok yüksek veya 40-45 gibi çok düşük not alan öğrenci sayısı çok daha az olacaktır. |
+
+ | Özellik | Kesikli Dağılım (Bilye Torbası) | Sürekli Dağılım (Su Bardağı) |
 | :--- | :--- | :--- |
 | **Veri Türü** | Sayılabilir (1, 2, 3...) | Ölçülebilir (1.5, 2.71, ...) |
 | **Olasılık Fonk.** | PMF (Olasılık Kütle Fonksiyonu) | PDF (Olasılık Yoğunluk Fonksiyonu) |
@@ -160,7 +186,6 @@ Bu, daha çok matematik ve sayı teorisiyle ilgili bir kavramdır. Bir aralıkta
 | **Tek Nokta Olasılığı**| `$P(X = c) > 0$` (Anlamlıdır) | `$P(X = c) = 0$` (Anlamsızdır) |
 | **Aralık Olasılığı**| `$P(a \le X \le b)$` (Noktalar toplanır) | `$P(a \le X \le b)$` (Eğri altındaki alan) |
 | **Örnekler** | Zar atışı, müşteri sayısı | Boy, kilo, sıcaklık, zaman |
-
 
  ---
 
