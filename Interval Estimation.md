@@ -126,6 +126,71 @@ Bu sonuç, tek bir sayı olan 160 cm'den çok daha değerlidir çünkü tahminim
 
 ---
 
+Bu üç kavram, istatistiksel çıkarımın temel taşlarıdır ve genellikle birbirine karıştırılır. 
+
+---
+
+### Ana Metafor: Göldeki Gizemli Balık
+
+Uçsuz bucaksız bir gölde ( **popülasyon** ) yaşayan ve tam yerini bilmediğimiz efsanevi, büyük bir balığın ( **popülasyonun gerçek ortalaması, $\mu$** ) peşinde olan bir balıkçı olduğunuzu hayal edin. Bütün gölü taramak imkansız olduğu için, balığın nerede olabileceğini tahmin etmeniz gerekiyor.
+
+Bir anlığına suyun üzerinde bir hareketlenme görüyorsunuz (bu sizin **örneklem ortalamanız, $\bar{x}$** ). Bu sizin en iyi ipucunuz, yani **nokta tahmininiz**. Ama bilirsiniz ki balık tam olarak orada olmayabilir, o hareketin biraz uzağında olabilir.
+
+İşte bu noktada, tek bir noktaya olta atmak yerine, daha mantıklı bir şey yaparsınız: **ağ atmak**.
+
+---
+
+### 1. Güven Seviyesi (Confidence Level) – Balıkçının Ustalık Seviyesi
+
+* **Nedir?** Genellikle yüzde olarak ifade edilen (90%, 95%, 99%) bir **yöntem güvenilirliği** ölçüsüdür.
+* **Ne İşe Yarar?** Tahmin yapma sürecimizin (ağ atma tekniğimizin) uzun vadede ne kadar başarılı olacağını belirtir.
+* **Bize Ne Anlatır?**
+    * **Metafor:** Güven Seviyesi, sizin **balıkçı olarak ustalığınızı** temsil eder. %95'lik bir güven seviyesi seçmek, "Benim kullandığım bu ağ atma tekniği o kadar iyi ki, bu gölde 100 farklı noktaya ağ atsam, bunların 95'inde efsanevi balığı ağın içinde yakalarım" demektir.
+* **Nasıl Yorumlanır? (En Önemli Nokta)**
+    * **YANLIŞ YORUM:**
+        > "Balığın şu an attığım ağın içinde olma olasılığı %95'tir."
+    * **DOĞRU YORUM:**
+        > "Bu aralığı oluşturmak için kullandığım **yönteme %95 güveniyorum**." Güven, tek bir sonuca değil, **sürecin kendisine** duyulan güvendir.
+
+---
+
+### 2. Hata Payı (Margin of Error) – Ağın Büyüklüğü
+
+* **Nedir?** Nokta tahmininize (örneklem ortalamasına) ekleyip çıkardığınız ve güven aralığınızın sınırlarını belirleyen **sayısal bir değerdir** (örn: ±5 cm).
+* **Ne İşe Yarar?** Tahminimizdeki belirsizliğin miktarını belirler. Güven aralığının "yarıçapıdır".
+* **Bize Ne Anlatır?**
+    * **Metafor:** Hata Payı, kullanacağınız **ağın ne kadar büyük olduğunu** söyler.
+        * **Küçük Hata Payı:** Küçük ve hassas bir ağ. Tahmininiz daha keskindir ama balığı kaçırma riskiniz biraz daha fazladır.
+        * **Büyük Hata Payı:** Geniş ve büyük bir ağ. Tahmininiz daha az keskindir ama balığı yakalama konusunda kendinize daha çok güvenirsiniz.
+* **Nelerden Etkilenir?**
+    * **Güven Seviyesi:** Daha usta bir balıkçı (%99 güven) balığı kaçırmamak için daha **büyük bir ağ** (daha büyük hata payı) kullanır.
+    * **Örneklem Boyutu:** Elinizde ne kadar çok ipucu varsa (büyük örneklem, `$n$`), o kadar **küçük bir ağa** (daha küçük hata payı) ihtiyaç duyarsınız.
+    * **Verinin Değişkenliği:** Göldeki balık çok hareketliyse (yüksek standart sapma), onu yakalamak için daha **büyük bir ağ** gerekir.
+
+---
+
+### 3. Güven Aralığı (Confidence Interval) – Suya Atılmış Ağ
+
+* **Nedir?** Bir alt ve bir üst sınırdan oluşan **değer aralığıdır** (örn: [155 cm, 165 cm]).
+* **Ne İşe Yarar?** Popülasyonun bilinmeyen gerçek parametresi için en olası aralığı tahmin eder.
+* **Bize Ne Anlatır?**
+    * **Metafor:** Güven Aralığı, balığı gördüğünüz yerin (nokta tahmini) etrafına **atmış olduğunuz ağın ta kendisidir**. Ağın merkezi sizin ilk ipucunuzdur (örneklem ortalaması), kenarları ise hata payı tarafından belirlenir.
+* **Nasıl Yorumlanır?**
+    * **Formül:** `Güven Aralığı = Nokta Tahmini ± Hata Payı`
+    * **Pratik Yorum:**
+        > "Elimdeki verilere ve %95 güven seviyesine dayanarak, göldeki efsanevi balığın (popülasyon ortalamasının) gerçek boyunun **155 cm ile 165 cm arasında** bir yerde olduğunu tahmin ediyorum."
+
+---
+
+### Özetle Birlikte Nasıl Çalışırlar?
+
+1.  Önce **ustalık seviyenize** karar verirsiniz (**Güven Seviyesi**, örn: %95).
+2.  Bu ustalık seviyesi ve elinizdeki ipuçları (veri), ne kadar **büyük bir ağa** ihtiyacınız olduğunu belirler (**Hata Payı**).
+3.  Balığı gördüğünüz noktanın (nokta tahmini) etrafına bu ağı atarsınız ve bu sizin **Güven Aralığınız** olur.
+
+Bu üçlü, bize tek bir "kuru" tahminden çok daha fazlasını sunar: Hem bir tahmin aralığı verir hem de bu aralığı oluşturan yönteme ne kadar güvenebileceğimizi söyleyerek tahminimizdeki **belirsizliği yönetmemizi** sağlar.
+
+
 # Karsilastirma tablosu eklenecel!!!
 
 
