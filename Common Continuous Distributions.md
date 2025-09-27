@@ -19,3 +19,7 @@
 <img width="791" height="248" alt="image" src="https://github.com/user-attachments/assets/e489ca37-c5dc-48d2-8961-b83ef955fccd" />
 
 ---
+
+
+# Düzgün Dağılım (Uniform Distribution) ve Üstel Dağılım (Exponential Distribution)
+
