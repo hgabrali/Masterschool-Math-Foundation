@@ -1,6 +1,6 @@
 # Normal Distribution
 
-[Normal Distribution-Codes](https://colab.research.google.com/drive/1jOaCghd9WhzMZOFUEfcvxxHEBH0Yo1h5#scrollTo=YUu0BJve-orF)
+[Normal Distribution_Z-score-Codes](https://colab.research.google.com/drive/1jOaCghd9WhzMZOFUEfcvxxHEBH0Yo1h5#scrollTo=YUu0BJve-orF)
 
 
 <img width="770" height="163" alt="image" src="https://github.com/user-attachments/assets/c49e213f-1f6a-4168-9b79-764e94674514" />
