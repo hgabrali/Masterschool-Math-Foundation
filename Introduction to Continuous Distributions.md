@@ -89,11 +89,65 @@ Her manzara (dağılım) farklıdır. Onları tanımlamak için iki temel ölç�
 
 Görsellerde iki popüler dağılım türü tanıtılıyor:
 
-* **Düzgün Dağılım (Uniform Distribution):**
-    * **Metafor (Mükemmel Düz Bir Plato):** Bu dağılım, belirli bir aralıktaki her sonucun **eşit derecede olası** olduğu durumları tanımlar. PDF grafiği, bir **dikdörtgen** şeklindedir.
-    * **Örnek:** Bir bilgisayarın 0 ile 1 arasında rastgele bir sayı üretmesi. 0.2 gelme olasılığı ile 0.8 gelme olasılığı tamamen aynıdır. Hiçbir bölgenin diğerine üstünlüğü yoktur.
+* **1. Düzgün Dağılım (Uniform Distribution):**
+---
 
-* **Normal Dağılım (Gaussian Distribution):**
+<img width="353" height="552" alt="image" src="https://github.com/user-attachments/assets/40ae3eea-a0d7-4f2b-8b10-438635bd8c4e" />
+
+
+   * **Metafor (Mükemmel Düz Bir Plato):** Bu dağılım, belirli bir aralıktaki her sonucun **eşit derecede olası** olduğu durumları tanımlar. PDF grafiği, bir **dikdörtgen** şeklindedir.
+   * **Örnek:** Bir bilgisayarın 0 ile 1 arasında rastgele bir sayı üretmesi. 0.2 gelme olasılığı ile 0.8 gelme olasılığı tamamen aynıdır. Hiçbir bölgenin diğerine üstünlüğü yoktur.
+      
+ **Uniform distribution** may refer to:
+
+* Continuous uniform distribution
+* Discrete uniform distribution
+* Uniform distribution (ecology)
+* Equidistributed sequence
+
+### Sürekli Düzgün Dağılım (Continuous Uniform Distribution)
+
+Bu, istatistikte en yaygın bilinen türdür. Belirli bir aralıktaki (örneğin 0 ile 10 arası) her bir sonucun gerçekleşme olasılığının **tamamen aynı** olduğu durumları ifade eder.
+
+* **Metafor:** Bir otobüsün her saat başı 0 ila 30. dakikalar arasında herhangi bir anda gelebildiğini ve her anın eşit olasılıklı olduğunu düşünün. Durağa rastgele bir zamanda gittiğinizde otobüsün 5. ile 10. dakikalar arasında gelme olasılığı, 20. ile 25. dakikalar arasında gelme olasılığı ile aynıdır.
+
+---
+
+### Kesikli Düzgün Dağılım (Discrete Uniform Distribution)
+
+Bu, **sayılabilir** sayıda ve sonlu olan her bir sonucun gerçekleşme olasılığının eşit olduğu durumları tanımlar.
+
+* **Metafor:** Hilesiz bir zarı attığınızda 1, 2, 3, 4, 5 veya 6 gelme olasılıklarının hepsi birbirine eşittir (1/6). Sonuçlar belirli ve ayrı değerlerdir.
+
+---
+
+### Düzgün Dağılım (Ekoloji)
+
+Bu terim, istatistiksel bir kavram değil, **ekolojik** bir gözlemdir. Bir popülasyondaki bireylerin bir yaşam alanı üzerinde nasıl yayıldığını ifade eder.
+
+* **Açıklama:** Düzgün dağılım, bireylerin birbirinden **eşit uzaklıklarda** bulunduğu bir yerleşim düzenidir. Bu durum genellikle bireyler arası rekabetin (örneğin kaynaklar veya alan için) yüksek olduğu durumlarda görülür.
+* **Örnek:** Kendi bölgelerini savunan penguenlerin yuvaları veya su için rekabet eden çöl bitkileri genellikle düzgün bir dağılım sergiler. 🐧
+
+---
+
+### Dengeli Dağılımlı Dizi (Equidistributed Sequence)
+
+Bu, daha çok matematik ve sayı teorisiyle ilgili bir kavramdır. Bir aralıktaki sayıların oluşturduğu bir dizinin, o aralığı ne kadar **"adil" veya "eşit"** bir şekilde doldurduğunu ifade eder.
+
+* **Açıklama:** Basitçe, bir dizideki elemanlar ilerledikçe, herhangi bir alt aralığa düşen eleman sayısının, o aralığın uzunluğuyla orantılı hale gelmesidir. Yani dizi, zamanla aralığın her yerine **eşit bir şekilde yayılır**.
+
+### Düzgün Dağılım Kavramları Karşılaştırma Tablosu
+
+| Kavram | Alan | Temel Fikir | Veri Tipi / Yapı | Örnek / Metafor |
+| :--- | :--- | :--- | :--- | :--- |
+| **Sürekli Düzgün Dağılım** | İstatistik | Belirli bir aralıktaki her sonucun olasılığı eşittir. | Sürekli (ölçülebilir) aralık | Bir otobüsün 0-30 dk. arasında herhangi bir anda gelmesi. |
+| **Kesikli Düzgün Dağılım** | İstatistik | Sonlu sayıdaki her bir ayrık sonucun olasılığı eşittir. | Kesikli (sayılabilir) değerler | Hilesiz bir zar atışı (1, 2, 3, 4, 5, 6). |
+| **Düzgün Dağılım (Ekoloji)** | Ekoloji | Bireylerin bir alanda birbirinden eşit uzaklıkta yayılması. | Coğrafi / Fiziksel alan | Rekabet nedeniyle eşit aralıklı penguen yuvaları. 🐧 |
+| **Dengeli Dağılımlı Dizi** | Matematik | Bir dizinin elemanlarının bir aralığı adil ve orantılı olarak doldurması. | Sayı dizisi (sequence) | Dizinin zamanla aralığın her yerine eşit yayılması. |
+
+* **2. Normal Dağılım (Gaussian Distribution):**
+  
+  ---
     * **Metafor (Çan Eğrisi Tepesi):** Doğada ve sosyal bilimlerde en sık karşılaşılan dağılımdır. Simetrik bir **çan** şeklindedir.
     * **Özellikleri:** Değerlerin çoğu ortalama ($\mu$) etrafında toplanır. Ortalamadan uzaklaştıkça bu değerlerin görülme sıklığı hızla azalır.
     * **Örnek:** İnsanların boyları, zeka seviyeleri (IQ), ölçüm hataları. Çoğu insan ortalama boydadır; çok uzun veya çok kısa insanlar çok daha azdır.
