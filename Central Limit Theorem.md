@@ -160,7 +160,55 @@ Bu yeni grafikle karşılaştığınızda, bir önceki kontrol listesindeki soru
 
 <img width="752" height="575" alt="image" src="https://github.com/user-attachments/assets/9cc64d78-03d7-4aba-bc1c-1f6c3f81ccf7" />
 
-### Cözümün aciklamasi eklenecek
+### Problemin Amacı
+
+Bu soru, bize bir popülasyon hakkında temel bilgiler (ortalama ve standart sapma) verildiğinde, o popülasyondan alacağımız örneklemlerin ortalamalarının nasıl davranacağını tahmin etmemizi istiyor.
+
+* **Metaforla Düşünelim:** Bize "kaotik krallığın" (popülasyonun) genel özelliklerini veriyorlar ve bizden, toplanacak olan "Bilgeler Konseyi'nin" (örneklem ortalamaları dağılımının) özelliklerini tahmin etmemizi bekliyorlar.
+
+---
+
+### Soru ve Cevabın Açıklaması
+
+#### 1. Verilen Bilgiler (Krallığın Özellikleri)
+
+* **Popülasyon Ortalaması ($\mu$) = 100:** Krallıktaki tüm bireylerin ortalaması 100'dür.
+* **Popülasyon Standart Sapması ($\sigma$) = 15:** Krallıktaki bireylerin görüşleri ortalama etrafında 15 birimlik bir yayılım gösteriyor.
+* **Örneklem Boyutu ($n$) = 40:** "Bilge" temsilcileri oluşturmak için her seferinde 40 kişilik gruplar seçeceğiz.
+
+#### 2. İstenenler (Bilgeler Konseyi'nin Özellikleri)
+
+Soru bizden iki şey istiyor:
+1.  Örneklem ortalamaları dağılımının **ortalaması** ne olur?
+2.  Örneklem ortalamaları dağılımının **standart sapması** ne olur?
+
+#### 3. Çözümün Açıklaması
+
+Çözüm, Merkezi Limit Teoremi'nin iki temel kuralını doğrudan uygular:
+
+**A) Örneklem Ortalamalarının Ortalaması (Konsey'in Merkezi)**
+* **CLT Kuralı (Kural 1):** Bir popülasyondan alınan örneklem ortalamalarının ortalaması, her zaman popülasyonun kendi ortalamasına eşittir.
+* **Matematiksel olarak:** `$E[\bar{X}] = \mu$`
+* **Uygulama:** Popülasyon ortalaması ($\mu$) 100 olduğu için, örneklem ortalamaları dağılımının ortalaması da **100**'dür.
+* **Yorum:** Oluşturacağımız "Bilgeler Konseyi"nin genel görüşü, krallığın gerçek genel görüşüyle tam olarak aynı merkezde olacaktır.
+
+**B) Örneklem Ortalamalarının Standart Sapması (Konsey'deki Fikir Birliği)**
+* **CLT Kuralı (Kural 2):** Örneklem ortalamaları dağılımının standart sapması, popülasyon standart sapmasının örneklem boyutunun kareköküne bölünmesiyle bulunur. Bu değere özel bir isim verilir: **Standart Hata (Standard Error)**.
+* **Matematiksel olarak:**
+    $$SE = \frac{\sigma}{\sqrt{n}}$$
+* **Uygulama:** Çözümde bu formül kullanılır:
+    `$SE = \frac{15}{\sqrt{40}} \approx 2.37$`
+* **Yorum:** Bu **2.37** değeri, "Bilgeler Konseyi"ndeki fikir birliğinin ne kadar güçlü olduğunu gösterir. Yani, 40 kişilik gruplardan alacağımız örneklem ortalamalarının, gerçek ortalama olan 100'ün etrafında tipik olarak **yaklaşık 2.37 birimlik bir sapma** göstermesini bekleriz. Örneklem boyutu (`$n=40$`) büyüdükçe bu değerin daha da küçüleceğini ve tahminlerimizin daha isabetli olacağını unutmayın.
+
+---
+
+### Özetle
+
+Bu alıştırma bize şunu gösteriyor: Ana popülasyonun dağılımı ne olursa olsun, eğer ondan 40'ar kişilik örneklemler alıp ortalamalarını hesaplarsak, bu ortalamaların oluşturacağı yeni dağılım:
+
+1.  **Ortalaması 100** olan,
+2.  **Standart sapması (Standart Hatası) 2.37** olan,
+3.  Ve şekli **Normal Dağılıma (Çan Eğrisi)** uyan bir dağılım olacaktır.
 
 ---
 
