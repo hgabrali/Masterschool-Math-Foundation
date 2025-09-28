@@ -24,6 +24,9 @@
 
 ---
 
+<img width="218" height="260" alt="image" src="https://github.com/user-attachments/assets/6b615a4c-56b5-4076-95d2-223ec9ec0902" />
+
+
 **Sıfır Hipotezi ($H_0$)** ve **Alternatif Hipotez ($H_a$ veya $H_1$)**, istatistiksel bir iddianın test edildiği bir hipotez testinin temelini oluşturan iki rakip beyandır.
 
 Gelin bu iki kavramı, metaforlar ve karşılaştırmalarla detaylı bir şekilde inceleyerek bir özet tablosu oluşturalım.
@@ -84,18 +87,255 @@ Bu iki hata arasında bir **ödünleşme (trade-off)** vardır:
 * **Mahkeme Metaforu:** Masum birini hapse atmamak için kanıt standardını (`$\alpha$`yı düşürerek) çok yükseltirseniz, suçluların delil yetersizliğinden serbest kalma ihtimalini (Tip II hatayı) artırırsınız.
 * **Çözüm:** Her iki hata türünü de aynı anda azaltmanın tek yolu, daha fazla ve daha iyi kanıt toplamaktır, yani **örneklem boyutunu artırmaktır**.
 
-  
+  #### Karşılaştırmalı Özet Tablosu
 
-# One-Tailed and Two-Tailed Tests konusunu türkce olarak metaforlu ve tablolu aciklayacagiz.
+| Özellik | Tip I Hata | Tip II Hata |
+| :--- | :--- | :--- |
+| **Diğer Adı** | **Yalancı Pozitif** (False Positive) | **Yalancı Negatif** (False Negative) |
+| **Tanım** | Doğru `$H_0$`'ı reddetmek. | Yanlış `$H_0$`'ı reddedememek. |
+| **Mahkeme Metaforu** | **Masum Birini Mahkum Etmek** | **Suçlu Birini Serbest Bırakmak** |
+| **Tıbbi Teşhis Metaforu**| Sağlıklı kişiye "hastasın" demek. | Hasta kişiye "sağlıklısın" demek. |
+| **Bizim Kararımız** | "Bir etki/fark var!" | "Bir etki/fark olduğuna dair yeterli kanıt yok." |
+| **Gerçek Durum** | Aslında bir etki/fark yoktu. | Aslında bir etki/fark vardı. |
+| **Olasılığı** | $\alpha$ (Anlamlılık Düzeyi) | $\beta$ (Beta) |
+| **Nasıl Kontrol Edilir?** | `$\alpha$` değerini düşürerek azaltılır. | Örneklem boyutunu artırarak azaltılır. |
 
-# Significance Level konusunu türkce olarak metaforlu ve tablolu aciklayacagiz.
+# One-Tailed and Two-Tailed Tests:
 
-# P-value konusunu türkce olarak metaforlu ve tablolu aciklayacagiz.
+<img width="524" height="268" alt="image" src="https://github.com/user-attachments/assets/89db017d-ef88-4589-a6dd-16498d6c9a8e" />
+
+Hipotez testlerinde **Tek Kuyruklu (One-Tailed)** ve **İki Kuyruklu (Two-Tailed)** testler arasındaki farkı anlamak, testinizi doğru bir şekilde kurmanız ve sonuçlarınızı doğru yorumlamanız için kritik öneme sahiptir.
+
+Gelin bu konuyu, metaforlar, karşılaştırmalar ve bir özet tablosuyla detaylı bir şekilde inceleyelim.
+
+---
+
+### Ana Metafor: Güvenlik Görevlisi ve Şüpheli Durum
+
+Bir hipotez testini, önemli bir binanın önünde nöbet tutan bir **güvenlik görevlisi** olarak düşünebiliriz. Görevlinin amacı, "normal durumdan" (Sıfır Hipotezi, $H_0$) sapan "şüpheli durumları" (Alternatif Hipotez, $H_a$) tespit etmektir. Testin tek mi yoksa çift kuyruklu mu olacağı, görevlinin **nereye baktığını** ve **ne tür bir şüpheli durum aradığını** belirler.
+
+---
+
+### 1. İki Kuyruklu Test (Two-Tailed Test) – "Her İki Yöne de Dikkat Et!"
+
+* **Nedir?**
+  Örneklem ortalamasının, popülasyon ortalamasından **herhangi bir yönde** (yani daha büyük **veya** daha küçük) anlamlı bir şekilde farklı olup olmadığını test eden yöntemdir.
+
+* **Metafor (Güvenlik Görevlisi):**
+  > Görevli, binanın hem **giriş** hem de **çıkış** kapısını aynı anda gözlemekle görevlidir. Onun için şüpheli durum, birinin izinsiz girmesi **ya da** izinsiz çıkmasıdır. Hangi yönde olursa olsun, "normal durumdan" herhangi bir sapma alarmı tetikler.
+
+* **Alternatif Hipotez ($H_a$):**
+  Her zaman bir "eşit değildir" (`$\neq$`) işareti içerir.
+    * **Örnek:** "Yeni bir öğretim metodunun not ortalaması üzerindeki etkisi, eski metodun ortalamasından **farklıdır**." (`$\mu_{yeni} \neq \mu_{eski}$`). Notların artması da, azalması da bizim için anlamlı bir sonuçtur.
+
+* **Risk Bölgesi ($\alpha$):**
+  Belirlediğimiz anlamlılık düzeyi (`$\alpha$`, örn: 0.05), iki kuyruğa **eşit olarak bölünür**. Yani, %2.5'lik risk sol kuyruğa (çok düşük değerler), %2.5'lik risk de sağ kuyruğa (çok yüksek değerler) dağıtılır. Bu, testi daha **muhafazakar** yapar, çünkü aşırı bir sonucun bu küçük bölgelerden birine düşmesi daha zordur.
+
+---
+
+### 2. Tek Kuyruklu Test (One-Tailed Test) – "Tek Bir Yöne Odaklan!"
+
+* **Nedir?**
+  Örneklem ortalamasının, popülasyon ortalamasından **sadece belirli bir yönde** (yani **sadece daha büyük** veya **sadece daha küçük**) anlamlı bir şekilde farklı olup olmadığını test eden yöntemdir.
+
+* **Metafor (Güvenlik Görevlisi):**
+  > Görevli, artık sadece **"GİRİŞ YASAK"** levhası olan bir çıkış kapısında nöbet tutmaktadır. Onun için tek şüpheli durum, birinin bu kapıdan **içeri girmeye çalışmasıdır**. Birinin dışarı çıkması normaldir ve alarmı tetiklemez. Görevli, tüm dikkatini tek bir yöne odaklamıştır.
+
+* **Alternatif Hipotez ($H_a$):**
+  Her zaman bir "büyüktür" (`>`) veya "küçüktür" (`<`) işareti içerir.
+    * **Örnek (Sağ Kuyruk Testi):** "Yeni bir gübre, bitki boyunu **artırır**." (`$\mu_{gübreli} > \mu_{gübresiz}$`). Burada bitki boyunun azalmasıyla ilgilenmiyoruz. Sadece artış olup olmadığını test ediyoruz.
+    * **Örnek (Sol Kuyruk Testi):** "Yeni bir diyet programı, kilo **verdirir**." (`$\mu_{diyet\_sonrası} < \mu_{diyet\_öncesi}$`). Kilo alımıyla ilgilenmiyoruz.
+
+* **Risk Bölgesi ($\alpha$):**
+  Belirlediğimiz anlamlılık düzeyinin (`$\alpha$`, örn: 0.05) **tamamı tek bir kuyruğa** yerleştirilir. Bu, testi o yöndeki bir farkı tespit etme konusunda daha **güçlü** kılar. Çünkü aşırı bir sonucun %5'lik bir alana düşmesi, %2.5'lik bir alana düşmesinden daha kolaydır.
+
+---
+
+### Önemli Karşılaştırma ve Seçim Kriteri
+
+* **Güç vs. Esneklik:**
+  Tek kuyruklu testler, belirli bir yöndeki etkiyi tespit etmede **daha güçlüdür**, ancak diğer yöndeki bir etkiyi tamamen gözden kaçırırlar. İki kuyruklu testler ise her iki yöndeki etkiye de açık olduğu için **daha güvenli ve daha az varsayımsaldır**.
+
+* **Ne Zaman Hangisi Seçilir?**
+  Eğer bir etki olacağına ve bu etkinin yönüne dair **çok güçlü teorik veya geçmiş kanıtlarınız** varsa tek kuyruklu test kullanabilirsiniz (örneğin, bir ilacın zararlı bir yan etkisinin olmasının imkansız olduğunu biliyorsanız ve sadece faydasını test ediyorsanız). Emin değilseniz veya her iki yöndeki bir fark da sizin için önemliyse, **varsayılan ve daha güvenli olan seçenek her zaman iki kuyruklu testtir.**
 
 
 
+| Özellik | İki Kuyruklu Test (Two-Tailed) | Tek Kuyruklu Test (One-Tailed) |
+| :--- | :--- | :--- |
+| **Ana Fikir** | "Bir fark var mı?" | "Belirli bir yönde (artış/azalış) bir fark var mı?" |
+| **Alternatif Hipotez ($H_a$)**| Eşit değildir (`$\neq$`) | Büyüktür (`>`) veya Küçüktür (`<`) |
+| **Metafor** | Hem giriş hem çıkışı gözleyen güvenlik görevlisi. | Sadece girişi (veya sadece çıkışı) gözleyen güvenlik görevlisi. |
+| **Risk Bölgesi ($\alpha$)** | `$\alpha/2$` olarak iki kuyruğa **bölünür**. | `$\alpha$`'nın tamamı tek bir kuyruğa **yerleştirilir**. |
+| **Güç** | Daha muhafazakar, daha az güçlü. | Belirtilen yöndeki bir etkiyi tespit etmede **daha güçlü**. |
+| **Ne Zaman Kullanılır?**| Bir farkın yönü hakkında bir fikriniz olmadığında (standart yaklaşım). | Farkın yönü hakkında güçlü bir teorik beklenti olduğunda. |
+| **Örnek Soru** | "Bu reklam kampanyası satışları **etkiledi mi**?" | "Bu indirim satışları **artırdı mı**?" | konusunu türkce olarak metaforlu ve tablolu aciklayacagiz.
+
+# Significance Level:
+
+<img width="363" height="208" alt="image" src="https://github.com/user-attachments/assets/1ab5f127-0eb1-4c19-87cf-d09a1ad81d6a" 
+
+   **Anlamlılık Düzeyi (Significance Level)**, hipotez testlerinin kalbinde yer alan ve verdiğimiz kararların temelini oluşturan bir "**karar çizgisidir**". Gelin bu kavramı metaforlar, karşılaştırmalar ve bir özet tablosuyla detaylı bir şekilde inceleyelim.
+
+---
+
+### Ana Metaforlar: Yargıcın Standardı ve Limbo Dansı
+
+Anlamlılık düzeyini anlamak için iki güçlü metafor kullanacağız:
+
+* **Mahkeme Duruşması:** Anlamlılık düzeyi, duruşma başlamadan önce **yargıcın belirlediği kanıt standardıdır**. "Birini suçlu bulmak için, sunulan kanıtların masum birinin başına gelme olasılığı en fazla ne kadar olabilir?" sorusunun cevabıdır.
+* **Limbo Dansı:** Bu, karar kuralını (`$p-değeri \le \alpha$`) akılda tutmak için harika bir yoldur. Anlamlılık düzeyi, altından geçmeniz gereken **limbo çubuğunun yüksekliğidir**.
+
+---
+
+### 1. Anlamlılık Düzeyi ($\alpha$) Nedir?
+
+* **Tanım:** Anlamlılık düzeyi (alfa, `$\alpha$`), bir hipotez testinde **Tip I Hata** yapma riskini ne kadar göze aldığımızı gösteren, **deneyden önce** belirlediğimiz bir olasılık değeridir.
+* **Ne İşe Yarar?** Gözlemlediğimiz sonuçların istatistiksel olarak "anlamlı" olup olmadığına karar vermek için bir **eşik değeri** veya **karar çizgisi** görevi görür.
+* **Bize Ne Anlatır? (Mahkeme Metaforu)**
+    > `$\alpha = 0.05$` demek, "Bu mahkemede, **masum birini mahkum etme riskini %5 olarak kabul ediyorum**" demektir. Bu, yargıcın adalet sistemindeki hatayı göze alma seviyesidir. Kısacası `$\alpha$`, bizim maksimum kabul edilebilir şüphe düzeyimizdir.
+
+---
+
+### 2. `$\alpha$` Değeri Nasıl Seçilir ve Yorumlanır? (Karşılaştırma)
+
+En yaygın `$\alpha$` değerleri 0.05, 0.01 ve 0.10'dur. Seçimimiz, yaptığımız hatanın sonuçlarına ne kadar katlanabileceğimize bağlıdır.
+
+#### A) Katı Standart: `$\alpha = 0.01` (%1 Risk)
+
+* **Limbo Dansı Metaforu:** Limbo çubuğu **çok alçaktadır**. Altından geçmek (yani `$H_0$`'ı reddetmek) çok zordur. Sadece çok "etkileyici" sonuçlar başarılı olabilir.
+* **Anlamı:** Sadece çok güçlü kanıtlar karşısında "bir etki vardır" demeye razıyız. Tip I Hata yapmaktan (masum birini mahkum etmekten) çok korkuyoruz.
+* **Ne Zaman Kullanılır?** Bir hatanın bedelinin çok ağır olduğu durumlarda.
+    * **Örnek:** Ciddi yan etkileri olabilecek yeni bir ilacın "etkili" olduğunu iddia etmek. Hatalı bir şekilde "etkili" demek felaket olabilir, bu yüzden kanıt standardı çok yüksek olmalıdır.
+
+#### B) Altın Standart: `$\alpha = 0.05` (%5 Risk)
+
+* **Limbo Dansı Metaforu:** Limbo çubuğu **standart bir yüksekliktedir**. Altından geçmek zorlayıcıdır ama imkansız değildir.
+* **Anlamı:** Bilimsel çalışmaların çoğunda kabul edilen standart dengedir. Tip I ve Tip II hatalar arasında makul bir denge kurar.
+* **Ne Zaman Kullanılır?** Çoğu bilimsel ve akademik araştırma, A/B testleri gibi genel amaçlı analizler için.
+
+#### C) Esnek Standart: `$\alpha = 0.10` (%10 Risk)
+
+* **Limbo Dansı Metaforu:** Limbo çubuğu **oldukça yüksektedir**. Altından geçmek (yani `$H_0$`'ı reddetmek) daha kolaydır.
+* **Anlamı:** Olası bir etkiyi veya farkı "kaçırmamak" bizim için daha önemlidir. Tip I Hata yapma riskini biraz daha fazla göze alıp, Tip II Hata (gerçek bir etkiyi gözden kaçırma) yapma riskini azaltmaya çalışırız.
+* **Ne Zaman Kullanılır?** Bir hatanın bedelinin düşük olduğu, keşif amaçlı ön analizlerde.
+    * **Örnek:** Bir web sitesinde yeni bir buton renginin "etkili olabileceğine" dair en ufak bir sinyali bile kaçırmak istemediğimiz bir ön analiz.
+
+---
+
+### 3. Karar Verme Süreci: p-değeri vs. `$\alpha$`
+
+Karar anı, bu iki değerin karşılaştırılmasıdır.
+
+* **p-değeri:** Sizin deneyinizden elde ettiğiniz kanıtın ne kadar "şaşırtıcı" olduğunun ölçüsüdür. (Limbo dansçısının ne kadar eğilebildiği).
+* **$\alpha$:** Sizin deneyden önce belirlediğiniz "karar çizgisidir". (Limbo çubuğunun yüksekliği).
+
+> **Altın Kural:**
+> * Eğer `$p-değeri \le \alpha$` ise → **$H_0$ Reddedilir**. (Dansçı, çubuğun altından başarıyla geçti! Sonuçlar istatistiksel olarak anlamlıdır.)
+> * Eğer `$p-değeri > \alpha$` ise → **$H_0$ Reddedilemez**. (Dansçı, çubuğu devirdi. Sonuçlar istatistiksel olarak anlamlı değildir.)
+
+### Understanding Significance Level & Confidence Level:
+
+<img width="554" height="452" alt="image" src="https://github.com/user-attachments/assets/0231b339-c1af-4348-8e49-1685883bb447" />
+
+<img width="460" height="201" alt="image" src="https://github.com/user-attachments/assets/a6bc6892-e44f-4c28-a0d2-4d01abf97f65" />
+
+<img width="565" height="407" alt="image" src="https://github.com/user-attachments/assets/871b5d7f-5144-423c-9435-5fd1d1faa322" />
+
+#### Karşılaştırmalı Özet Tablosu
+
+| Anlamlılık Düzeyi ($\alpha$) | Metafor (Limbo Çubuğu) | Tip I Hata Riski | Tip II Hata Riski | Ne Zaman Kullanılır? |
+| :--- | :--- | :--- | :--- | :--- |
+| **Katı (`$\alpha = 0.01$`)** | Çok Alçak | **Çok Düşük** | Yüksek | Hatalı pozitif sonucun bedeli çok ağır olduğunda (ilaç güvenliği vb.). |
+| **Standart (`$\alpha = 0.05$`)** | Normal Yükseklik | **Düşük** | Orta | Genel bilimsel araştırmalar, A/B testleri. |
+| **Esnek (`$\alpha = 0.10$`)** | Yüksek | **Orta** | Düşük | Olası bir etkiyi kaçırma riskinin yüksek olduğu öncü çalışmalar. |
 
 
+# P-value:
+
+<img width="972" height="837" alt="image" src="https://github.com/user-attachments/assets/6bf0dfd3-5e10-44a8-87ac-5e96c807dd67" />
+
+
+
+**p-değeri (p-value)**, hipotez testlerinin en önemli ama aynı zamanda en sık yanlış anlaşılan kavramıdır. Bir sonucun istatistiksel olarak "anlamlı" olup olmadığına karar vermemizi sağlayan kilit bir kanıttır.
+
+Gelin bu kavramı metaforlar, karşılaştırmalar ve bir özet tablosuyla detaylı bir şekilde inceleyelim.
+
+---
+
+### Ana Metafor: Mahkeme Duruşmasındaki "Şaşırtıcılık" Kanıtı
+
+Bir hipotez testini bir **mahkeme duruşması** olarak düşünmeye devam edelim:
+
+* **Sıfır Hipotezi ($H_0$):** "Sanık masumdur." Bu, testin başındaki varsayımımızdır.
+* **Kanıt:** Olay yerinde bulunan bir parmak izi.
+* **p-değeri:** Bu, savcının yargıca sunduğu en güçlü argümandır ve şunu söyler:
+    > "Sayın yargıç, eğer sanık **gerçekten masum olsaydı**, bu parmak izinin olay yerinde **sırf şans eseri** bulunma ihtimali işte bu kadardır."
+
+p-değeri, bir sonucun varsayılan durum (masumiyet) altında ne kadar **şaşırtıcı veya beklenmedik** olduğunun bir ölçüsüdür.
+
+---
+
+### 1. p-değeri Nedir?
+
+* **Tanım:**
+  p-değeri, **sıfır hipotezi ($H_0$) doğruyken**, en az bizim deneyimizde gözlemlediğimiz kadar aşırı (veya daha da aşırı) bir sonucun **şans eseri** ortaya çıkma olasılığıdır.
+
+* **Ne İşe Yarar?**
+  Bize, gözlemlediğimiz sonucun sadece rastlantısal bir dalgalanma mı, yoksa sıfır hipotezine karşı gerçek bir kanıt mı olduğunu değerlendirme imkanı sunar.
+
+* **Bize Ne Anlatır?**
+  Düşük bir p-değeri, "Eğer `$H_0$` doğru olsaydı, bu sonucu görmek çok büyük bir tesadüf olurdu. Belki de `$H_0$` doğru değildir?" dedirtir. Yüksek bir p-değeri ise, "Bu sonucu görmek şaşırtıcı değil, `$H_0$` doğru olsa bile bu tür sonuçlar şans eseri sık sık görülebilir" anlamına gelir.
+
+---
+
+### 2. p-değeri Nasıl Yorumlanır? (Karşılaştırma)
+
+p-değerinin kendisi tek başına bir anlam ifade etmez; onu önceden belirlediğimiz **Anlamlılık Düzeyi ($\alpha$)** ile karşılaştırarak bir karara varırız.
+
+#### A) Düşük p-değeri (örn: `$p < 0.05$`)
+
+* **Anlamı:** Gözlemlediğimiz sonuç, `$H_0$`'ın doğru olduğu varsayımı altında **çok beklenmedik ve şaşırtıcıdır**.
+* **Mahkeme Metaforu:** Olay yerinde bulunan parmak izinin, masum olduğu varsayılan sanığa ait olma ihtimali çok düşüktür. Bu durum, "masumiyet" varsayımına karşı **güçlü bir şüphe** oluşturur.
+* **Karar:** Bu, sıfır hipotezine karşı **güçlü bir kanıttır**. Genellikle `$H_0$`'ı reddederiz.
+
+#### B) Yüksek p-değeri (örn: `$p > 0.05$`)
+
+* **Anlamı:** Gözlemlediğimiz sonuç, `$H_0$`'ın doğru olduğu varsayımı altında **beklenen, şaşırtıcı olmayan** bir durumdur.
+* **Mahkeme Metaforu:** Olay yeri bir kütüphaneyse ve sanık da orada çalışan bir kütüphaneciyse, parmak izinin orada bulunması hiç şaşırtıcı değildir. Bu kanıt, "masumiyet" varsayımını çürütmek için **zayıftır**.
+* **Karar:** Bu, sıfır hipotezine karşı **zayıf bir kanıttır**. `$H_0$`'ı reddetmek için yeterli nedenimiz yoktur.
+
+#### Karşılaştırmalı Özet Tablosu: p-değeri vs. Anlamlılık Düzeyi ($\alpha$)
+
+Bu iki kavram sıkça karıştırılır, ancak rolleri tamamen farklıdır.
+
+| Özellik | p-değeri (p-value) | Anlamlılık Düzeyi ($\alpha$) |
+| :--- | :--- | :--- |
+| **Tanım** | `$H_0$` doğruyken, gözlemlenen sonucun ortaya çıkma olasılığı. | `$H_0$` doğruyken onu reddetme hatasını yapmayı göze aldığımız risk. |
+| **Metafor (Mahkeme)**| **Kanıtın gücü/şaşırtıcılığı.** | Yargıcın önceden belirlediği **kanıt standardı**. |
+| **Kökeni** | Deney verilerinden **hesaplanır**. | Deneyden önce araştırmacı tarafından **seçilir**. |
+| **Rolü** | Karar vermek için kullanılan **kanıt**. | Karar vermek için kullanılan **eşik/sınır**. |
+| **Kullanımı** | Değeri `$\alpha$` ile karşılaştırılır. | Değeri `p-değeri` ile karşılaştırmak için bir referans noktasıdır. |
+
+### Çok Önemli Notlar: p-değerinin Yanlış Yorumları
+
+---
+
+❌ **YANLIŞ:** p-değeri, sıfır hipotezinin doğru olma olasılığıdır.
+
+✅ **DOĞRU:** p-değeri, `$H_0$` **doğru varsayıldığında** verilerin ortaya çıkma olasılığıdır.
+
+---
+
+❌ **YANLIŞ:** Yüksek bir p-değeri (örn: 0.80), sıfır hipotezinin doğru olduğunu kanıtlar.
+
+✅ **DOĞRU:** Yüksek bir p-değeri, sadece `$H_0$`'ı reddetmek için **yeterli kanıtımız olmadığı** anlamına gelir. Bu, "delil yetersizliğinden beraat" kararı gibidir, "masumiyetin kanıtı" değil.
+
+---
+
+❌ **YANLIŞ:** İstatistiksel olarak anlamlı bir sonuç (düşük p-değeri), pratik olarak da önemli bir sonuçtur.
+
+✅ **DOĞRU:** Çok büyük bir örneklemle, pratik olarak hiçbir anlamı olmayan çok küçük bir fark bile istatistiksel olarak anlamlı çıkabilir. Anlamlılık, **etkinin büyüklüğünü göstermez**.
 
 ---
 
