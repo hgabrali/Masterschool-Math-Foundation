@@ -313,7 +313,8 @@ Odaklanmış bir pazarlamacı olarak, temel bir ekonomik varsayıma güvenirsini
 
 # Significance Level:
 
-<img width="363" height="208" alt="image" src="https://github.com/user-attachments/assets/1ab5f127-0eb1-4c19-87cf-d09a1ad81d6a" 
+
+
 
    **Anlamlılık Düzeyi (Significance Level)**, hipotez testlerinin kalbinde yer alan ve verdiğimiz kararların temelini oluşturan bir "**karar çizgisidir**". Gelin bu kavramı metaforlar, karşılaştırmalar ve bir özet tablosuyla detaylı bir şekilde inceleyelim.
 
