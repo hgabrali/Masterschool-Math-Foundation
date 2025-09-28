@@ -2,6 +2,77 @@
 
 [Hypothesis Testing](https://colab.research.google.com/drive/1jA3-u4knu5kqdVWQ80fTSATXWe6nOwsb#scrollTo=OdfNyUqrWr6K)
 
+### Hipotez Testi Sürecinin 4 Adımı
+
+Bu süreci, yeni bir web sitesi tasarımının dönüşüm oranını artırıp artırmadığını test ettiğimiz bir A/B testi örneği üzerinden inceleyelim.
+
+---
+
+#### ❓ Adım 1: Hipotezleri Belirle (Soruyu Tanımla)
+
+* **Ne Yapılır?**
+  Test edilecek iddiayı, iki rakip hipotez şeklinde, matematiksel olarak ifade edersiniz:
+    1.  **Sıfır Hipotezi ($H_0$):** Genellikle "etki yok" veya "fark yok" diyen, çürütmeye çalışacağımız varsayımdır.
+    2.  **Alternatif Hipotez ($H_a$):** Kanıtlamaya çalıştığımız, "etki var" veya "fark var" diyen iddiadır.
+  Bu aşamada testin **tek kuyruklu mu yoksa çift kuyruklu mu** olacağına karar verirsiniz.
+
+* **Neden Önemli?**
+  Bu adım, testin **temelini ve amacını** oluşturur. Ne aradığınızı en başta net bir şekilde tanımlamazsanız, bulduğunuz sonuç anlamsız olur. Bu, bir yolculuğa çıkmadan önce haritada hedefi belirlemek gibidir.
+
+* **Örnek:**
+    * **$H_0$:** Yeni web sitesi tasarımının dönüşüm oranına bir etkisi yoktur; ortalama dönüşüm oranı eskisiyle aynıdır (`$\mu_{yeni} = \mu_{eski}$`).
+    * **$H_a$:** Yeni web sitesi tasarımı, dönüşüm oranını artırır (`$\mu_{yeni} > \mu_{eski}$`). (Bu, tek kuyruklu bir testtir çünkü sadece artışla ilgileniyoruz).
+
+---
+
+#### ⚖️ Adım 2: Karar Kriterlerini Belirle (Oyunun Kurallarını Koy)
+
+* **Ne Yapılır?**
+  Kanıtları görmeden önce, "başarının" ne anlama geleceğini tanımlarsınız.
+    1.  **Anlamlılık Düzeyini ($\alpha$) Seç:** Tip I Hata yapma (yani, aslında bir etki yokken "etki var" deme) riskini ne kadar göze alacağınızı belirlersiniz. Genellikle `$\alpha = 0.05$` seçilir.
+    2.  **Doğru Testi Seç:** Veri türünüze ve probleminize uygun istatistiksel testi (örn: t-testi, Z-testi) belirlersiniz.
+
+* **Neden Önemli?**
+  Bu, **objektifliği** sağlar. Oyunun kurallarını oyun başladıktan sonra değiştiremezsiniz. Bu adım, sonuçları kendi lehinize yorumlamanızı engeller ve bilimsel bir standart oluşturur. Bu, mahkemede "makul şüphe" standardını duruşma başlamadan önce belirlemek gibidir.
+
+* **Örnek:**
+    * Karar çizgimizi `$\alpha = 0.05$` olarak belirliyoruz.
+    * Örneklem boyutumuz küçük ve popülasyon standart sapması bilinmediği için **tek örneklemli t-testi** kullanmaya karar veriyoruz.
+
+---
+
+#### 📊 Adım 3: İstatistikleri Hesapla (Kanıtları Topla ve Analiz Et)
+
+* **Ne Yapılır?**
+    1.  Veri toplarsınız (A/B testini çalıştırırsınız).
+    2.  Örneklem istatistiklerini (ortalama, standart sapma vb.) hesaplarsınız.
+    3.  Seçtiğiniz testin **test istatistiğini** (örn: t-değeri) ve en önemlisi **p-değerini (p-value)** hesaplarsınız.
+
+* **Neden Önemli?**
+  Bu, davanın kanıt toplama ve analiz aşamasıdır. p-değeri, sıfır hipotezine karşı elinizdeki kanıtın ne kadar **güçlü ve şaşırtıcı** olduğunu ölçen sayısal bir değerdir.
+
+* **Örnek:**
+  A/B testini çalıştırıp verileri topladıktan sonra, t-istatistiğini hesaplarız ve sonucunda `p-değeri = 0.02` buluruz.
+
+---
+
+#### 🏁 Adım 4: Karar Ver ve Yorumla (Hükmü Açıkla)
+
+* **Ne Yapılır?**
+    1.  Hesaplanan p-değerini, 2. Adımda belirlediğiniz anlamlılık düzeyi ($\alpha$) ile karşılaştırırsınız.
+    2.  **Karar Kuralı:** Eğer `$p-değeri \le \alpha$` ise, `$H_0$`'ı reddedersiniz. Aksi halde, `$H_0$`'ı reddedemezsiniz.
+    3.  İstatistiksel kararı, problemin bağlamına uygun, **anlaşılır bir dille** yorumlarsınız.
+
+* **Neden Önemli?**
+  Bu, yolculuğun son durağıdır. Başta sorduğunuz soruya bir cevap verirsiniz. İstatistiksel bir jargon olan "Sıfır hipotezini reddediyoruz" ifadesini, herkesin anlayabileceği "Evet, yeni tasarım gerçekten de işe yarıyor" gibi pratik bir sonuca dönüştürürsünüz.
+
+* **Örnek:**
+    * **Karşılaştırma:** Bizim p-değerimiz (0.02), `$\alpha$` değerimizden (0.05) küçüktür.
+    * **İstatistiksel Karar:** Sıfır hipotezini ($H_0$) reddediyoruz.
+    * **Pratik Yorum:** "Elde ettiğimiz sonuçlar, yeni web sitesi tasarımının dönüşüm oranını **istatistiksel olarak anlamlı bir şekilde artırdığına** dair yeterli kanıt sunmaktadır."
+ 
+---
+
 ### Hipotez Testi Süreci Karşılaştırma Tablosu (Tek Örneklemli t-Testi)
 
 * **Ana Metafor:** İstatistiksel bir hipotez testini, bir **mahkeme salonu duruşması** gibi düşünebiliriz. Bir iddia var ve biz bu iddiayı elimizdeki kanıtlara (verilere) dayanarak yargılıyoruz.
