@@ -24,8 +24,13 @@
 
 ---
 
-<img width="218" height="260" alt="image" src="https://github.com/user-attachments/assets/6b615a4c-56b5-4076-95d2-223ec9ec0902" />
+<img width="537" height="185" alt="image" src="https://github.com/user-attachments/assets/68c6bc6f-c3df-41fc-b899-4a6461e8bf00" />
 
+<img width="580" height="299" alt="image" src="https://github.com/user-attachments/assets/0c12edc1-a32e-4a77-a520-45bece9a8c6e" />
+
+<img width="514" height="281" alt="image" src="https://github.com/user-attachments/assets/5714b95e-92dc-4fda-8733-bbdbb57146c3" />
+
+<img width="752" height="791" alt="image" src="https://github.com/user-attachments/assets/61211b37-7e29-437a-99cd-8afaa42c6e75" />
 
 **Sıfır Hipotezi ($H_0$)** ve **Alternatif Hipotez ($H_a$ veya $H_1$)**, istatistiksel bir iddianın test edildiği bir hipotez testinin temelini oluşturan iki rakip beyandır.
 
