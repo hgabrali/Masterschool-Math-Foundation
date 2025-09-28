@@ -46,6 +46,12 @@ Bu iki hata türünü anlamak için iki güçlü metafor kullanacağız:
     * **Sıfır Hipotezi ($H_0$):** "Hasta sağlıklıdır."
 
 ---
+# Tip I Hata & Tip II Hata:
+
+<img width="576" height="280" alt="image" src="https://github.com/user-attachments/assets/912b842b-f0c3-42c3-acfe-553a652a237f" />
+
+<img width="676" height="358" alt="image" src="https://github.com/user-attachments/assets/26b9bc02-c0ed-4535-9d4a-8b95e11772b7" />
+
 
 ### Tip I Hata: Masum Birini Mahkum Etmek (Yalancı Pozitif)
 
@@ -104,6 +110,67 @@ Bu iki hata arasında bir **ödünleşme (trade-off)** vardır:
 | **Gerçek Durum** | Aslında bir etki/fark yoktu. | Aslında bir etki/fark vardı. |
 | **Olasılığı** | $\alpha$ (Anlamlılık Düzeyi) | $\beta$ (Beta) |
 | **Nasıl Kontrol Edilir?** | `$\alpha$` değerini düşürerek azaltılır. | Örneklem boyutunu artırarak azaltılır. |
+
+---
+
+En yaygın dijital pazarlama senaryolarından biri olan **A/B Testi** üzerinden Tip I ve Tip II Hataları incelemesi:
+
+---
+
+### Senaryo: "Sepete Ekle" Buton Rengini Değiştirmek 🎨
+
+Bir e-ticaret siteniz olduğunu ve "Sepete Ekle" butonunun rengini mevcut **mavi** renkten, daha dikkat çekici olduğunu düşündüğünüz **yeşil** bir renge çevirmeyi test ettiğinizi varsayalım.
+
+* **Sıfır Hipotezi ($H_0$):**
+    > "Buton renginin tıklanma oranına bir etkisi **yoktur**. Yeşil ve mavi butonun performansları arasında bir fark yoktur."
+* **Alternatif Hipotez ($H_a$):**
+    > "Yeşil buton, tıklanma oranını **değiştirir** (artırır veya azaltır)."
+
+Testi yapıp verileri analiz ettikten sonra varacağınız yanlış kararlar, Tip I ve Tip II hatalar olacaktır.
+
+---
+
+### Tip I Hata: Hayali Bir Başarıyı Kutlamak (Yalancı Pozitif)
+
+* **Tanım:** Gerçekte bir etkisi olmamasına rağmen, test sonucunda "yeni yeşil buton daha iyi çalışıyor" diye yanlış bir karara varmak.
+
+* **Senaryoda Ne Olur?** Test sonucunda yeşil butonun tıklanma oranı, mavi butondan istatistiksel olarak anlamlı derecede yüksek çıkar (düşük p-değeri). `$H_0$`'ı reddeder ve yeşil butonun daha iyi olduğuna karar verirsiniz.
+
+* **Gerçek Durum:** Aslında iki buton arasında hiçbir performans farkı yoktur. Sizin test süreniz boyunca tamamen **şans eseri**, yeşil butonu gören kullanıcılar biraz daha fazla tıklama yapmıştır.
+
+* **Sonuç ve Bedeli (İş Hayatındaki Etkisi):**
+    * Bu "hayali" başarıya dayanarak, tüm web sitesindeki "Sepete Ekle" butonlarını yeşile çevirmek için bir karar alırsınız.
+    * Tasarımcılar ve yazılımcılar saatlerini/günlerini bu değişikliği uygulamak için harcar.
+    * Şirket, bu değişiklikten dolayı satışların artacağını bekler, ancak **beklenen artış asla gerçekleşmez**.
+    * **Sonuç:** Kaynaklar (zaman ve para) boşa harcanmış olur.
+
+---
+
+### Tip II Hata: Masadaki Parayı Görmemek (Yalancı Negatif)
+
+* **Tanım:** Yeni yeşil buton gerçekten daha iyi bir performansa sahipken, testin bu farkı tespit edememesi ve "iki buton arasında bir fark yoktur" diye yanlış karara varmak.
+
+* **Senaryoda Ne Olur?** Test sonucunda iki buton arasındaki fark, istatistiksel olarak anlamlı çıkmaz (yüksek p-değeri). `$H_0$`'ı reddedemez ve "bir fark olduğuna dair yeterli kanıt yok" dersiniz.
+
+* **Gerçek Durum:** Yeşil buton, aslında tıklanma oranını **gerçekten de %10 artırmaktadır**, ancak sizin örnekleminiz bu etkiyi net bir şekilde gösterecek kadar büyük veya uzun süreli olmamıştır.
+
+* **Sonuç ve Bedeli (İş Hayatındaki Etkisi):**
+    * "İşe yaramıyor" diye düşünüp, sitenin tamamında bu kârlı değişikliği yapmaktan vazgeçersiniz.
+    * Düşük performanslı mavi butonu kullanmaya devam edersiniz.
+    * Şirket, aslında kolayca elde edebileceği **potansiyel bir gelir artışını kaçırmış olur**.
+    * **Sonuç:** Kaçırılmış bir fırsat ve masada bırakılmış bir para demektir.
+ 
+  #### Karşılaştırmalı Özet Tablosu (A/B Testi Örneği)
+
+| Özellik | Tip I Hata (Yalancı Pozitif) | Tip II Hata (Yalancı Negatif) |
+| :--- | :--- | :--- |
+| **Metafor** | **Hayali Bir Başarıyı Kutlamak** | **Masadaki Parayı Görmemek** |
+| **Test Kararımız** | "Yeşil buton daha iyi!" | "Butonlar arasında fark yok." |
+| **Gerçek Durum** | Yeşil ve mavi buton arasında fark yoktu. | Yeşil buton aslında daha iyiydi. |
+| **Sonuç** | Gereksiz yere kaynak harcanır, beklenen kazanç gelmez. | Potansiyel bir kazanç fırsatı kaçırılır. |
+| **Hangi Durumda Olur?**| Genellikle `$\alpha$` (anlamlılık) seviyesi çok esnek tutulduğunda veya tamamen şanssızlık. | Genellikle örneklem boyutu çok küçük olduğunda (testin gücü düşük olduğunda). |
+
+
 
 # One-Tailed and Two-Tailed Tests:
 
@@ -175,6 +242,74 @@ Bir hipotez testini, önemli bir binanın önünde nöbet tutan bir **güvenlik 
 | **Güç** | Daha muhafazakar, daha az güçlü. | Belirtilen yöndeki bir etkiyi tespit etmede **daha güçlü**. |
 | **Ne Zaman Kullanılır?**| Bir farkın yönü hakkında bir fikriniz olmadığında (standart yaklaşım). | Farkın yönü hakkında güçlü bir teorik beklenti olduğunda. |
 | **Örnek Soru** | "Bu reklam kampanyası satışları **etkiledi mi**?" | "Bu indirim satışları **artırdı mı**?" | konusunu türkce olarak metaforlu ve tablolu aciklayacagiz.
+
+---
+
+Dijital pazarlama dünyasından çok yaygın bir senaryo olan **A/B testi** üzerinden Tek Kuyruklu ve İki Kuyruklu testleri karşılaştırmalı olarak açıklayalım.
+
+---
+
+### Pazarlama Senaryosu: İndirim Kuponu Kampanyası 💸
+
+Bir e-ticaret siteniz olduğunu ve sattığınız bir online kurs için yeni bir pazarlama stratejisi denemek istediğinizi varsayalım. Mevcut durumda kursun ortalama günlük satışı **100 adet**. Satışları artırmak amacıyla, siteye yeni gelen ziyaretçilere **"%20 Hoş Geldin İndirimi"** sunan bir kampanya başlatıyorsunuz.
+
+Testin sonunda sormanız gereken soru şudur: "Bu indirim kampanyası satışları etkiledi mi?" Bu soruyu sorma şekliniz, yapacağınız testin türünü belirler.
+
+---
+
+### 1. İki Kuyruklu Test (Two-Tailed) – İhtiyatlı Analistin Yaklaşımı
+
+İhtiyatlı bir veri analisti olarak, kampanyanın olası tüm sonuçlarını düşünürsünüz.
+
+* **Bakış Açısı:**
+  > "İndirimler genellikle satışları artırır. Ancak, belki de bu indirim markamızın değerini düşürür ve insanlar 'ucuz mal kalitesizdir' diye düşünerek kursu daha **az** satın alır? Veya belki de hiçbir etkisi olmaz. Ben **her türlü değişime** hazırlıklı olmalıyım."
+
+* **Sorulan Soru:**
+  > "İndirim kampanyası, ortalama günlük satışları **değiştirdi mi**?"
+
+* **Hipotezler:**
+    * **$H_0$ (Sıfır Hipotezi):** İndirimli satışların ortalaması, eski ortalamaya eşittir. `$\mu_{indirimli} = 100$`
+    * **$H_a$ (Alternatif Hipotez):** İndirimli satışların ortalaması, eski ortalamadan **farklıdır**. `$\mu_{indirimli} \neq 100$`
+
+* **Metafor (Arama Alanı):**
+  Analist, elindeki fenerle hem **sağdaki** (satışlarda beklenmedik bir artış) hem de **soldaki** (satışlarda beklenmedik bir düşüş) karanlık bölgeleri aydınlatmaya çalışır. Fenerin ışığını (anlamlılık düzeyi `$\alpha$`) iki yöne de paylaştırdığı için, herhangi bir yöndeki küçük bir hareketi görmesi biraz daha zordur.
+
+* **Sonuç:**
+  Bu test, satışlarda anlamlı bir artış **veya** azalış olup olmadığını size söyleyebilir.
+
+---
+
+### 2. Tek Kuyruklu Test (One-Tailed) – Odaklanmış Pazarlamacının Yaklaşımı
+
+Odaklanmış bir pazarlamacı olarak, temel bir ekonomik varsayıma güvenirsiniz.
+
+* **Bakış Açısı:**
+  > "Fiyatı düşürmenin satışları düşürmesi için hiçbir mantıklı sebep yok. Bu, pazarlamanın doğasına aykırı. En kötü senaryo, indirimin hiçbir işe yaramamasıdır. Benim tek merak ettiğim şey, bu indirimin satışları **artırıp artırmadığıdır**."
+
+* **Sorulan Soru:**
+  > "İndirim kampanyası, ortalama günlük satışları **artırdı mı**?"
+
+* **Hipotezler:**
+    * **$H_0$ (Sıfır Hipotezi):** İndirimli satışların ortalaması, eski ortalamadan daha az veya eşittir. `$\mu_{indirimli} \le 100$`
+    * **$H_a$ (Alternatif Hipotez):** İndirimli satışların ortalaması, eski ortalamadan **daha fazladır**. `$\mu_{indirimli} > 100$`
+
+* **Metafor (Arama Alanı):**
+  Pazarlamacı, elindeki fenerin tüm gücünü (anlamlılık düzeyi `$\alpha$`) sadece **sağdaki** (satışlarda artış olan) bölgeye odaklar. Sol tarafla (satışların düşmesiyle) hiç ilgilenmez. Tüm ışığı tek bir noktaya odakladığı için, o bölgedeki en ufak bir hareketi bile tespit etme gücü daha yüksektir.
+
+* **Sonuç:**
+  Bu test, satışlarda anlamlı bir artış olup olmadığını size daha yüksek bir güçle söyleyebilir. Ancak satışlar bir sebepten düşerse, bu test o düşüşün istatistiksel olarak anlamlı olup olmadığını size **söyleyemez**.
+
+
+  #### Karşılaştırmalı Özet Tablosu (Pazarlama Örneği)
+
+| Özellik | İki Kuyruklu Test (İhtiyatlı Analist) | Tek Kuyruklu Test (Odaklanmış Pazarlamacı) |
+| :--- | :--- | :--- |
+| **Bakış Açısı** | "Her sonuca açığım." | "Sadece beklediğim sonuçla ilgileniyorum." |
+| **Sorulan Soru** | "Kampanya satışları **değiştirdi mi**?" | "Kampanya satışları **artırdı mı**?" |
+| **Alternatif Hipotez ($H_a$)**| `$\mu \neq 100$` | `$\mu > 100$` |
+| **Risk Bölgesi ($\alpha$)** | `$\alpha/2$` olarak iki kuyruğa **bölünür**. | `$\alpha$`'nın tamamı tek bir yöne **odaklanır**. |
+| **Güçlü Yönü** | Beklenmedik sonuçlara (örn: satışların düşmesi) karşı esnek ve güvenlidir. | Belirli bir yöndeki (örn: artış) etkiyi tespit etmede **daha güçlüdür**. |
+| **Zayıf Yönü** | Tek bir yöndeki etkiyi tespit etme gücü biraz daha düşüktür. | Beklenmedik ters yöndeki bir etkiyi tamamen gözden kaçırır. |
 
 # Significance Level:
 
