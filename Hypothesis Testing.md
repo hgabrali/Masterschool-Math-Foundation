@@ -255,7 +255,68 @@ Karar anı, bu iki değerin karşılaştırılmasıdır.
 
 <img width="972" height="837" alt="image" src="https://github.com/user-attachments/assets/6bf0dfd3-5e10-44a8-87ac-5e96c807dd67" />
 
+### Ana Fikir: p-değeri Bir "Şaşırtıcılık Ölçer"dir, "Doğruluk Ölçer" Değil
 
+Bu görselin temel mesajı şudur: **p-değeri, bir hipotezin doğru olup olmadığını söylemez.** Sadece, "eğer hipotezimiz doğru olsaydı, elimizdeki sonuçları görmek ne kadar şaşırtıcı olurdu?" sorusunu cevaplar.
+
+---
+
+### Bölüm 1: Grafiğin Yorumu - p-değeri Nedir?
+
+Grafik, bir hipotez testinin dünyasını haritalandırır:
+
+* **Eğri (Normal Dağılım):** Bu, **Sıfır Hipotezinin ($H_0$)** doğru olduğu bir evreni temsil eder. Yani, "hiçbir özel durum yok, her şey normal" varsayımındaki tüm olası sonuçları gösterir.
+* **Eğrinin Ortası (More likely observation):** `$H_0$` evreninde en sık beklenen, sıradan ve "sıkıcı" sonuçlardır.
+* **Eğrinin Kuyrukları (Very un-likely observations):** `$H_0$` evreninde gerçekleşmesi çok nadir, şaşırtıcı ve "şüpheli" sonuçlardır.
+* **Kırmızı Nokta (Observed data point):** Bu, bizim deneyimiz sonucunda **elde ettiğimiz gerçek veridir**. Grafikte bu nokta, şüpheli bir bölge olan kuyruk kısmına düşmüştür.
+* **Yeşil Alan (P-value):** İşte bu, p-değerinin kendisidir. Anlamı şudur:
+    > "Eğer Sıfır Hipotezi doğru olsaydı (yani her şey normal olsaydı), bizim bulduğumuz bu kırmızı nokta kadar veya ondan **daha da aşırı** (daha da şüpheli) bir sonucu **sırf şans eseri** görme olasılığımız, bu yeşil alan kadardır."
+
+Eğer bu yeşil alan (p-değeri) çok küçükse, sonucumuzun "normal" bir evrende şans eseri ortaya çıkmasının çok düşük bir ihtimal olduğunu anlarız.
+
+---
+
+### Bölüm 2: Mantıksal Hata - p-değeri Ne Değildir?
+
+Görselin en üstündeki "Önemli" kutusu, istatistikte en sık yapılan hatayı vurgular.
+
+**Matematiksel Olarak:**
+$$
+P(\text{Gözlem | Hipotez}) \neq P(\text{Hipotez | Gözlem})
+$$
+Bu karmaşık görünen ifadeyi basit bir metaforla açıklayalım:
+
+#### Yağmur ve Islak Zemin Metaforu
+
+* **Hipotez:** Yağmur yağıyor.
+* **Gözlem:** Yerdeki çimenler ıslak.
+
+Şimdi iki farklı olasılık sorusu soralım:
+
+* **Soru A (p-değerinin mantığı): `$P(\text{Gözlem | Hipotez})$`**
+    > **Soru:** "Eğer yağmurun yağdığını **BİLİYORSAK**, çimenlerin ıslak olma olasılığı nedir?"
+    > **Cevap:** Çok yüksektir, neredeyse %100. Yağmur yağıyorsa, çimenler ıslanır.
+    >
+    > **p-değeri de tam olarak bu mantıkla çalışır.** `$H_0$`'ın doğru olduğunu **varsayar** ve bu varsayım altında bizim veriyi (gözlemi) bulma olasılığımızı hesaplar.
+
+* **Soru B (Sık yapılan hata): `$P(\text{Hipotez | Gözlem})$`**
+    > **Soru:** "Eğer çimenlerin ıslak olduğunu **GÖRÜYORSAK**, yağmur yağıyor olma olasılığı nedir?"
+    > **Cevap:** %100 değildir. Belki de fıskiyeler çalıştı, biri hortumla bir yeri suladı veya kar eridi. Çimenlerin ıslak olması, kesin olarak yağmur yağdığı anlamına gelmez.
+
+**İşte En Büyük Hata (Transposed Conditional Fallacy):**
+Bir deney yapıp düşük bir p-değeri bulmak (yani "şaşırtıcı" bir gözlem yapmak), **Durum A**'daki gibi bir durumdur. Ancak buradan yola çıkarak **Durum B** hakkında kesin bir yargıya varmak hatadır.
+
+> **Yani,** "Eğer `$H_0$` doğru olsaydı, bu veriyi görmem çok düşük bir ihtimaldi" (düşük p-değeri) demek, "**Öyleyse `$H_0$`'ın doğru olma olasılığı çok düşüktür**" demekle **aynı şey değildir!**
+
+---
+
+### Özetle
+
+Bu görsel bize şunu anlatır:
+
+* p-değeri, hipotezinizin doğru veya yanlış olma ihtimalini **söylemez**.
+* p-değeri, sadece verilerinizin, "hiçbir şey olmuyor" diyen varsayımsal bir dünya ile ne kadar uyumsuz olduğunu, yani ne kadar "şaşırtıcı" olduğunu söyler.
+* Düşük bir p-değeri, `$H_0$`'a karşı bir **şüphe uyandıran kırmızı bir bayraktır**, ancak `$H_0$`'ın yanlış olduğunun kesin bir kanıtı veya olasılığı değildir.
 
 **p-değeri (p-value)**, hipotez testlerinin en önemli ama aynı zamanda en sık yanlış anlaşılan kavramıdır. Bir sonucun istatistiksel olarak "anlamlı" olup olmadığına karar vermemizi sağlayan kilit bir kanıttır.
 
