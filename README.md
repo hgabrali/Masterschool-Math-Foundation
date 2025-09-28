@@ -1,5 +1,10 @@
 # Masterschool-Math-Foundation
 
+<img width="555" height="462" alt="image" src="https://github.com/user-attachments/assets/6b0ae5be-8749-4e36-9719-f89d2bc50730" />
+
+* “Knowing is not enough; we must apply. Willing is not enough; we must do.” ~ Johann Wolfgang von Goethe 
+
+
 ### Repository Overview
 
 This repository serves as a comprehensive portfolio for my coursework on mathematical foundations, which is an integral part of the Data Science curriculum at Masterschool.
