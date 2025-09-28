@@ -28,56 +28,63 @@
 
 Gelin bu iki kavramı, metaforlar ve karşılaştırmalarla detaylı bir şekilde inceleyerek bir özet tablosu oluşturalım.
 
+### Ana Metaforlar: Mahkeme Duruşması ve Tıbbi Teşhis
+
+Bu iki hata türünü anlamak için iki güçlü metafor kullanacağız:
+
+* **Mahkeme Duruşması:** Bir sanığın suçlu olup olmadığına karar verdiğimiz bir senaryo.
+    * **Sıfır Hipotezi ($H_0$):** "Sanık masumdur."
+* **Tıbbi Teşhis:** Bir hastanın belirli bir hastalığa sahip olup olmadığına karar verdiğimiz bir senaryo.
+    * **Sıfır Hipotezi ($H_0$):** "Hasta sağlıklıdır."
+
 ---
 
-### Ana Metafor: Mahkeme Salonu ve Bilimsel Deney
+### Tip I Hata: Masum Birini Mahkum Etmek (Yalancı Pozitif)
 
-Bu iki hipotezi anlamak için iki güçlü metafor kullanabiliriz:
+* **Tanım:**
+  Gerçekte **doğru** olan bir sıfır hipotezini ($H_0$) **reddetmektir**. Yani, ortada bir etki veya fark yokken, "bir etki var" diye yanlış bir sonuca varmaktır.
 
-* **Mahkeme Salonu:** Bir iddiayı yargıladığımız bir duruşma.
-* **Bilimsel Deney:** Yeni bir fikrin işe yarayıp yaramadığını test ettiğimiz bir laboratuvar.
+* **Metaforlarla Açıklama:**
+    * **Mahkeme Metaforu:**
+        > Bu, **masum birini suçlu bulup hapse atmaktır** 😱. Duruşma sistemindeki en ciddi hata olarak kabul edilir. Elimizdeki kanıtlar bizi yanıltmış ve masumiyet varsayımını haksız yere çürütmüşüzdür.
+    * **Tıbbi Teşhis Metaforu:**
+        > Bu, **sağlıklı bir insana "hastasın" demektir (Yalancı Pozitif - False Positive)**. Bu teşhis, kişiyi gereksiz strese, masrafa ve hatta zararlı tedavilere maruz bırakabilir.
+
+* **Olasılığı: Alfa ($\alpha$)**
+  Bir Tip I hata yapma olasılığı, bizim en başta belirlediğimiz **anlamlılık düzeyine ($\alpha$)** eşittir. Eğer testimizi `$\alpha = 0.05$` ile yapıyorsak, en başından **%5 oranında masum birini mahkum etme riskini** kabul etmiş oluruz. `$\alpha$` değerini düşürerek bu riski azaltabiliriz.
+
+* **Örnek Sonuç:**
+  İşe yaramayan bir ilacın "etkili" olduğu sonucuna varılarak piyasaya sürülmesi.
 
 ---
 
-#### 1. Sıfır Hipotezi ($H_0$) – Statükonun Savunucusu
+### Tip II Hata: Suçlu Birini Serbest Bırakmak (Yalancı Negatif)
 
-* **Nedir?**
-  Sıfır hipotezi, testin başında doğru olarak kabul edilen varsayımdır. Genellikle "bir etki yoktur," "bir fark yoktur," veya "bir değişiklik olmamıştır" gibi ifadeler içerir. Çürütülmeye çalışılan mevcut durum veya genel kanıdır.
+* **Tanım:**
+  Gerçekte **yanlış** olan bir sıfır hipotezini ($H_0$) **reddedememektir**. Yani, ortada gerçek bir etki veya fark varken, bunu tespit etmek için yeterli kanıt bulamayıp "bir etki yoktur" sonucuna varmaktır.
 
-* **Rolü:**
-  Değişime karşı bir "şeytanın avukatı" rolü oynar. Bir etkinin veya farkın, sadece şans eseri ortaya çıkmadığından emin olmamızı sağlar.
+* **Metaforlarla Açıklama:**
+    * **Mahkeme Metaforu:**
+        > Bu, **suçlu birini delil yetersizliğinden serbest bırakmaktır**. Sanık aslında suçludur, ama elimizdeki kanıtlar onu mahkum etmeye yetmemiştir.
+    * **Tıbbi Teşhis Metaforu:**
+        > Bu, **hasta bir insana "sağlıklısın, bir şeyin yok" demektir (Yalancı Negatif - False Negative)**. Bu teşhis, hastalığın ilerlemesine ve tedavi şansının kaçırılmasına neden olabileceği için çok tehlikelidir.
 
-* **Metaforları:**
-    * **Mahkeme Salonu:** "**Sanık masumdur.**" Duruşma başladığında, sanığın masum olduğu varsayılır. Onu suçlu bulmak için bu varsayımın "makul şüphenin ötesinde" çürütülmesi gerekir.
-    * **Bilimsel Deney:** "**Yeni gübrenin bitki büyümesine bir etkisi yoktur.**" Deneye başlarken, yeni tedavinin veya yöntemin mevcut durumdan farksız olduğunu varsayarız.
+* **Olasılığı: Beta ($\beta$)**
+  Bir Tip II hata yapma olasılığı **Beta ($\beta$)** ile gösterilir. Testin **gücü (power)** ise `$1 - \beta$`'dır ve gerçek bir etkiyi doğru bir şekilde tespit etme yeteneğini ölçer.
 
-* **Matematiksel İpucu:**
-  Her zaman bir eşitlik içerir (`$=$, `$\le$`, veya `$\ge$`).
+* **Örnek Sonuç:**
+  Gerçekten işe yarayan bir kanser ilacının, testlerde "etkisiz" bulunarak rafa kaldırılması.
 
-#### 2. Alternatif Hipotez ($H_a$ veya $H_1$) – Değişimin Habercisi
+---
 
-* **Nedir?**
-  Alternatif hipotez, araştırmacının kanıtlamaya çalıştığı iddiadır. Bu, "bir etki vardır," "bir fark vardır," veya "bir değişiklik olmuştur" diyen yeni ve "heyecan verici" fikirdir.
+### İki Hata Arasındaki Denge
 
-* **Rolü:**
-  Statükoya meydan okur. Eğer sıfır hipotezini çürütecek kadar güçlü kanıt bulursak, alternatif hipotezi kabul ederiz.
+Bu iki hata arasında bir **ödünleşme (trade-off)** vardır:
 
-* **Metaforları:**
-    * **Mahkeme Salonu:** "**Sanık suçludur.**" Bu, savcının kanıtlamaya çalıştığı iddiadır.
-    * **Bilimsel Deney:** "**Yeni gübre bitki büyümesini artırır.**" Bu, araştırmacının keşfetmeyi umduğu yeniliktir.
+* **Mahkeme Metaforu:** Masum birini hapse atmamak için kanıt standardını (`$\alpha$`yı düşürerek) çok yükseltirseniz, suçluların delil yetersizliğinden serbest kalma ihtimalini (Tip II hatayı) artırırsınız.
+* **Çözüm:** Her iki hata türünü de aynı anda azaltmanın tek yolu, daha fazla ve daha iyi kanıt toplamaktır, yani **örneklem boyutunu artırmaktır**.
 
-* **Matematiksel İpucu:**
-  Her zaman bir eşitsizlik içerir (`$\ne$`, `$>$`, veya `$<$`).
-
-# Asagidaki tabloyu markdown formatina cevircez:
-
-<img width="664" height="447" alt="image" src="https://github.com/user-attachments/assets/aed7c1e2-0da4-4f9e-9604-67dc93e997ad" />
-
-
-
-
-# Type I and Type II Errors konusunu türkce olarak metaforlu ve tablolu aciklayacagiz. 
-
+  
 
 # One-Tailed and Two-Tailed Tests konusunu türkce olarak metaforlu ve tablolu aciklayacagiz.
 
