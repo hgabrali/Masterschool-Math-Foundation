@@ -173,3 +173,10 @@ Bir olasılık dağılımını, kütlesi farklı yerlerde yoğunlaşmış bir **
 | **2. Moment: Varyans ($\sigma^2$) / Standart Sapma ($\sigma$)** | **Variance / Standard Deviation**| Verilerin ortalamadan ne kadar uzakta yayıldığının bir ölçüsüdür. Varyans, ortalamadan sapmaların karesinin ortalamasıdır. Standart sapma ise varyansın kareköküdür. | **Dönme Eylemsizliği (Rotational Inertia)** | Heykeli denge noktasından döndürmek ne kadar zor? Kütlesi merkeze yakın, **kompakt bir küre** (düşük varyans) mi, yoksa kolları iki yana açılmış **geniş bir heykel** (yüksek varyans) mi? |
 | **3. Moment: Çarpıklık ($\beta_1$)** | **Skewness** | Dağılımın simetriden ne kadar saptığının bir ölçüsüdür. Simetrik bir dağılımda (örn: Normal Dağılım) çarpıklık sıfırdır. | **Dengesizlik / Tek Tarafa Yığılma (Lopsidedness)**| Heykel mükemmel simetrik mi? Yoksa bir tarafında diğerine göre daha uzun ve ağır bir kolu var mı? Bu dengesizlik, heykelin hangi yöne "eğilim" gösterdiğini anlatır. |
 | **4. Moment: Basıklık/Sivrilik ($\beta_2$)**| **Kurtosis** | Dağılımın kuyruklarının "ağırlığını" ve merkezinin "sivriliğini" normal dağılıma göre ölçer. | **Uçların Ağırlığı / Sivrilik (Weight of the Extremes / Peakedness)** | Heykelin kütlesi nasıl dağılmış? Kütlenin çoğu merkezde toplanıp **sivri bir tepe** mi oluşturuyor ve uçlarda çok ince ama ağır **kuyrukları** (yüksek basıklık) mı var? Yoksa kütle daha eşit dağılıp **düz bir plato** (düşük basıklık) mu oluşturuyor? |
+
+<img width="1041" height="310" alt="image" src="https://github.com/user-attachments/assets/00593117-6b3c-48f4-8f70-6c39fb947368" />
+
+<img width="827" height="340" alt="image" src="https://github.com/user-attachments/assets/712a97da-8dc0-4793-a5e4-7411e77ee07f" />
+
+
+
