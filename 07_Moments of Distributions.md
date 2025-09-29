@@ -128,4 +128,48 @@ Bu momentler, bir veri bilimcinin sadece **"ne olacak?"** sorusunu değil, aynı
 
 ---
 
-Bu kavramları somutlaştırmak için şimdi uygulamaya dönelim! Gördüğün gibi, Beklenti ve Varyans hesaplamak, gerçek hayatta Risk Yönetimi yapmaktır.
+## İstatistiksel Momentler: Dağılımların Şeklini Anlamak
+
+İstatistikte **momentler (moments)**, bir olasılık dağılımının şeklini ve karakterini tanımlayan bir dizi ölçüdür. Tıpkı bir nesnenin fiziksel özelliklerini (kütle merkezi, dengesi, vb.) tanımlamak gibi, istatistiksel momentler de bir veri dağılımının geometrisini ve davranışını anlamamızı sağlar.
+
+Gelin bu konuyu, İngilizce terimlerini de belirterek ve akılda kalıcı bir ana metafor üzerinden detaylıca inceleyelim.
+
+---
+
+### Ana Metafor: Olasılık Dağılımı Bir Heykel Olsaydı...
+
+Bir olasılık dağılımını, kütlesi farklı yerlerde yoğunlaşmış bir **metal heykel** gibi düşünün. Momentler, bu heykelin fiziksel özelliklerini tanımlamamıza yarayan ölçümlerdir.
+
+1.  **Birinci Moment (First Moment):** Heykelin **denge noktasını** bulur.
+2.  **İkinci Moment (Second Moment):** Heykelin bu denge noktası etrafında ne kadar kolay **döneceğini** (yani ne kadar yayvan olduğunu) ölçer.
+3.  **Üçüncü Moment (Third Moment):** Heykelin ne kadar **dengesiz veya tek tarafa yığılmış** olduğunu ölçer.
+4.  **Dördüncü Moment (Fourth Moment):** Heykelin kütlesinin merkezde ne kadar **sivri** ve uçlarda ne kadar **ağır** olduğunu ölçer.
+
+---
+
+### Terimlerin Pratik Anlamları
+
+* **Ortalama (Mean):**
+  Veri setinizin merkezi konumunu söyler.
+
+* **Standart Sapma (Standard Deviation):**
+  Verilerinizin bu merkezden tipik olarak ne kadar uzakta olduğunu söyler. **Düşük** standart sapma, verilerin tutarlı ve birbirine yakın olduğunu; **yüksek** standart sapma ise verilerin dağınık ve değişken olduğunu gösterir.
+
+* **Çarpıklık (Skewness):**
+  Dağılımınızın kuyruğunun hangi yöne uzun olduğunu söyler.
+    * **Pozitif (Sağa Çarpık):** Kuyruk sağa doğrudur. Çoğu veri düşük değerlerde toplanmıştır, ancak birkaç tane çok yüksek "aykırı" değer ortalamayı yukarı çeker (örn: insanların maaşları).
+    * **Negatif (Sola Çarpık):** Kuyruk sola doğrudur. Çoğu veri yüksek değerlerde toplanmıştır, ancak birkaç tane çok düşük değer ortalamayı aşağı çeker (örn: kolay bir sınavdan alınan notlar).
+
+* **Basıklık (Kurtosis):**
+  Dağılımınızın ne kadar "**aykırı değere eğilimli**" olduğunu söyler.
+    * **Yüksek Basıklık (Leptokurtic):** Normal dağılıma göre daha sivri bir tepeye ve daha "kalın" kuyruklara sahiptir. Bu, aşırı değerlerin (outlier) beklenenden daha olası olduğu anlamına gelir (örn: hisse senedi getirileri).
+    * **Düşük Basıklık (Platykurtic):** Normal dağılıma göre daha basık bir tepeye ve daha "ince" kuyruklara sahiptir. Aşırı değerler daha az olasıdır.
+ 
+### Ayrıntılı ve Karşılaştırmalı Momentler Tablosu
+
+| Moment | İngilizce Karşılığı | Teknik Tanım | Metafor (Heykel Analojisi) | Bize Ne Anlatır? (Yorumu) |
+| :--- | :--- | :--- | :--- | :--- |
+| **1. Moment: Ortalama ($\mu$)** | **Mean, Expected Value** | Bir dağılımın "ağırlık merkezidir". Her bir değerin, gerçekleşme olasılığı ile ağırlıklandırılmış ortalamasıdır. | **Denge Noktası (Center of Gravity)** | Heykeli hangi noktadan parmağınızın ucuna koyarsanız dengede durur? Bu nokta, dağılımın "merkezini" veya "tipik" değerini gösterir. |
+| **2. Moment: Varyans ($\sigma^2$) / Standart Sapma ($\sigma$)** | **Variance / Standard Deviation**| Verilerin ortalamadan ne kadar uzakta yayıldığının bir ölçüsüdür. Varyans, ortalamadan sapmaların karesinin ortalamasıdır. Standart sapma ise varyansın kareköküdür. | **Dönme Eylemsizliği (Rotational Inertia)** | Heykeli denge noktasından döndürmek ne kadar zor? Kütlesi merkeze yakın, **kompakt bir küre** (düşük varyans) mi, yoksa kolları iki yana açılmış **geniş bir heykel** (yüksek varyans) mi? |
+| **3. Moment: Çarpıklık ($\beta_1$)** | **Skewness** | Dağılımın simetriden ne kadar saptığının bir ölçüsüdür. Simetrik bir dağılımda (örn: Normal Dağılım) çarpıklık sıfırdır. | **Dengesizlik / Tek Tarafa Yığılma (Lopsidedness)**| Heykel mükemmel simetrik mi? Yoksa bir tarafında diğerine göre daha uzun ve ağır bir kolu var mı? Bu dengesizlik, heykelin hangi yöne "eğilim" gösterdiğini anlatır. |
+| **4. Moment: Basıklık/Sivrilik ($\beta_2$)**| **Kurtosis** | Dağılımın kuyruklarının "ağırlığını" ve merkezinin "sivriliğini" normal dağılıma göre ölçer. | **Uçların Ağırlığı / Sivrilik (Weight of the Extremes / Peakedness)** | Heykelin kütlesi nasıl dağılmış? Kütlenin çoğu merkezde toplanıp **sivri bir tepe** mi oluşturuyor ve uçlarda çok ince ama ağır **kuyrukları** (yüksek basıklık) mı var? Yoksa kütle daha eşit dağılıp **düz bir plato** (düşük basıklık) mu oluşturuyor? |
