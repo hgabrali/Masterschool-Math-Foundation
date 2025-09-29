@@ -316,14 +316,29 @@ Bu örnek, Bayes Teoremi'nin yeni bir kanıt (kusurlu ürün) ışığında bir 
 Bir fabrika, toplam 10.000 ürün üreten üç makine (A, B, C) işletmektedir. Makinelere ait üretim oranları (**Öncül Olasılıklar**) ve kusur oranları (**Olabilirlikler**) aşağıdaki gibidir:
 
 
-| Makine | Günlük Üretim | Ürünün O Makineden Gelme Olasılığı ($P(M)$) | Kusur Oranı ($P(\text{Kusurlu}|M)$) |
+Diyelim ki bir fabrikada **A Makinesi**, **B Makinesi** ve **C Makinesi** olmak üzere üç makine bulunmaktadır. Bu makineler, aşağıdaki üretim ve kusur oranlarıyla günde toplam 10.000 adet ürün üretmektedir:
 
-| :--- | :--- | :--- | :--- |
+* **A Makinesi**, günde 4.000 adet ürün üretir ve kusur oranı %1'dir.
+* **B Makinesi**, günde 3.000 adet ürün üretir ve kusur oranı %2'dir.
+* **C Makinesi**, günde 3.000 adet ürün üretir ve kusur oranı %3'tür.
 
-| **A** | 4.000 | `$P(A) = 4000/10000 = \mathbf{0.40}$` | `$P(D|A) = \mathbf{0.01}$` |
-| **B** | 3.000 | `$P(B) = 3000/10000 = \mathbf{0.30}$` | `$P(D|B) = \mathbf{0.02}$` |
-| **C** | 3.000 | `$P(C) = 3000/10000 = \mathbf{0.30}$` | `$P(D|C) = \mathbf{0.03}$` |
+> Eğer rastgele bir ürün seçilirse ve bu ürünün kusurlu olduğu tespit edilirse, bu ürünün her bir makine tarafından üretilmiş olma olasılığı nedir?
 
+---
+
+### Çözüm
+
+$A$, $B$, $C$ olayları sırasıyla her bir makineye karşılık gelsin. Her bir makineden bir ürün seçme olasılıkları şu şekilde verilir:
+
+* `$P(A) = \frac{4000}{10000} = 0.4$`
+* `$P(B) = \frac{3000}{10000} = 0.3$`
+* `$P(C) = \frac{3000}{10000} = 0.3$`
+
+Ayrıca her bir makine için kusurlu bir ürün seçme olasılığının ne olduğunu da biliyoruz:
+
+* `$P(D|A) = 0.01$` - A makinesinden seçilen bir ürünün kusurlu olma olasılığı
+* `$P(D|B) = 0.02$` - B makinesinden seçilen bir ürünün kusurlu olma olasılığı
+* `$P(D|C) = 0.03$` - C makinesinden seçilen bir ürünün kusurlu olma olasılığı
 
 
 
