@@ -166,26 +166,6 @@ Büyük Veri, genellikle farklı kaynaklardan gelen gürültülü ve eksik bilgi
 
 Bayes Teoremi, özetle, belirsizlikle dolu dünyamızda **rasyonel çıkarım yapma** ve **bilgiyi etkin bir şekilde kullanma** becerimizin matematiksel anahtarıdır.
 
-Bu konunun gücünü göstermek için, popüler bir tıbbi teşhis senaryosunu ele alan bir **Python kodu** yazabiliriz. Böyle bir simülasyon ister misin?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ---
