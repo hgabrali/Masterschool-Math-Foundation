@@ -317,9 +317,10 @@ Bir fabrika, toplam 10.000 ürün üreten üç makine (A, B, C) işletmektedir. 
 
 | Makine | Günlük Üretim | Ürünün O Makineden Gelme Olasılığı ($P(M)$) | Kusur Oranı ($P(\text{Kusurlu}|M)$) |
 | :--- | :--- | :--- | :--- |
-| **A** | 4.000 | $P(A) = 4000/10000 = \mathbf{0.40}$ | $P(D|A) = \mathbf{0.01}$ |
-| **B** | 3.000 | $P(B) = 3000/10000 = \mathbf{0.30}$ | $P(D|B) = \mathbf{0.02}$ |
-| **C** | 3.000 | $P(C) = 3000/10000 = \mathbf{0.30}$ | $P(D|C) = \mathbf{0.03}$ |
+| **A** | 4.000 | `$P(A) = 4000/10000 = \mathbf{0.40}$` | `$P(D|A) = \mathbf{0.01}$` |
+| **B** | 3.000 | `$P(B) = 3000/10000 = \mathbf{0.30}$` | `$P(D|B) = \mathbf{0.02}$` |
+| **C** | 3.000 | `$P(C) = 3000/10000 = \mathbf{0.30}$` | `$P(D|C) = \mathbf{0.03}$` |
+
 
 **Soru:** Rastgele seçilen bir ürünün **kusurlu (D)** olduğu biliniyorsa, bu ürünün her bir makineden gelme olasılığı ($P(A|D)$, $P(B|D)$, $P(C|D)$) nedir?
 
