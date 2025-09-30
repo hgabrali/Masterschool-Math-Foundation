@@ -452,6 +452,9 @@ Karar anı, bu iki değerin karşılaştırılmasıdır.
 
 <img width="460" height="201" alt="image" src="https://github.com/user-attachments/assets/a6bc6892-e44f-4c28-a0d2-4d01abf97f65" />
 
+<img width="671" height="246" alt="image" src="https://github.com/user-attachments/assets/4d1c180c-5e3a-4c06-bdd4-8ba55a17c130" />
+
+
 <img width="565" height="407" alt="image" src="https://github.com/user-attachments/assets/871b5d7f-5144-423c-9435-5fd1d1faa322" />
 
 #### Karşılaştırmalı Özet Tablosu
