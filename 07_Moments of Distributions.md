@@ -146,7 +146,7 @@ Bir olasılık dağılımını, kütlesi farklı yerlerde yoğunlaşmış bir **
 4.  **Dördüncü Moment (Fourth Moment):** Heykelin kütlesinin merkezde ne kadar **sivri** ve uçlarda ne kadar **ağır** olduğunu ölçer.
 
 ---
-
+[Moment](https://tr.m.wikipedia.org/wiki/Moment_(matematik))
 ### Terimlerin Pratik Anlamları
 
 * **Ortalama (Mean):**
@@ -188,5 +188,6 @@ Bir olasılık dağılımını, kütlesi farklı yerlerde yoğunlaşmış bir **
 
 <img width="827" height="340" alt="image" src="https://github.com/user-attachments/assets/712a97da-8dc0-4793-a5e4-7411e77ee07f" />
 
+<img width="832" height="572" alt="image" src="https://github.com/user-attachments/assets/3bb34f21-8c9d-4ed8-ba73-a34827ba3964" />
 
 
