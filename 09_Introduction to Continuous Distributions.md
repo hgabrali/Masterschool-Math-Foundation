@@ -1,7 +1,7 @@
 
 # Yaygın Sürekli Dağılımların Kapsamlı ve Karşılaştırmalı Analizi: Teori, Tarihçe ve Uygulamalar
 
-Istatistiksel çıkarımın ve risk modellemesinin temelini oluşturan en yaygın **sürekli olasılık dağılımlarını (Common Continuous Probability Distributions)** derinlemesine incelemektedir. Rapor, dağılımların matematiksel tanımlarını, tarihsel gelişim kronolojisini, birbirleriyle olan ilişkilerini ve günümüzdeki endüstriyel, finansal ve akademik uygulama alanlarını detaylı olarak karşılaştırmalı bir perspektifle sunmaktadır.
+Amac: Istatistiksel çıkarımın ve risk modellemesinin temelini oluşturan en yaygın **sürekli olasılık dağılımlarını (Common Continuous Probability Distributions)** derinlemesine incelemektedir. Dağılımların matematiksel tanımlarını, tarihsel gelişim kronolojisini, birbirleriyle olan ilişkilerini ve günümüzdeki endüstriyel, finansal ve akademik uygulama alanlarını detaylı olarak karşılaştırmalı bir perspektifle sunmaktadır.
 
 ---
 
