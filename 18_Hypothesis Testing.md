@@ -7,7 +7,7 @@
 Bu süreci, yeni bir web sitesi tasarımının dönüşüm oranını artırıp artırmadığını test ettiğimiz bir A/B testi örneği üzerinden inceleyelim.
 
 ---
-
+ 
 #### ❓ Adım 1: Hipotezleri Belirle (Soruyu Tanımla)
 
 * **Ne Yapılır?**
