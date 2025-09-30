@@ -72,11 +72,17 @@ Normal dağılım, "ideal" popülasyonu temsil ederken; $t$, $\chi^2$ ve $F$ da�
 
 ### 3.1. Normal Dağılım (Normal/Gaussian Distribution, $N(\mu, \sigma^2)$)
 
+<img width="774" height="285" alt="image" src="https://github.com/user-attachments/assets/0ecebad6-a624-4caa-8bfe-e01b328f2bd1" />
+
+
 * **Parametreler:** Ortalama ($\mu$, Mean) ve Varyans ($\sigma^2$) veya Standart Sapma ($\sigma$, Standard Deviation).
 * **PDF:** Çan şeklindedir: $f(x|\mu, \sigma^2) = \frac{1}{\sigma\sqrt{2\pi}} e^{-(x-\mu)^2/(2\sigma^2)}$, $-\infty < x < \infty$.
 * **Özellikler:** $\mu$'ya göre simetriktir. Standart Normal Dağılım, $\mu=0$ ve $\sigma=1$ parametrelerine sahip özel bir durumdur.
 
 ### 3.2. Üstel Dağılım (Exponential Distribution, $Exp(\lambda)$)
+
+<img width="625" height="522" alt="image" src="https://github.com/user-attachments/assets/20a11a38-b5f4-4f0d-ab25-cc7b11ceaf21" />
+
 
 Poisson süreci bağlamında, **olaylar arasındaki zaman aralıklarını** modellemek için kullanılır.
 
@@ -84,7 +90,10 @@ Poisson süreci bağlamında, **olaylar arasındaki zaman aralıklarını** mode
 * **PDF:** Yalnızca pozitif değerler için tanımlıdır ($x \ge 0$): $f(x|\lambda) = \lambda e^{-\lambda x}$, $x \ge 0$.
 * **Hafızasızlık Özelliği (Memoryless Property):** Bir sistemin belirli bir süre çalışmış olması, gelecekteki arızalanma olasılığını etkilemez: $P(X > s+t | X > s) = P(X > t)$.
 
-### 3.3. Tekdüze Dağılım (Uniform Distribution, $U(a,b)$)
+### 3.3. Tekdüze Dağılım (Uniform Distribution, Rectangular Distributions, $U(a,b)$)
+
+<img width="352" height="557" alt="image" src="https://github.com/user-attachments/assets/87978a3e-1a89-4f51-8a44-7c05236bbfe4" />
+
 
 Belirli bir $a$ ve $b$ aralığındaki tüm sonuçların **eşit olasılık yoğunluğuna** sahip olduğu en basit sürekli dağılımdır.
 
@@ -93,6 +102,9 @@ Belirli bir $a$ ve $b$ aralığındaki tüm sonuçların **eşit olasılık yoğ
 * **Özellikler:** Ortalaması $(a+b)/2$, varyansı $(b-a)^2/12$'dir. Simülasyonlarda rastgele sayı üretmek için kullanılır.
 
 ### 3.4. Gama Dağılımları Ailesi (The Gamma Family of Distributions)
+
+<img width="537" height="282" alt="image" src="https://github.com/user-attachments/assets/48262cb1-9024-4cb9-a892-9cd17a9e417f" />
+
 
 Üstel dağılımın bir genellemesi olup, özellikle bir dizi bağımsız üstel olayın (Poisson sürecindeki olaylar) tamamlanması için gereken **kümülatif bekleme sürelerini** modellemek için kullanılır.
 
@@ -103,8 +115,17 @@ Belirli bir $a$ ve $b$ aralığındaki tüm sonuçların **eşit olasılık yoğ
 
 ### 3.5. Diğer Önemli Sürekli Dağılımlar
 
+<img width="875" height="352" alt="image" src="https://github.com/user-attachments/assets/57c87adf-f302-45c8-b196-4089f7f88923" />
+
 * **Lognormal Dağılım:** Bir rastgele değişkenin doğal logaritması Normal dağılıma uyuyorsa, değişkenin kendisi Lognormal dağılıma uyar. Yalnızca pozitif değerler alır ve **sağa çarpık** değişkenleri modellemek için kullanılır (örn: gelir dağılımı, finansal varlık fiyatları).
+
+<img width="446" height="665" alt="image" src="https://github.com/user-attachments/assets/f60b63bf-76ad-40f7-9d23-7d13086bd5c1" />
+
 * **Weibull Dağılımı:** **Güvenilirlik analizi** ve **yaşam süresi modellemesi** (*failure time modeling*) için çok esnek bir araçtır. Şekil parametresi sayesinde arıza oranının zamanla değişmesini (azalması, sabit kalması, artması) modellemeye olanak tanır.
+
+<img width="1295" height="566" alt="image" src="https://github.com/user-attachments/assets/8fe096d5-9b14-4f1a-a8a1-152ff44bf408" />
+
+  
 * **Beta Dağılımı:** Sabit $[0, 1]$ aralığında tanımlanmış rastgele değişkenleri modellemek için idealdir. Genellikle **olasılıkları, oranları veya yüzdeleri** modellemek için kullanılır.
 
 ---
