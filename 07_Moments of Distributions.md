@@ -174,6 +174,11 @@ Bir olasılık dağılımını, kütlesi farklı yerlerde yoğunlaşmış bir **
 | **3. Moment: Çarpıklık ($\beta_1$)** | **Skewness** | Dağılımın simetriden ne kadar saptığının bir ölçüsüdür. Simetrik bir dağılımda (örn: Normal Dağılım) çarpıklık sıfırdır. | **Dengesizlik / Tek Tarafa Yığılma (Lopsidedness)**| Heykel mükemmel simetrik mi? Yoksa bir tarafında diğerine göre daha uzun ve ağır bir kolu var mı? Bu dengesizlik, heykelin hangi yöne "eğilim" gösterdiğini anlatır. |
 | **4. Moment: Basıklık/Sivrilik ($\beta_2$)**| **Kurtosis** | Dağılımın kuyruklarının "ağırlığını" ve merkezinin "sivriliğini" normal dağılıma göre ölçer. | **Uçların Ağırlığı / Sivrilik (Weight of the Extremes / Peakedness)** | Heykelin kütlesi nasıl dağılmış? Kütlenin çoğu merkezde toplanıp **sivri bir tepe** mi oluşturuyor ve uçlarda çok ince ama ağır **kuyrukları** (yüksek basıklık) mı var? Yoksa kütle daha eşit dağılıp **düz bir plato** (düşük basıklık) mu oluşturuyor? |
 
+
+<img width="636" height="369" alt="image" src="https://github.com/user-attachments/assets/24a0f20a-c187-478b-8e34-5c442df2f6bc" />
+
+
+
 <img width="679" height="266" alt="image" src="https://github.com/user-attachments/assets/62745bec-a9d7-483d-b8b0-39ad78447f1b" />
 
 
