@@ -129,6 +129,9 @@ Popülasyon standart sapması ($\sigma$) bilinmediğinde ve özellikle **örnekl
 
 ### 4.2. Ki-Kare Dağılımı ($\chi^2$, Chi-Square Distribution, $\chi^2_\nu$)
 
+<img width="865" height="470" alt="image" src="https://github.com/user-attachments/assets/4582c936-5697-4b3d-9864-093ef4caca26" />
+
+
 $\nu$ serbestlik derecesiyle, $\nu$ adet bağımsız standart normal rastgele değişkenin **karelerinin toplamının** dağılımıdır.
 
 * **Yapı ve Parametre:** Tek parametresi serbestlik derecesidir ($\nu$). Dağılım, daima pozitif değerler alır ve **sağa çarpıktır**.
