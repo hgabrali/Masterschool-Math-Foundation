@@ -115,6 +115,9 @@ Normal dağılımdan türetilmiş bu dağılımlar, küçük örneklem belirsizl
 
 ### 4.1. Student's t-Dağılımı (Student's t-Distribution, $t_\nu$)
 
+<img width="600" height="306" alt="image" src="https://github.com/user-attachments/assets/33a842ed-0918-4793-8034-211f26ec7787" />
+
+
 Popülasyon standart sapması ($\sigma$) bilinmediğinde ve özellikle **örneklem büyüklüğü ($n$) küçük olduğunda** popülasyon ortalamasını tahmin etmek için geliştirilmiştir.
 
 * **Yapı ve Serbestlik Derecesi ($\nu$):** Genellikle $\nu = n-1$. T-istatistiği, $t_\nu = \frac{Z}{\sqrt{\chi^2_\nu / \nu}}$ şeklinde elde edilir.
