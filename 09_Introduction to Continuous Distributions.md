@@ -142,6 +142,9 @@ $\nu$ serbestlik derecesiyle, $\nu$ adet bağımsız standart normal rastgele de
 
 ### 4.3. F-Dağılımı (F-Distribution, $F_{\nu_1, \nu_2}$)
 
+<img width="547" height="696" alt="image" src="https://github.com/user-attachments/assets/1c8f2343-015a-4049-892c-243c0d5f9daf" />
+
+
 **İki varyansın oranını** karşılaştırmak için tasarlanmıştır.
 
 * **Yapı ve Parametreler:** İki bağımsız Ki-Kare değişkeninin, kendi serbestlik derecelerine bölünmüş oranının dağılımıdır: $F_{\nu_1, \nu_2} \equiv \frac{\chi^2_{\nu_1}/\nu_1}{\chi^2_{\nu_2}/\nu_2}$. İki serbestlik derecesi parametresi vardır: Pay serbestlik derecesi ($\nu_1$) ve payda serbestlik derecesi ($\nu_2$).
