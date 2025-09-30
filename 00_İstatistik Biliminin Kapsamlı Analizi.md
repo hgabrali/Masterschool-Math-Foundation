@@ -1,6 +1,6 @@
 # İstatistik Biliminin Kapsamlı Analizi: Kronolojik Gelişim, Temel Kavramlar ve Nicel Çıkarım Metodolojileri Üzerine
 
-Bu rapor, İstatistik bilimini temel tanımlarından başlayarak kronolojik tarihsel gelişimini, çekirdek teorik yapı taşlarını ve modern uygulamalarını detaylı, karşılaştırmalı ve metaforik bir dille incelemektedir. Analiz, disiplinin temel zorluklarını ve mantık tuzaklarını ele almakta, aynı zamanda gelecekteki veri bilimi (*Data Science*) trendleri ile olan kesişim noktalarını değerlendirmektedir.
+### Bu rapor, İstatistik bilimini temel tanımlarından başlayarak kronolojik tarihsel gelişimini, çekirdek teorik yapı taşlarını ve modern uygulamalarını detaylı, karşılaştırmalı ve metaforik bir dille incelemektedir. Analiz, disiplinin temel zorluklarını ve mantık tuzaklarını ele almakta, aynı zamanda gelecekteki veri bilimi (*Data Science*) trendleri ile olan kesişim noktalarını değerlendirmektedir.
 ---
 
 ## I. İstatistik Bilimine Giriş: Tanım, Kapsam ve İki Ana Perspektif
