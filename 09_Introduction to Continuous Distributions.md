@@ -111,6 +111,9 @@ Belirli bir $a$ ve $b$ aralığındaki tüm sonuçların **eşit olasılık yoğ
 
 ## 4. İstatistiksel Çıkarım Dağılımları
 
+<img width="751" height="413" alt="image" src="https://github.com/user-attachments/assets/d906ac40-6e1c-41f6-b532-294fff15830d" />
+
+
 Normal dağılımdan türetilmiş bu dağılımlar, küçük örneklem belirsizliğini ve varyans karşılaştırmalarını hesaba katarak modern **hipotez testlerinin** ve çıkarımın temelini oluşturur.
 
 ### 4.1. Student's t-Dağılımı (Student's t-Distribution, $t_\nu$)
