@@ -639,7 +639,17 @@ Bu iki kavram sıkça karıştırılır, ancak rolleri tamamen farklıdır.
 
 ---
 
+<img width="1350" height="702" alt="image" src="https://github.com/user-attachments/assets/e3c1fcab-5b27-4de9-b9f7-5e94e555f62f" />
 
 
+<img width="1260" height="692" alt="image" src="https://github.com/user-attachments/assets/bbd382ef-d7d0-4ef1-95cb-20dbf29244ec" />
+
+
+<img width="1065" height="391" alt="image" src="https://github.com/user-attachments/assets/9fbf1081-074d-41f0-8200-4e7d71a44972" />
+
+<img width="1173" height="485" alt="image" src="https://github.com/user-attachments/assets/8cf94f91-0595-46be-b1c7-597e480f6747" />
+
+
+<img width="1140" height="552" alt="image" src="https://github.com/user-attachments/assets/79fabc22-44b4-40ee-8801-9b032d3d5aa0" />
 
 
