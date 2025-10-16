@@ -61,6 +61,7 @@ This repository will be continuously updated as I progress through the curriculu
 | **Origin** | Coursera Course Materials (Ders Notları) |
 | **Language** | English (as presented in the title) |
 
+[DeepLearning.AI](https://community.deeplearning.ai/t/downloading-your-notebook-downloading-your-workspace-and-refreshing-your-workspace/475495)
 ---
 
 ## 📝 Overview
