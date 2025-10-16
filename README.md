@@ -44,3 +44,20 @@ Through this project, I aim to achieve proficiency in:
 -   **`resources/`**: Relevant external resources and lecture notes.
 
 This repository will be continuously updated as I progress through the curriculum.
+
+# 📚 Probability & Statistics for Machine Learning & Data Science
+
+## 🎓 Source Information
+
+| Detail | Description |
+| :--- | :--- |
+| **Topic** | Probability & Statistics for Machine Learning & Data Science |
+| **Source Type** | Course Notes / Lecture Material |
+| **Origin** | Coursera Course Materials (Ders Notları) |
+| **Language** | English (as presented in the title) |
+
+---
+
+## 📝 Overview
+
+This repository or document contains notes and explanations covering fundamental concepts of **Probability and Statistics**, specifically tailored for their application in **Machine Learning** and **Data Science** fields.
