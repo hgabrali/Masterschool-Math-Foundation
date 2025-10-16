@@ -653,3 +653,19 @@ Bu iki kavram sıkça karıştırılır, ancak rolleri tamamen farklıdır.
 <img width="1140" height="552" alt="image" src="https://github.com/user-attachments/assets/79fabc22-44b4-40ee-8801-9b032d3d5aa0" />
 
 
+<img width="1178" height="588" alt="image" src="https://github.com/user-attachments/assets/8ca6fd5d-22b6-4e1e-8766-4f64de8572e1" />
+
+<img width="1172" height="547" alt="image" src="https://github.com/user-attachments/assets/c9ab5aa5-2552-46f5-b919-1f9dffdd470b" />
+
+<img width="1072" height="330" alt="image" src="https://github.com/user-attachments/assets/3edc369f-5a05-4477-b43a-3243ad24c865" />
+
+
+<img width="1097" height="419" alt="image" src="https://github.com/user-attachments/assets/d5696a09-3eb7-44a1-9e33-f79df4c79b00" />
+
+
+
+
+
+
+
+
