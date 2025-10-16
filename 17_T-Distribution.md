@@ -458,6 +458,236 @@ $$0.0173 < 0.05$$
 
 <img width="788" height="591" alt="image" src="https://github.com/user-attachments/assets/93c22c26-2a9d-440a-a0ab-ae41b2a01493" />
 
+---
+
+# 🚀 Bağımsız İki Örneklem $t$-Testi (Independent Two Sample $t$-Test)
+
+* Farkli populasyon ve örneklemde- Independent  two sample t-Test, t-testle olan iliskisi nedir?
+* Burada degree of freedom´in önemi nedir?, Independent  two sample t-Test´te right, left and two tailed testlere nasil karar verecegim?
+* Hangi parametrelere bakmam gerekli?, Independent  two sample t-Test´te P-valunun durumu nedir? Ne zaman ve ne etkilerde degisir? ve significance level ile olan iliskilerini nasil incelememiz gereki?
+* Hipotezlerin karar/ kabul durumlari ne olur? ve Nelere bakarak degerlendirmemiz gerekli? Hangi parametreler karsilastirilmali?
+* ML´de   Two Sample t -Test nerede ve nasil kullanilir?
+
+
+<img width="1211" height="573" alt="image" src="https://github.com/user-attachments/assets/97284ce1-115d-4d28-8368-c5f62720c992" />
+
+
+<img width="1127" height="583" alt="image" src="https://github.com/user-attachments/assets/5966f711-7191-4b8b-81f8-3a6388a1cade" />
+
+* Then:
+
+<img width="1103" height="583" alt="image" src="https://github.com/user-attachments/assets/94379043-f75d-41f7-acfd-0a8542491901" />
+
+
+<img width="1208" height="602" alt="image" src="https://github.com/user-attachments/assets/5a5918d1-bb12-4f7b-b9fb-447503bfb5f2" />
+
+
+<img width="1214" height="592" alt="image" src="https://github.com/user-attachments/assets/997f524c-358e-439c-b10a-c8c76a1bdc7a" />
+
+<img width="1207" height="577" alt="image" src="https://github.com/user-attachments/assets/e2c93fa9-3023-4cc3-ab70-428e4f83c8e3" />
+
+
+
+<img width="1233" height="600" alt="image" src="https://github.com/user-attachments/assets/1375fe30-2745-4bbe-8fe5-c2a779c69489" />
+
+
+<img width="1226" height="603" alt="image" src="https://github.com/user-attachments/assets/71875565-485c-4ba8-bbc4-4875402c198c" />
+
+
+# 🤝 1. Farklı Popülasyon ve Örneklemde - İlişkisi Nedir?
+
+Bağımsız iki örneklem $t$-Testi (Independent Two Sample $t$-Test), adından da anlaşılacağı gibi, **birbirinden bağımsız iki farklı popülasyonun (anakütlenin) ortalamaları arasında anlamlı bir fark olup olmadığını** test etmek için kullanılır.
+
+| Kavram | Açıklama |
+| :--- | :--- |
+| **Popülasyonlar** | İki ayrı ve bağımsız grup varsayılır (Örn: A Reklamını görenler ve B Reklamını görenler). Popülasyon parametreleri $\mu_1$ ve $\mu_2$'dir. |
+| **Örneklemler** | Her popülasyondan bağımsız olarak veri toplanır. Örneklem istatistikleri $\bar{X}_1$ ve $\bar{X}_2$'dir. |
+| **$t$-Test ile İlişkisi** | Tek örneklem $t$-Testi, bir örneklemin ortalamasını bilinen bir popülasyon ortalamasıyla ($\mu$) karşılaştırırken; **İki Örneklem $t$-Testi, iki örneklem ortalaması arasındaki farkı $(\bar{X}_1 - \bar{X}_2)$, bu farkın sıfır olup olmadığına göre** (yani $\mu_1 = \mu_2$ olup olmadığına göre) test eder. |
+
+### Test İstatistiği (Genel Formül):
+
+$$t = \frac{(\bar{X}_1 - \bar{X}_2) - (\mu_1 - \mu_2)}{SE(\bar{X}_1 - \bar{X}_2)}$$
+*Sıfır hipotezi ($H_0: \mu_1 = \mu_2$) altında, formüldeki $(\mu_1 - \mu_2)$ terimi $0$ kabul edilir.*
+
+# 👥 İki Örneklem $t$-Testi Temel Kavramları
+
+Bu tablo, Bağımsız İki Örneklem $t$-Testinde yer alan temel istatistiksel kavramları ve testin amacını açıklamaktadır.
+
+---
+
+| Kavram | Açıklama |
+| :--- | :--- |
+| **Popülasyonlar** | İki ayrı ve bağımsız grup varsayılır (Örn: A Reklamını görenler ve B Reklamını görenler). Popülasyon parametreleri $\mu_1$ ve $\mu_2$'dir. |
+| **Örneklemler** | Her popülasyondan bağımsız olarak veri toplanır. Örneklem istatistikleri $\bar{X}_1$ ve $\bar{X}_2$'dir. |
+| **$t$-Test ile İlişkisi** | Tek örneklem $t$-Testi, bir örneklemin ortalamasını bilinen bir popülasyon ortalamasıyla ($\mu$) karşılaştırırken; **İki Örneklem $t$-Testi, iki örneklem ortalaması arasındaki farkı ($\bar{X}_1 - \bar{X}_2$), bu farkın sıfır olup olmadığına göre** (yani $\mu_1 = \mu_2$ olup olmadığına göre) test eder. |
+
+
+# 🛠️ Test İstatistiği ve $df$ Hesaplaması
+
+## Test İstatistiği (Genel Formül)
+
+Bağımsız İki Örneklem $t$-Testinin genel formülü aşağıdaki gibidir:
+
+$$t = \frac{(\bar{X}_1 - \bar{X}_2) - (\mu_1 - \mu_2)}{SE(\bar{X}_1 - \bar{X}_2)}$$
+
+* Sıfır hipotezi ($H_0: \mu_1 = \mu_2$) altında, formüldeki $(\mu_1 - \mu_2)$ terimi $\mathbf{0}$ kabul edilir.
+
+---
+
+## 2. Serbestlik Derecesinin Önemi ve Test Türüne Karar Verme
+
+### Serbestlik Derecesinin ($df$) Önemi 📐
+
+Bağımsız iki örneklem $t$-Testinde **serbestlik derecesi ($df$)**, hesaplanan $t$-değerinin hangi $t$-dağılımını takip edeceğini belirler. İki farklı örneklem olduğu için $df$ hesaplaması daha karmaşıktır ve **varyansların eşit olup olmamasına (Homogeneity of Variances)** göre değişir:
+
+#### 1. Varyanslar Eşit Kabul Edilirse (Pooled t-Test):
+
+$$df = n_1 + n_2 - 2$$
+
+#### 2. Varyanslar Eşit Kabul Edilmezse (Welch's t-Test):
+
+* $df$ için karmaşık bir formül (Welch-Satterthwaite denklemi) kullanılır.
+* Genellikle istatistiksel yazılımlar bunu otomatik hesaplar ve $df$ tam sayı olmayabilir.
+* **Bu, pratikte daha yaygın kullanılan ve varsayımlara daha az hassas olan yöntemdir.**
+
+$df$'in önemi, **testin gücünü ve p-değerini doğru hesaplamak için doğru dağılımı seçmeyi** sağlamasıdır.
+
+### Test Türüne Karar Verme (Right, Left and Two-Tailed) 🚪
+
+Test türüne, kurulan **Alternatif Hipotez ($H_1$)** ile karar verilir:
+
+| Test Türü | Alternatif Hipotez ($H_1$) | Anlamı |
+| :--- | :--- | :--- |
+| **Çift Kuyruk (Two-Tailed)** | $\mu_1 \neq \mu_2$ | Ortalamalar arasında **fark var** mı? |
+| **Sağ Kuyruk (Right-Tailed)** | $\mu_1 > \mu_2$ | Birinci popülasyonun ortalaması, ikinciden **daha büyük** mi? |
+| **Sol Kuyruk (Left-Tailed)** | $\mu_1 < \mu_2$ | Birinci popülasyonun ortalaması, ikinciden **daha küçük** mü? |
+
+# 🚀 Bağımsız İki Örneklem $t$-Testi (Independent Two Sample $t$-Test)
+
+Harika bir konu! Bağımsız İki Örneklem $t$-Testi (Independent Two Sample $t$-Test), makine öğrenimi ve veri biliminde A/B testlerinden deney analizlerine kadar birçok yerde kullanılan temel bir istatistiksel araçtır.
+
+Aşağıda, istediğiniz başlıkları teknik, kapsamlı ve anlaşılır bir şekilde ele alarak sunuyorum.
+
+---
+
+## 1. Farklı Popülasyon ve Örneklemde - İlişkisi Nedir? 🤝
+
+Bağımsız iki örneklem $t$-Testi, adından da anlaşılacağı gibi, **birbirinden bağımsız iki farklı popülasyonun (anakütlenin) ortalamaları arasında anlamlı bir fark olup olmadığını** test etmek için kullanılır.
+
+| Kavram | Açıklama |
+| :--- | :--- |
+| **Popülasyonlar** | İki ayrı ve bağımsız grup varsayılır (Örn: A Reklamını görenler ve B Reklamını görenler). Popülasyon parametreleri $\mu_1$ ve $\mu_2$'dir. |
+| **Örneklemler** | Her popülasyondan bağımsız olarak veri toplanır. Örneklem istatistikleri $\bar{X}_1$ ve $\bar{X}_2$'dir. |
+| **$t$-Test ile İlişkisi** | Tek örneklem $t$-Testi, bir örneklemin ortalamasını bilinen bir popülasyon ortalamasıyla ($\mu$) karşılaştırırken; **İki Örneklem $t$-Testi, iki örneklem ortalaması arasındaki farkı $(\bar{X}_1 - \bar{X}_2)$, bu farkın sıfır olup olmadığına göre** (yani $\mu_1 = \mu_2$ olup olmadığına göre) test eder. |
+
+### Test İstatistiği (Genel Formül): 📈
+
+$$t = \frac{(\bar{X}_1 - \bar{X}_2) - (\mu_1 - \mu_2)}{SE(\bar{X}_1 - \bar{X}_2)}$$
+
+Sıfır hipotezi ($H_0: \mu_1 = \mu_2$) altında, formüldeki $(\mu_1 - \mu_2)$ terimi $\mathbf{0}$ kabul edilir.
+
+---
+
+## 2. Serbestlik Derecesinin Önemi ve Test Türüne Karar Verme 📐
+
+### Serbestlik Derecesinin ($df$) Önemi
+
+Bağımsız iki örneklem $t$-Testinde **serbestlik derecesi ($df$)**, hesaplanan $t$-değerinin hangi $t$-dağılımını takip edeceğini belirler. İki farklı örneklem olduğu için $df$ hesaplaması daha karmaşıktır ve **varyansların eşit olup olmamasına (Homogeneity of Variances)** göre değişir:
+
+#### Varyanslar Eşit Kabul Edilirse (Pooled t-Test):
+
+$$df = n_1 + n_2 - 2$$
+
+#### Varyanslar Eşit Kabul Edilmezse (Welch's t-Test):
+
+* $df$ için karmaşık bir formül (Welch-Satterthwaite denklemi) kullanılır.
+* Genellikle istatistiksel yazılımlar bunu otomatik hesaplar ve $df$ tam sayı olmayabilir.
+* Bu, **pratikte daha yaygın kullanılan ve varsayımlara daha az hassas olan yöntemdir**.
+
+$df$'in önemi, **testin gücünü ve p-değerini doğru hesaplamak için doğru dağılımı seçmeyi** sağlamasıdır.
+
+### Test Türüne Karar Verme (Right, Left and Two-Tailed) 🚪
+
+Test türüne, kurulan **Alternatif Hipotez ($H_1$)** ile karar verilir:
+
+| Test Türü | Alternatif Hipotez ($H_1$) | Anlamı |
+| :--- | :--- | :--- |
+| **Çift Kuyruk (Two-Tailed)** | $\mu_1 \neq \mu_2$ | Ortalamalar arasında **fark var** mı? ($H_0: \mu_1 = \mu_2$ reddedilir.) |
+| **Sağ Kuyruk (Right-Tailed)** | $\mu_1 > \mu_2$ | Birinci popülasyonun ortalaması, ikinciden **daha büyük** mü? |
+| **Sol Kuyruk (Left-Tailed)** | $\mu_1 < \mu_2$ | Birinci popülasyonun ortalaması, ikinciden **daha küçük** mü? |
+
+---
+
+## 3. Parametreler, P-Değeri ve Anlamlılık Seviyesi ($\alpha$) İlişkisi 🧐
+
+### Hangi Parametrelere Bakmam Gerekli?
+
+* **Örneklem Ortalamaları ($\bar{X}_1, \bar{X}_2$):** Ortalamalar arasındaki farkın büyüklüğü.
+* **Örneklem Büyüklükleri ($n_1, n_2$):** Testin gücünü ve $df$'yi belirler.
+* **Örneklem Standart Sapmaları ($S_1, S_2$):** Varyansı ve dolayısıyla Test İstatistiğinin paydasını ($SE$) belirler.
+* **Varyans Eşitliği Testi Sonucu (Örn: Levene Testi):** Hangi $t$-Test formülünün kullanılacağına (Pooled vs. Welch's) karar vermek için gereklidir.
+
+### P-Değerinin Durumu ve Etkileyen Faktörler 📉
+
+**P-Değeri (p-value):** Sıfır hipotezi ($H_0$) doğruyken, elimizdeki veriler kadar veya daha ekstrem bir sonuç görme olasılığıdır.
+
+#### Değişim Nedenleri ve Etkileri:
+
+* **Ortalamalar Arasındaki Farkın Büyüklüğü ($\bar{X}_1 - \bar{X}_2$):** Fark ne kadar büyükse, $t$-değeri o kadar büyük olur ve p-değeri o kadar **küçülür** (Daha anlamlı bir sonuç).
+* **Standart Hata ($SE$):** $SE$ ne kadar küçükse, $t$-değeri o kadar büyük olur ve p-değeri o kadar **küçülür**. $SE$'yi küçülten faktörler:
+    * Örneklem büyüklüğünün ($n$) artması.
+    * Örneklem varyansının ($S^2$) azalması.
+* **Serbestlik Derecesi ($df$):** $df$ arttıkça, $t$-dağılımı normal dağılıma yaklaşır ve bu durum p-değeri üzerinde küçük bir etki yaratabilir.
+
+### P-Değeri ve Anlamlılık Seviyesi ($\alpha$) İlişkisi 🚦
+
+* **Anlamlılık Seviyesi ($\alpha$ / Significance Level):** Testi yapmadan önce belirlenen ve reddetme bölgesini tanımlayan eşik değerdir. Genellikle $\mathbf{0.05}$ (%5) olarak ayarlanır. Bu, Birinci Tip Hata (Type I Error) yapma riskini (doğru $H_0$'ı reddetme riski) temsil eder.
+* **İlişki:** Test kararı bu iki değerin karşılaştırılmasına dayanır:
+    * Eğer $\text{p-value} \leq \alpha$ ise: Sonuç istatistiksel olarak **anlamlıdır**. $H_0$ reddedilir.
+ 
+# ✍️ 4. Hipotezlerin Karar/Kabul Durumları
+
+Hipotez testinde kullanılan parametreler ve karar verme süreci:
+
+| Durum | Karşılaştırma | İstatistiksel Karar | Yorum |
+| :--- | :--- | :--- | :--- |
+| **Anlamlı Fark Var** ✅ | p-value $\leq \alpha$ | $H_0$ **Reddedilir** | $\mu_1$ ve $\mu_2$ arasında anlamlı bir fark olduğuna dair yeterli kanıt var. $\mathbf{H_1}$ kabul edilir. |
+| **Anlamlı Fark Yok** ❌ | p-value $ > \alpha$ | $H_0$ **Reddedilemez** | $\mu_1$ ve $\mu_2$ arasında anlamlı bir fark olduğuna dair yeterli kanıt yok. Fark, tesadüfü olabilir. |
+
+### Karşılaştırılacak Temel Parametreler:
+
+1.  **$p$-Değeri** vs. **$\alpha$ seviyesi** (En yaygın karar mekanizması).
+2.  **Hesaplanan $t$-Değeri** vs. **Kritik $t$-Değeri** ($df$ ve $\alpha$'ya dayalı tablo değeri).
+
+### Karşılaştırılacak Temel Parametreler: 🎯
+
+1.  **$p$-Değeri** vs. **$\alpha$ seviyesi** (En yaygın karar mekanizması).
+2.  **Hesaplanan $t$-Değeri** vs. **Kritik $t$-Değeri** ($df$ ve $\alpha$'ya dayalı tablo değeri).
+
+---
+
+## 5. ML'de Two Sample $t$-Test Nerede ve Nasıl Kullanılır? 🤖
+
+Bağımsız iki örneklem $t$-Testi, Makine Öğrenimi (ML) ve Veri Bilimi bağlamında, özellikle **karşılaştırmalı analiz** ve **deney tasarımı** aşamalarında hayati bir rol oynar:
+
+| Kullanım Alanı | Senaryo | Nasıl Kullanılır? |
+| :--- | :--- | :--- |
+| **A/B Testi** | Bir e-ticaret sitesinde A tasarımının B tasarımından daha iyi dönüşüm (Conversion Rate) sağlayıp sağlamadığını test etmek. | $H_0: \mu_{A} = \mu_{B}$. İki grubun dönüşüm ortalaması $(\bar{X}_A, \bar{X}_B)$ karşılaştırılarak hangi tasarımın daha iyi olduğu kararlaştırılır. |
+| **Model Değerlendirme** | İki farklı ML modelinin (Örn: Model 1 vs. Model 2) aynı veri seti üzerinde elde ettiği performans metriklerinin (Örn: F1 Skoru, RMSE) ortalamaları arasında fark var mı? | Modellerin k-katlamalı çapraz doğrulama (k-fold cross-validation) ile elde edilen metriklerinin ortalamaları karşılaştırılır. Eğer fark anlamlıysa, modellerden biri diğerinden daha iyidir. |
+| **Özellik Seçimi** | Bir özelliğin (feature) eklendiği modelin performansının, eklenmediği modele göre anlamlı bir fark yaratıp yaratmadığını test etmek. | Özelliğin etkisini nicel olarak test ederek gereksiz özelliklerin elenmesine yardımcı olur. |
+| **Ön İşleme Etkisi** | İki farklı veri ön işleme yönteminin (Örn: Normalizasyon vs. Standardizasyon) nihai model başarısı üzerindeki etkisini karşılaştırmak. | İki ön işleme yöntemiyle eğitilmiş modellerin test seti performansları karşılaştırılır. |
+
+# 🤖 5. ML'de Two Sample $t$-Test Nerede ve Nasıl Kullanılır?
+
+Bağımsız iki örneklem $t$-Testi, Makine Öğrenimi (ML) ve Veri Bilimi bağlamında, özellikle **karşılaştırmalı analiz** ve **deney tasarımı** aşamalarında hayati bir rol oynar:
+
+| Kullanım Alanı | Senaryo | Nasıl Kullanılır? |
+| :--- | :--- | :--- |
+| **A/B Testi** 🛒 | Bir e-ticaret sitesinde A tasarımının B tasarımından daha iyi dönüşüm (Conversion Rate) sağlayıp sağlamadığını test etmek. | $H_0: \mu_{A} = \mu_{B}$. İki grubun dönüşüm ortalaması ($\bar{X}_A, \bar{X}_B$) karşılaştırılarak hangi tasarımın daha iyi olduğu kararlaştırılır. |
+| **Model Değerlendirme** ✨ | İki farklı ML modelinin (Örn: Model 1 vs. Model 2) aynı veri seti üzerinde elde ettiği performans metriklerinin (Örn: F1 Skoru, RMSE) ortalamaları arasında fark var mı? | Modellerin k-katlamalı çapraz doğrulama (k-fold cross-validation) ile elde edilen metriklerinin ortalamaları karşılaştırılır. Eğer fark anlamlıysa, modellerden biri diğerinden daha iyidir. |
+| **Özellik Seçimi** 🧩 | Bir özelliğin (feature) eklendiği modelin performansının, eklenmediği modele göre anlamlı bir fark yaratıp yaratmadığını test etmek. | Özelliğin etkisini nicel olarak test ederek gereksiz özelliklerin elenmesine yardımcı olur. |
+| **Ön İşleme Etkisi** ⚙️ | İki farklı veri ön işleme yönteminin (Örn: Normalizasyon vs. Standardizasyon) nihai model başarısı üzerindeki etkisini karşılaştırmak. | İki ön işleme yöntemiyle eğitilmiş modellerin test seti performansları karşılaştırılır. |
+
 
 
 
