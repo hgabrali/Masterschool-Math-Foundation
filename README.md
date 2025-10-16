@@ -1,6 +1,11 @@
 # Masterschool-Math-Foundation
 
+
+
 <img width="555" height="462" alt="image" src="https://github.com/user-attachments/assets/6b0ae5be-8749-4e36-9719-f89d2bc50730" />
+
+<img width="832" height="832" alt="image" src="https://github.com/user-attachments/assets/ce12a045-1d37-46e6-8659-43ef89fb466f" />
+
 
 * “Knowing is not enough; we must apply. Willing is not enough; we must do.” ~ Johann Wolfgang von Goethe 
 
