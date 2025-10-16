@@ -176,3 +176,288 @@ Bu şema, şu pratik kuralları özetler:
 * **t-Dağılımı:** "Küçük örneklemli, belirsiz ama düzenli" senaryolar için.
 * **Diğer Yöntemler:** "Küçük örneklemli, belirsiz ve düzensiz" senaryolar için.
 
+
+
+
+# 💡 t-Dağılımı: Motivasyon ve Rolü (t-Distribution: Motivation and Role)
+
+## 🎯 Hipotez Testinde t-Dağılımının Rolü Nedir?
+
+* Bu görsel, istatistikte $t$-Dağılımının (t-Distribution) neden ortaya çıktığını ve hipotez testindeki temel rolünü mükemmel bir şekilde özetliyor.
+
+<img width="1207" height="573" alt="image" src="https://github.com/user-attachments/assets/7ce1909c-4ecc-4685-9299-a7ea79447a73" />
+
+
+* Eger Sigma bilinmezse ne olur? 
+
+
+<img width="1203" height="563" alt="image" src="https://github.com/user-attachments/assets/30b19a24-6499-4ca4-a531-30b78cc5115a" />
+
+* Degrees of freedom artarsa ne olur?
+* 
+
+<img width="1210" height="557" alt="image" src="https://github.com/user-attachments/assets/0d932907-0f43-41fc-82e4-a726acd99484" />
+
+
+
+<img width="1207" height="582" alt="image" src="https://github.com/user-attachments/assets/ccddc7f0-596a-4558-9590-6c751504b14a" />
+
+
+
+$t$-Dağılımının (Student's t-Distribution) hipotez testindeki temel rolü, **anakütle standart sapması ($\sigma$) bilinmediğinde** veya örneklem boyutu ($n$) küçük olduğunda ($\approx n < 30$) standart normal dağılım ($Z$-dağılımı) yerine kullanılmasıdır.
+
+* **Rasyonel:** Bir hipotez testi yaparken bir test istatistiği hesaplamamız gerekir. Anakütle standart sapması ($\sigma$) biliniyorsa, $Z$-istatistiğini kullanırız. Ancak $\sigma$ bilinmiyorsa, $t$-dağılımını kullanırız.
+* **Amaç:** $t$-dağılımı, $\sigma$'nın bilinmemesinden kaynaklanan ek belirsizliği hesaba katar. Bu, $Z$-dağılımına göre **daha geniş kuyruklara** sahip olması anlamına gelir, bu da daha **muhafazakâr (conservartive)** sonuçlar elde etmemizi sağlar.
+
+---
+
+## ❓ Eğer Sigma ($\sigma$) Bilinmezse Ne Olur? (Population Unknown $\sigma$)
+
+Görsel, $\sigma$'nın bilinmediği durumda ne olduğunu açıkça göstermektedir:
+
+### Z İstatistiği (If $\mu, \sigma$ are known):
+
+$$Z = \frac{\bar{X} - \mu}{\sigma/\sqrt{n}} \sim N(0, 1^2)$$
+
+Eğer anakütle standart sapması ($\sigma$) ve anakütle ortalaması ($\mu$) biliniyorsa, standartlaştırılmış örneklem ortalaması ($Z$ istatistiği) standart normal dağılımı ($N(0,1)$) takip eder.
+
+### $\sigma$ Bilinmezse (What if $\sigma$ is unknown?):
+
+$\sigma$ bilinmediğinde, onun yerine örneklemden hesaplanan bir tahmini değer olan **örneklem standart sapması ($S$)** kullanılır (**Replace $\sigma$ with its estimate**).
+
+### T İstatistiği:
+
+$$T = \frac{\bar{X} - \mu}{S/\sqrt{n}}$$
+
+$\sigma$ yerine $S$ kullanıldığı anda, elde edilen test istatistiği artık $Z$ istatistiği değil, **$T$ istatistiği** olur ve **$t$-dağılımını** takip eder. Bu durum, istatistiğe **ek bir değişkenlik (variability)** getirir.
+
+---
+
+## 🛠️ $t$-Dağılımının Parametreleri Nelerdir?
+
+$t$-Dağılımının temel tek bir parametresi vardır:
+
+### Serbestlik Derecesi (Degrees of Freedom / $df$):
+
+$t$-dağılımının şeklini belirleyen parametredir. Genellikle örneklem büyüklüğü ($n$) kullanılarak hesaplanır.
+
+$$df = n - 1$$
+
+Görseldeki örneklem büyüklüğü $n=10$ olduğu için ($i=1$'den $10$'a kadar toplam), serbestlik derecesi $df = 10 - 1 = 9$ olacaktır.
+
+---
+
+## ⬆️ Serbestlik Derecesi ($df$) Artarsa Ne Olur?
+
+Serbestlik derecesi ($df$) $t$-dağılımının şekli üzerinde kritik bir etkiye sahiptir:
+
+* **$df$ küçükken:** $t$-dağılımı, standart normal dağılıma göre daha basık (platykurtic) ve **daha kalın, geniş kuyruklara** sahiptir. Bu, uç değerlerin (outliers) ortaya çıkma olasılığının daha yüksek olduğu anlamına gelir.
+* **$df$ arttıkça ($n$ büyüdükçe):** $t$-dağılımının şekli, kuyrukları incelterek ve merkezi tepe noktasını yükselterek **standart normal dağılıma ($Z$-Distribution) yaklaşır.**
+* **$df \to \infty$ olduğunda:** $t$-dağılımı, pratik olarak standart normal dağılım ile aynı hale gelir. (Genellikle $df > 30$ olduğunda $t$ yerine $Z$ kullanılabilir.)
+
+### 📝 Özetle:
+
+Örneklem boyutu büyüdükçe, $\sigma$'nın tahmini ($S$) daha güvenilir hale gelir ve **$t$-dağılımı $Z$-dağılımı ile birleşir.**
+
+# t-Tests: Gaussian Veri (Bilinmeyen $\sigma$)
+
+<img width="1219" height="589" alt="image" src="https://github.com/user-attachments/assets/25ad45f0-8a79-4100-9f6b-ddfb6eb45207" />
+
+
+# 📊 Sağ Kuyruk Testi: Gaussian Veri (Bilinmeyen $\sigma$)
+
+Bu analiz, ABD'de 1970'lerde 18 yaşındaki bireylerin ortalama boyunun günümüzde artıp artmadığını, $\sigma$ bilinmediği için $t$-Dağılımı kullanarak test etmektedir.
+
+---
+
+## 1. Hipotezler ve Seviyeler
+
+| Parametre | Değer/İfade | Açıklama |
+| :--- | :--- | :--- |
+| **Sıfır Hipotezi** ($H_0$) | $\mu = 66.7$ in. | Ortalama boyun değişmediği varsayımı. |
+| **Alternatif Hipotez** ($H_1$) | $\mu > 66.7$ in. | Ortalama boyun arttığı hipotezi (Sağ Kuyruk Testi). |
+| **Örneklem Büyüklüğü** ($n$) | $n=10$ | |
+| **Anlamlılık Seviyesi** ($\alpha$) | $\alpha = 0.05$ | Reddetme bölgesi için belirlenen risk seviyesi (%5). |
+
+---
+
+## 2. Örneklem İstatistikleri ve t-İstatistiği Hesaplama
+
+| İstatistik | Değer | Açıklama |
+| :--- | :--- | :--- |
+| **Örneklem Ortalaması** ($\bar{x}$) | $68.442$ | |
+| **Örneklem Standart Sapması** ($s$) | $3.113$ | |
+
+### 🚀 t-İstatistiği
+
+Örneklem standart sapması ($s$) kullanılarak $t$-istatistiği hesaplanır:
+
+$$t = \frac{\bar{x} - \mu}{s/\sqrt{n}} = \frac{68.442 - 66.7}{3.113/\sqrt{10}} \approx \mathbf{1.770}$$
+
+---
+
+## 3. P-Değeri (p-value) Hesaplama
+
+Hesaplanan $t=1.770$ değerinin, $H_0$'ın doğru olduğu varsayımıyla elde edilme olasılığı bulunur.
+
+$$\text{p-value: } P\left(\frac{\bar{X} - 66.7}{S/\sqrt{10}} > 1.770 \mid \mu = 66.7\right)$$
+
+Hesaplanan p-değeri: 
+$$\mathbf{0.0552}$$
+
+*(Bu değer, $t$-dağılımının $1.770$ değerinden sonraki sağ kuyruk alanını temsil eder - Grafikteki turuncu bölge)*
+
+---
+
+## 4. Karar ve Sonuç
+
+P-değeri ($\mathbf{0.0552}$) $\alpha$ ($\mathbf{0.05}$) ile karşılaştırılır:
+
+$$0.0552 > 0.05$$
+
+* **Karar Kuralı:** Eğer $\text{p-value} > \alpha$ ise $H_0$ **redd edilmez**.
+* **Sonuç:** $\implies$ **Do not reject $H_0$** (Null hypothesis reddedilmez).
+
+### Yorum 💬
+
+%5 anlamlılık seviyesinde, ortalama boyun $66.7$ inçten daha büyük olduğuna dair **yeterli istatistiksel kanıt yoktur
+
+<img width="1210" height="603" alt="image" src="https://github.com/user-attachments/assets/6d26c2d9-4b18-4e38-90eb-ea0ef0ead229" />
+
+# 🧮 Çift Kuyruk Testi: Gaussian Veri (Bilinmeyen $\sigma$)
+
+Bu analiz, ABD'de 1970'lerde 18 yaşındaki bireylerin ortalama boyunun **değişip değişmediğini** test etmektedir. Anakütle standart sapması ($\sigma$) bilinmediği için $t$-Dağılımı kullanılmıştır.
+
+---
+
+## 1. Hipotezler ve Seviyeler
+
+| Parametre | Değer/İfade | Açıklama |
+| :--- | :--- | :--- |
+| **Sıfır Hipotezi** ($H_0$) | $\mu = 66.7$ in. | Ortalama boyun değişmediği varsayımı. |
+| **Alternatif Hipotez** ($H_1$) | $\mu \neq 66.7$ in. | Ortalama boyun değiştiği hipotezi (**Çift Kuyruk Testi**). |
+| **Örneklem Büyüklüğü** ($n$) | $n=10$ | |
+| **Anlamlılık Seviyesi** ($\alpha$) | $\alpha = 0.05$ | Reddetme bölgesi için belirlenen risk seviyesi. |
+
+---
+
+## 2. Örneklem İstatistikleri ve t-İstatistiği Hesaplama
+
+| İstatistik | Değer | Açıklama |
+| :--- | :--- | :--- |
+| **Örneklem Ortalaması** ($\bar{x}$) | $68.442$ | |
+| **Örneklem Standart Sapması** ($s$) | $3.113$ | |
+
+### 🚀 t-İstatistiği
+
+Örneklem standart sapması ($s$) kullanılarak $t$-istatistiği hesaplanır:
+
+$$t = \frac{\bar{x} - \mu}{s/\sqrt{n}} = \frac{68.442 - 66.7}{3.113/\sqrt{10}} \approx \mathbf{1.770}$$
+
+---
+
+## 3. P-Değeri (p-value) Hesaplama
+
+Çift kuyruk testinde, $t$'nin mutlak değerinin her iki yönde de elde edilme olasılığı bulunur.
+
+$$\text{p-value: } P\left(\left|\frac{\bar{X} - 66.7}{S/\sqrt{10}}\right| > 1.770 \mid \mu = 66.7\right)$$
+
+*p-değeri, tek kuyruk testinin p-değerinin iki katıdır ($\approx 0.0552 \times 2$).*
+
+Hesaplanan p-değeri: 
+$$\mathbf{0.1105}$$
+
+*(Bu değer, $t$-dağılımının $1.770$'ın sağında ve $-1.770$'ın solunda kalan iki kuyruk alanının toplamını temsil eder - Grafikteki turuncu bölgeler)*
+
+---
+
+## 4. Karar ve Sonuç
+
+P-değeri ($\mathbf{0.1105}$) $\alpha$ ($\mathbf{0.05}$) ile karşılaştırılır:
+
+$$0.1105 > 0.05$$
+
+* **Karar Kuralı:** Eğer $\text{p-value} > \alpha$ ise $H_0$ **redd edilmez**.
+* **Sonuç:** $\implies$ **Do not reject $H_0$** (Null hypothesis reddedilmez).
+
+### Yorum 💬
+
+%5 anlamlılık seviyesinde, ortalama boyun $66.7$ inçten **farklı olduğuna** dair **yeterli istatistiksel kanıt yoktur**.
+
+
+<img width="1217" height="597" alt="image" src="https://github.com/user-attachments/assets/8cab2ac3-821a-435a-92d2-1fb15e018d1e" />
+
+# 📉 Sol Kuyruk Testi: Gaussian Veri (Bilinmeyen $\sigma$)
+
+Bu analiz, ABD'de 1970'lerdeki 18 yaşındaki bireylerin ortalama boyunun **azalıp azalmadığını** test etmektedir. Anakütle standart sapması ($\sigma$) bilinmediği için $t$-Dağılımı kullanılmıştır.
+
+---
+
+## 1. Hipotezler ve Seviyeler
+
+| Parametre | Değer/İfade | Açıklama |
+| :--- | :--- | :--- |
+| **Sıfır Hipotezi** ($H_0$) | $\mu = 66.7$ in. | Ortalama boyun değişmediği varsayımı. |
+| **Alternatif Hipotez** ($H_1$) | $\mu < 66.7$ in. | Ortalama boyun azaldığı hipotezi (**Sol Kuyruk Testi**). |
+| **Örneklem Büyüklüğü** ($n$) | $n=10$ | |
+| **Anlamlılık Seviyesi** ($\alpha$) | $\alpha = 0.05$ | Reddetme bölgesi için belirlenen risk seviyesi. |
+
+---
+
+## 2. Örneklem İstatistikleri ve t-İstatistiği Hesaplama
+
+| İstatistik | Değer | Açıklama |
+| :--- | :--- | :--- |
+| **Örneklem Ortalaması** ($\bar{x}$) | $64.252$ | |
+| **Örneklem Standart Sapması** ($s$) | $3.113$ | |
+
+### 🚀 t-İstatistiği
+
+Örneklem standart sapması ($s$) kullanılarak $t$-istatistiği hesaplanır:
+
+$$t = \frac{\bar{x} - \mu}{s/\sqrt{n}} = \frac{64.252 - 66.7}{3.113/\sqrt{10}} \approx \mathbf{-2.487}$$
+
+---
+
+## 3. P-Değeri (p-value) Hesaplama
+
+Hesaplanan negatif $t=-2.487$ değerinin, $H_0$'ın doğru olduğu varsayımıyla elde edilme olasılığı bulunur.
+
+$$\text{p-value: } P\left(\frac{\bar{X} - 66.7}{S/\sqrt{10}} < -2.487 \mid \mu = 66.7\right)$$
+
+Hesaplanan p-değeri: 
+$$\mathbf{0.0173}$$
+
+*(Bu değer, $t$-dağılımının $-2.487$ değerinden önceki sol kuyruk alanını temsil eder - Grafikteki turuncu bölge)*
+
+---
+
+## 4. Karar ve Sonuç
+
+P-değeri ($\mathbf{0.0173}$) $\alpha$ ($\mathbf{0.05}$) ile karşılaştırılır:
+
+$$0.0173 < 0.05$$
+
+* **Karar Kuralı:** Eğer $\text{p-value} < \alpha$ ise $H_0$ **reddedilir**.
+* **Sonuç:** $\implies$ **Conclusion: reject $H_0$** (Sıfır hipotezi reddedilir).
+
+### Yorum 💬
+
+%5 anlamlılık seviyesinde, ortalama boyun $66.7$ inçten **azaldığına** dair **yeterli istatistiksel kanıt bulunmuştur**.
+
+<img width="752" height="638" alt="image" src="https://github.com/user-attachments/assets/4e5d9888-b600-41c4-8343-f1312195322d" />
+
+<img width="750" height="343" alt="image" src="https://github.com/user-attachments/assets/fa18b80f-9034-48df-a068-fbc3b799f532" />
+
+<img width="795" height="708" alt="image" src="https://github.com/user-attachments/assets/f50d12ca-db64-468a-a767-234cc94d1a40" />
+
+<img width="784" height="423" alt="image" src="https://github.com/user-attachments/assets/951f01e0-15e5-4fb1-a5de-0af61a8288e5" />
+
+<img width="798" height="367" alt="image" src="https://github.com/user-attachments/assets/18c758a6-f575-4e94-b84e-b6ae95552833" />
+
+
+<img width="788" height="591" alt="image" src="https://github.com/user-attachments/assets/93c22c26-2a9d-440a-a0ab-ae41b2a01493" />
+
+
+
+
