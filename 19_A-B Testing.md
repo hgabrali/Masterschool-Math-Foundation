@@ -155,3 +155,201 @@ A/B testleri, modern dijital işletmelerin operasyonel ve stratejik kararların�
 1.  **Veriye Dayalı Kültürün Benimsenmesi:** Kişisel görüşler yerine verilere değer veren ve sürekli deneyi teşvik eden bir deney kültürü (*Culture of Experimentation*) oluşturulmalıdır.
 2.  **İstatistiksel Protokollere Uyum:** Tip I ve Tip II hatalarını önlemek için yetersiz örneklem büyüklüğü kullanılması veya testlerin zamanından önce durdurulması gibi yaygın hatalardan kaçınılmalıdır. MDE'nin karesel etkisi dikkate alınarak, test edilecek değişikliklerin yüksek potansiyelli (*yüksek MDE hedefli*) olmasına özen gösterilmelidir.
 3.  **Teknolojik Hazırlık:** Yüksek hacimli ve hızlı optimizasyon gerektiren dinamik ortamlarda (örneğin reklam gösterimleri veya kişiselleştirilmiş öneriler), kümülatif ödülü maksimize eden MAB algoritmalarının ve yapay zeka destekli optimizasyon araçlarının teknik altyapıya entegrasyonu planlanmalıdır.
+
+---
+# 🧪 HYPOTHESIS TESTING: The Engine Behind ML's A/B Testing
+
+## 🚀 Key Application in Machine Learning: A/B Testing
+
+This section explores how statistical hypothesis testing serves as the foundation for crucial decision-making processes in Machine Learning, particularly within A/B testing frameworks.
+
+## 🔬 Machine Learning Uygulamalarında Hipotez Testi: A/B Testleri
+
+Bağımsız ve eşli hipotez testleri, Makine Öğrenimi ve Veri Biliminde sadece kullanıcı deneyimini değil, aynı zamanda modelin iç bileşenlerini ve performansını karşılaştırmak için de temel araçlardır.
+
+| Kullanım Alanı | Amaç ve Açıklama | Örnek Senaryo | İstatistiksel Bağlantı |
+| :--- | :--- | :--- | :--- |
+| **Model/Algoritma Seçimi** 🤖 | İki veya daha fazla farklı ML modelinin (Örn: Lineer Regresyon vs. Rastgele Orman) aynı görevde anlamlı olarak farklı performans gösterip göstermediğini test etmek. | Model A'nın ortalama **RMSE** (Kök Ortalama Kare Hatası) değeri, Model B'nin ortalama RMSE değerinden istatistiksel olarak daha düşük mü? | **Eşli $t$-Testi** (Paired $t$-Test) |
+| **Özellik Mühendisliği (Feature Engineering)** 🛠️ | Yeni eklenen veya dönüştürülen bir özelliğin, modelin nihai performansını anlamlı bir şekilde artırıp artırmadığını değerlendirmek. | Özellik X'i kullanan modelin ortalama hassasiyeti (Precision), kullanmayan modelinkinden istatistiksel olarak farklı mı? | **Bağımsız $t$-Testi** veya $t$-Testi Varyantları |
+| **Optimizasyon/Hiperparametre Ayarı** ⚙️ | Bir hiperparametrenin (Örn: Öğrenme oranı) iki farklı değeriyle eğitilen model setlerinin performans sonuçlarını karşılaştırmak. | Learning Rate = 0.01 ile elde edilen doğruluk (Accuracy) ortalaması, Learning Rate = 0.001 ile elde edilenden daha iyi mi? | **Bağımsız $t$-Testi** (Independent Two-Sample $t$-Test) |
+| **Kullanıcı Deneyimi (UX) - A/B Testi** 🧑‍💻 | ML tarafından sunulan iki farklı çıktının veya önerinin (Örn: Kişiselleştirilmiş Başlık A vs. Başlık B) kullanıcı davranışı (tıklama, dönüşüm) üzerindeki etkisini ölçmek. | Reklam B'nin tıklama oranı (**CTR**), Reklam A'nın CTR'sinden istatistiksel olarak daha yüksek mi? | **İki Örneklem Oran Testi** (Two Sample Test for Proportions) |
+| **Tıbbi/Bilimsel Deneyler** 🧪 | ML destekli bir tanı aracının (Model A) performansı ile geleneksel bir yöntemin (Model B) performansını karşılaştırmak. | Model A'nın hastalığı doğru teşhis etme oranı, Model B'ninkinden anlamlı derecede farklı mı? | **İki Örneklem Oran Testi** veya **Eşli $t$-Testi** |
+
+
+<img width="1216" height="592" alt="image" src="https://github.com/user-attachments/assets/b7849c95-dacb-48f9-9c49-39c022e4dfbc" />
+
+
+# 🛒 A/B Testi: Satın Alma Miktarı Analizi (Sol Kuyruk t-Testi)
+
+Bu analiz, iki farklı ürün tasarımının (A ve B) kullanıcı başına ortalama satın alma miktarı üzerinde anlamlı bir fark yaratıp yaratmadığını Welch's $t$-Testi (Varyanslar eşit değil varsayımı) ile test etmektedir.
+
+---
+
+## 1. Hipotezler ve Seviyeler
+
+| Parametre | Değer/İfade | Açıklama |
+| :--- | :--- | :--- |
+| **Sıfır Hipotezi** ($H_0$) | $\mu_A - \mu_B = 0$ | Ortalamalar arasında fark yoktur. |
+| **Alternatif Hipotez** ($H_1$) | $\mu_A - \mu_B < 0$ | Tasarım B'nin ortalaması, A'dan anlamlı olarak daha yüksektir (Sol Kuyruk Testi). |
+| **Anlamlılık Seviyesi** ($\alpha$) | $0.05$ | Reddetme bölgesi için belirlenen %5 risk. |
+
+---
+
+## 2. Örneklem Verileri ve t-İstatistiği
+
+| Grup | $n$ (Büyüklük) | $\bar{x}$ (Ortalama) | $s$ (Std. Sapma) |
+| :--- | :--- | :--- | :--- |
+| **A (Tasarım A)** | $n_A = 80$ | $\bar{x} = 50$ | $s_A = 10$ |
+| **B (Tasarım B)** | $n_B = 20$ | $\bar{y} = 55$ | $s_B = 15$ |
+
+### 🚀 t-İstatistiği Hesabı (Welch's $t$-Testi)
+
+$$t = \frac{(\bar{X} - \bar{Y}) - 0}{\sqrt{\frac{s_A^2}{n_A} + \frac{s_B^2}{n_B}}}$$
+
+$$t = \frac{50 - 55 - 0}{\sqrt{\frac{10^2}{80} + \frac{15^2}{20}}} = \frac{-5}{\sqrt{1.25 + 11.25}} \approx \mathbf{-1.414}$$
+
+*Test, yaklaşık $df \approx 23.38$ serbestlik dereceli $t$-dağılımını takip eder.*
+
+---
+
+## 3. P-Değeri ve Karar 🛑
+
+### P-Değeri:
+
+$$\text{p-value} = P(T < -1.414 \mid H_0 \text{ doğru}) = \mathbf{0.085}$$
+
+### Karar (Conclusion):
+
+$$\mathbf{p\text{-value} (0.085) > \alpha (0.05)}$$
+
+### Neden $H_0$ Reddedilmedi? ❌
+
+$H_0$'ın reddedilmemesinin temel nedeni, hesaplanan p-değerinin ($\mathbf{0.085}$), anlamlılık seviyesi ($\alpha=0.05$) eşiğinin **üzerinde** kalmasıdır.
+
+* $H_0$ doğru iken bu kadar ekstrem bir farkın görülme olasılığı **%8.5**'tir.
+* Bu olasılık, belirlediğimiz kabul edilebilir hata riskinden **(\%5)** daha yüksektir.
+* Bu nedenle, Tasarım B'nin daha iyi olduğuna dair kanıt, istatistiksel olarak **yeterli derecede güçlü değildir**. Sonuç, tesadüfi olabilir.
+
+**Nihai Sonuç:** Yeterli kanıt olmadığından, **Sıfır Hipotezi reddedilmez** (**Don't reject $H_0$**).
+
+---
+
+<img width="1166" height="544" alt="image" src="https://github.com/user-attachments/assets/1c674480-b262-4d04-b3d4-a581e5edae0e" />
+
+# 🧪 A/B Testi ve t-Testleri İş Akışı (A/B Testing and t-Tests Workflow)
+
+A/B Testi, iki varyasyonu (A/B) karşılaştırmak için kullanılan bir metodolojidir. Bu süreç, genellikle bir hipotez testi olan $t$-Testi ile sonuçlandırılır.
+
+---
+
+## 🗺️ Süreç Adımları (Workflow Steps)
+
+Bu tablo, A/B test sürecini baştan sona adımlarıyla ve her adımdaki temel aksiyonlarla açıklamaktadır.
+
+| # | Adım (Step) | Açıklama (Description) | Bağlantılı İstatistiksel Kavram |
+| :---: | :--- | :--- | :--- |
+| **1** 💡 | **Varyasyonları Önerme (Propose Variations)** | Karşılaştırılacak iki farklı versiyon (A ve B) belirlenir. Bu, bir web sayfasının iki farklı başlığı, bir modelin iki farklı çıktısı vb. olabilir. | **Sıfır Hipotezi ($H_0$)** ve **Alternatif Hipotezin ($H_1$)** Kurulması. |
+| **2** 🎲 | **Örneklemi Rastgele Bölme (Randomly Split Sample)** | Test edilecek kullanıcı veya veri grubu, iki eşit ve bağımsız gruba (A ve B) rastgele ayrılır. Rastgelelik, önyargıyı (bias) azaltmak için kritik öneme sahiptir. | **Bağımsız Örneklemler** (Independent Samples) Varsayımı. |
+| **3** 🎯 | **Her Grup İçin Sonuçları Ölçme (Measure Outcomes)** | Her iki varyasyona maruz kalan grupların çıktıları ölçülür ve karşılaştırılabilir bir metrik (Örn: Ortalama satın alma miktarı, tıklama oranı) belirlenir. | **Örneklem İstatistiklerinin** ($\bar{x}, s, n$) Hesaplanması. |
+| **4** 📈 | **Karar Vermek İçin İstatistiksel Analiz (Statistical Analysis to Make a Decision)** | Elde edilen metrikler, aradaki farkın rastlantısal mı yoksa istatistiksel olarak anlamlı mı olduğunu belirlemek için analiz edilir. **$t$-Testi** bu aşamanın temel aracıdır. | **$t$-Testinin** Uygulanması, **P-Değeri**nin hesaplanması ve **Anlamlılık Seviyesi ($\alpha$)** ile karşılaştırılması. |
+
+### 🔑 $t$-Testi Bağlantısı
+
+$t$-Testi, analiz aşamasında (Adım 4) kullanılır ve iki grup arasındaki farkın basit şanstan mı kaynaklandığını yoksa varyasyonlardan birinin gerçekten diğerinden daha iyi olup olmadığını belirlememizi sağlar.
+
+---
+
+
+# 📉 A/B Testi: Dönüşüm Oranları (Two-Proportion Z-Test)
+
+* Neden Binomial kullanildi?
+* Hangi istatistik kullanilacak bu durumda?
+* Law of large numbers´in buradaki kullanim amaci nedir?
+* Bu örnekte Gaussein nerede devreye girer?
+* Distribution´i neden standardize ederiz?, Neyi cözmemizi saglar?
+* Sample proportion neden all samples´lari consider eder?
+* Neden Left-tailed test secildi?
+* Sample icin p-Value nedir? Nasil bulunur? Hangi parameterlara bakmak gerekir?
+  
+
+  
+<img width="1192" height="566" alt="image" src="https://github.com/user-attachments/assets/ebf23c20-9d41-486c-a596-b260b4582db9" />
+
+
+<img width="1120" height="538" alt="image" src="https://github.com/user-attachments/assets/2defc1ad-8bf4-4d47-93bb-3cc5e66f3693" />
+
+<img width="1209" height="555" alt="image" src="https://github.com/user-attachments/assets/cd515dbe-0dac-47e1-a647-4b79299521ed" />
+
+<img width="1087" height="535" alt="image" src="https://github.com/user-attachments/assets/9c812e64-d70f-498c-b56b-d9b9380cc41f" />
+
+<img width="1215" height="580" alt="image" src="https://github.com/user-attachments/assets/6bdae407-4986-4a05-9f5e-2d124f64c64f" />
+
+<img width="1214" height="577" alt="image" src="https://github.com/user-attachments/assets/c4fdcc71-7729-4fc7-bd5e-3733f010b491" />
+
+<img width="1236" height="611" alt="image" src="https://github.com/user-attachments/assets/4099cac1-790c-4917-a2a7-a10dc4dc1a57" />
+
+
+
+
+Bu bölüm, A/B testinde dönüşüm oranlarını karşılaştırmak için kullanılan İki Oran Z-Testi'nin matematiksel altyapısını ve uygulama örneğini detaylandırır.
+
+---
+
+## A. Temel Yapı ve Varsayımlar
+
+### 1. Neden Binom (Binomial) Dağılımı Kullanıldı?
+
+* **Açıklama:** A/B testinde her bir kullanıcının çıktısı (dönüşüm var/yok) iki sonuçlu bir denemedir (Bernoulli). $X$ ve $Y$, $n$ sayıda bağımsız Bernoulli denemesindeki toplam başarı sayısını (dönüşüm sayısını) temsil ettiğinden, **Binom Dağılımını** takip ederler.
+* **Görsel İfade:** $X \sim \text{Binomial}(n_A, p_A) \quad \text{ve} \quad Y \sim \text{Binomial}(n_B, p_B)$
+
+### 2. Hangi İstatistik Kullanılacak Bu Durumda?
+
+* **İstatistik:** **Z-İstatistiği** (İki Oran Z-Testi).
+* **Neden:** Örneklem büyüklükleri yeterince büyük olduğunda, Binom dağılımını Normal Dağılım ile yakınlaştırmak (approximate) mümkündür, bu da Z-testi kullanmamızı sağlar.
+
+### 3. Büyük Sayılar Yasasının ve Gaussian Yaklaşımının Rolü 🎯
+
+* **Law of Large Numbers (LLN) Amacı:** Örneklem oranlarının ($\hat{p}_A, \hat{p}_B$) gerçek popülasyon oranlarına ($p_A, p_B$) yaklaşmasını sağlar, güvenilir tahminciler elde ederiz.
+* **Gaussian (Normal) Yaklaşımı:** Merkezi Limit Teoremi (CLT) sayesinde, $n$ büyükse, örneklem oranlarının farkının dağılımı **Normal Dağılıma** yaklaşır. Bu, test istatistiği olarak $Z$ kullanmamızın temelini oluşturur.
+
+---
+
+## B. Test İstatistiği ve Standardizasyon
+
+### 4. Dağılımı Neden Standartlaştırırız? 📏
+
+* **Amaç:** Dağılımı standart bir ölçeğe ($Z \sim N(0, 1)$) dönüştürmek.
+* **Çözüm:** Hesaplanan $z$-değerini, Standart Normal Dağılım tabloları veya yazılımları kullanarak p-değerini bulmak için evrensel olarak karşılaştırmamızı sağlar.
+
+### 5. Örneklem Oranı Neden Tüm Örneklemleri ($X+Y$) Dikkate Alır? (Pooled Estimate) 🧩
+
+* **Neden:** Sıfır Hipotezi ($H_0: p_A = p_B = p$) altında, her iki popülasyonun da **aynı ortak $p$ oranına** sahip olduğu varsayılır. Bu bilinmeyen $p$'yi tahmin etmek için en iyi yol, iki örneklemden toplanan tüm veriyi birleştirmektir.
+* **Formül (Birleştirilmiş Oran Tahmini):**
+    $$\hat{p} = \frac{X + Y}{n_A + n_B}$$
+
+### Test İstatistiği (Test Statistic) Formülü:
+
+$$Z = \frac{\hat{p}_A - \hat{p}_B - 0}{\sqrt{\hat{p}(1-\hat{p})\left(\frac{1}{n_A} + \frac{1}{n_B}\right)}} \approx N(0, 1)$$
+
+---
+
+## C. Örnek Uygulama ve Karar
+
+### 6. Neden Sol Kuyruk Testi Seçildi? ⬅️
+
+* **Hipotez:** $H_1: p_A - p_B < 0$ (Yani, $p_B > p_A$).
+* **Seçim Nedeni:** Test, Tasarım B'nin dönüşüm oranının A'dan **daha yüksek olduğunu** kanıtlamayı amaçlar. Eğer bu doğruysa, fark $p_A - p_B$ **negatif** çıkacaktır. Negatif değerler, $Z$-dağılımının sol kuyruğunda yer aldığı için Sol Kuyruk Testi seçilmiştir.
+
+### 7. Örnek Sonuçları ve Yorum
+
+| İstatistik | Değer |
+| :--- | :--- |
+| **Gözlemlenen $Z$** ($z$) | $\mathbf{-1.336}$ |
+| **P-Değeri** | $\mathbf{0.091}$ |
+| **Anlamlılık Seviyesi** ($\alpha$) | $\mathbf{0.05}$ |
+
+**Karar ve Yorum:**
+
+1.  **Karşılaştırma:** $\text{p-value} (0.091) > \alpha (0.05)$
+2.  **Sonuç:** $H_0$ **Reddedilmez** (**Do not reject $H_0$**).
+3.  **Yorum:** %5 anlamlılık seviyesinde, Tasarım B'nin dönüşüm oranının Tasarım A'dan anlamlı derecede daha yüksek olduğuna dair **yeterli istatistiksel kanıt yoktur**. Gözlemlenen fark şanstan kaynaklanmış olabilir.
